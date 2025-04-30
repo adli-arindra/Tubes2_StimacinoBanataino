@@ -1,5 +1,8 @@
 "use client";
 import Tree from "@/components/tree";
+import { useEffect, useState } from "react";
+import LiveTree from "@/components/live_tree";
+
 
 const treeData1 = {
   name: "Root",
@@ -144,14 +147,78 @@ const treeData2 = {
 };
 
 export default function Home() {
+  const [startAnimation, setStartAnimation] = useState(false);
+  const [treeData, setTreeData] = useState(treeData1);
+  const [inputValue, setInputValue] = useState('');
+  const [resetAnimation, setResetAnimation] = useState(false);
+  const [showLive, setShowLive] = useState(false);
+
+  const handle_submit = () => {
+    if (inputValue !== '') {
+      try {
+        const parsed = JSON.parse(inputValue);
+        setTreeData(parsed);
+        setInputValue('');
+        console.log("changed the tree display!");
+      } catch (err) {
+        console.error('Invalid JSON:', err);
+      }
+    }
+  }
+
+  const onStartLive = () => {
+    if (startAnimation) return;
+    setStartAnimation(true);
+    setShowLive(true);
+  }
+
+  const onStoppedLive = () => {
+    console.log("Animation completed");
+    setStartAnimation(false);
+    setShowLive(false);
+  }
+
+  console.log(startAnimation);
   return (
     <div className="flex flex-col items-center w-full h-screen bg-gray-800 p-4 space-y-4">
       <h1 className="text-4xl">Recipe Tree</h1>
-      <div className="relative w-4/5 h-[500px] overflow-auto border border-gray-600 rounded-lg">
+      <div className="relative w-4/5 h-[600px] overflow-auto border border-gray-600 rounded-lg">
         <div className="absolute min-w-full min-h-full flex justify-center items-start p-8">
-          <Tree node={treeData2} />
+          {
+            !showLive ?
+            <Tree node={treeData} type="root"/>
+            :
+            <LiveTree
+            root={treeData}
+            start={startAnimation}
+            delay={800}
+            onAnimationComplete={onStoppedLive}
+            resetAnimation={resetAnimation}
+            />
+          }
         </div>
       </div>
+      <div className="w-2/3 h-32 flex flex-row justify-center">
+        <textarea
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder="Input your JSON here!"
+          className="bg-white w-9/10 h-32 rounded-2xl border-4 border-black text-black p-4 resize-none overflow-x-auto overflow-y-auto whitespace-pre text-wrap"
+          spellCheck={false}
+        />
+        <button onClick={handle_submit}
+          className={`w-1/10 h-full rounded-2xl border-black ml-4 text-xl ${startAnimation ? 'bg-gray-500' : 'bg-green-500'}`}
+          disabled={startAnimation}>
+          Enter
+        </button>
+      </div>
+      <button 
+          onClick={onStartLive}
+          className={`p-2 rounded text-white mt-4 ${startAnimation ? 'bg-gray-500' : 'bg-blue-500'}`}
+          disabled={startAnimation}
+          >
+          Start Animation
+      </button>
     </div>
   );
 }

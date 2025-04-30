@@ -1,0 +1,15 @@
+{
+    "name": "Root",
+    "idx": 0,
+    "children": [
+    {
+        "first": {
+            "name": "Child 2A",
+            "idx": 1
+        },
+        "second": {
+            "name": "Child 2B",
+            "idx": 2
+        }
+    }]
+}
