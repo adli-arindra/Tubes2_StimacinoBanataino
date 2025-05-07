@@ -1,0 +1,107 @@
+{
+    "name": "Root",
+    "idx": 0,
+    "left": {
+      "name": "Child 1A",
+      "idx": 1,
+      "left": {
+        "name": "Grandchild 1A-A",
+        "idx": 3,
+        "left": {
+          "name": "Great-Grandchild 1A-A-1",
+          "idx": 7
+        },
+        "right": {
+          "name": "Great-Grandchild 1A-A-2",
+          "idx": 8
+        }
+      },
+      "right": {
+        "name": "Grandchild 1A-B",
+        "idx": 4,
+        "left": {
+          "name": "Great-Grandchild 1A-B-1",
+          "idx": 9
+        },
+        "right": {
+          "name": "Great-Grandchild 1A-B-2",
+          "idx": 10
+        }
+      }
+    },
+    "right": {
+      "name": "Child 1B",
+      "idx": 2,
+      "left": {
+        "name": "Grandchild 1B-A",
+        "idx": 5,
+        "left": {
+          "name": "Great-Grandchild 1B-A-1",
+          "idx": 11
+        },
+        "right": {
+          "name": "Great-Grandchild 1B-A-2",
+          "idx": 12
+        }
+      },
+      "right": {
+        "name": "Grandchild 1B-B",
+        "idx": 6,
+        "left": {
+          "name": "Great-Grandchild 1B-B-1",
+          "idx": 13
+        },
+        "right": {
+          "name": "Great-Grandchild 1B-B-2",
+          "idx": 14
+        }
+      }
+    },
+    "children": [
+      {
+        "left": {
+          "name": "Child 2A",
+          "idx": 15,
+          "left": {
+            "name": "Grandchild 2A-A",
+            "idx": 19
+          },
+          "right": {
+            "name": "Grandchild 2A-B",
+            "idx": 20
+          }
+        },
+        "right": {
+          "name": "Child 2B",
+          "idx": 16,
+          "left": {
+            "name": "Grandchild 2B-A",
+            "idx": 21
+          },
+          "right": {
+            "name": "Grandchild 2B-B",
+            "idx": 22
+          }
+        }
+      },
+      {
+        "left": {
+          "name": "Child 3A",
+          "idx": 17
+        },
+        "right": {
+          "name": "Child 3B",
+          "idx": 18,
+          "left": {
+            "name": "Grandchild 3B-A",
+            "idx": 23
+          },
+          "right": {
+            "name": "Grandchild 3B-B",
+            "idx": 24
+          }
+        }
+      }
+    ]
+  }
+  
