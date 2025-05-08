@@ -1,64 +1,96 @@
 package search
 
 import (
-	"fmt"
-	"bfs/graph"
+    "fmt"
+    "bfs/graph"
 )
 
-// Menyimpan informasi dari item ke queue BFS
 type QueueItem struct {
-	Node	string
-	Paths	[]string
-	Recipes [][]string
+    Node    string
+    Paths   []string
+    Recipes [][]string
 }
 
 func BFS(target string, g graph.Graph) (map[string][][]string, error) {
-	// Mulai dari 4 elemen dasar
-	queue := []QueueItem{}
-	startingElements := []string{"Air", "Fire", "Earth", "Water"}
+    queue := []QueueItem{}
+    startingElements := []string{"Air", "Fire", "Earth", "Water"}
+    visited := make(map[string]bool)
+    result := make(map[string][][]string)
 
-	for _, elem := range startingElements {
-		queue = append(queue, QueueItem{Node: elem, Paths: []string{elem}, Recipes: [][]string{}})
-	}
+    // Inisialisasi elemen dasar
+    for _, elem := range startingElements {
+        visited[elem] = true
+        queue = append(queue, QueueItem{
+            Node:    elem,
+            Paths:   []string{elem},
+            Recipes: [][]string{},
+        })
+    }
 
-	visited := make(map[string]bool) // Melacak elemen yang sudah dikunjungi
+    for len(queue) > 0 {
+        item := queue[0]
+        queue = queue[1:]
 
-	result := make(map[string][][]string)
+        if item.Node == target {
+            result[target] = item.Recipes
+            continue
+        }
 
-	for len(queue) > 0 {
-		item := queue[0]
-		queue = queue[1:]
+        if currentRecipes, exists := g[item.Node]; exists {
+            for _, recipe := range currentRecipes {
+                if len(recipe) != 2 {
+                    continue
+                }
 
-		// Skip elemen yang uda dikunjungi
-		if visited[item.Node] {
-			continue
-		}
+                resultElement := recipe[1] // Selemen yag dibuat
+                if visited[resultElement] {
+                    continue
+                }
 
-		visited[item.Node] = true
+                if !visited[recipe[0]] {
+                    continue
+                }
 
-		if item.Node == target {
-			result[target] = item.Recipes
-		}
+                visited[resultElement] = true
+                fullRecipe := []string{item.Node, recipe[0], resultElement}
+                newRecipes := append(item.Recipes, fullRecipe)
+                
+                queue = append(queue, QueueItem{
+                    Node:    resultElement,
+                    Paths:   append(item.Paths, resultElement),
+                    Recipes: newRecipes,
+                })
+            }
+        }
 
-		for _, recipe := range g[item.Node] {
-			for _, next := range recipe {
-				if !visited[next] {
-					// Menambah elemen berikutnya ke antrian dan resep 
-					newRecipes := append(item.Recipes, []string{fmt.Sprintf("%s , %s", recipe[0], recipe[1])})
-					queue = append(queue, QueueItem{
-						Node:    next,
-						Paths:   append(item.Paths, next),
-						Recipes: newRecipes,
-					})
-				}
-			}
-		}
-	}
+        for resultElement, recipes := range g {
+            if visited[resultElement] {
+                continue
+            }
 
-	// Jika tidak ditemukan jalur, kembalikan error
-	if len(result) == 0 {
-		return nil, fmt.Errorf("target %s not found", target)
-	}
+            for _, recipe := range recipes {
+                if len(recipe) != 2 || !visited[recipe[0]] {
+                    continue
+                }
 
-	return result, nil
+                if recipe[1] == item.Node {
+                    visited[resultElement] = true
+                    fullRecipe := []string{recipe[0], item.Node, resultElement}
+                    newRecipes := append(item.Recipes, fullRecipe)
+                    
+                    queue = append(queue, QueueItem{
+                        Node:    resultElement,
+                        Paths:   append(item.Paths, resultElement),
+                        Recipes: newRecipes,
+                    })
+                }
+            }
+        }
+    }
+
+    if len(result) == 0 {
+        return nil, fmt.Errorf("target %s not found", target)
+    }
+
+    return result, nil
 }
