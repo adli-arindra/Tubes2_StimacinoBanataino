@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"bfs/graph"
+	"bfs/search"
 )
 
 func main() {
@@ -11,9 +12,15 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Println("Total elements with recipes:", len(g))
-	for k, v := range g {
-		fmt.Printf("%s ← %v\n", k, v)
-		break
+	var target string
+	fmt.Println("Masukkan elemen target yang ingin dicari:")
+	fmt.Scan(&target)
+
+	result, err := search.BFS(target, g)
+	if err != nil {
+		fmt.Println("Error:", err)
+	} else {
+		// Menampilkan hasil
+		fmt.Printf("%s: %v\n", target, result[target])
 	}
 }
