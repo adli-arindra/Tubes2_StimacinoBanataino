@@ -70,7 +70,7 @@ func ScrapeAll() (Catalog, error) {
 			cols.Eq(1).Find("li").Each(func(i int, li *goquery.Selection){
 				recipe := li.Text()
 				if recipe != "" {
-					recipe = strings.ReplaceAll(recipe, "+", "")
+					recipe = strings.ReplaceAll(recipe, "+", "") // Hapus tanda + antara 2 elemen resep
 					recipes = append(recipes, strings.Fields(recipe))
 				}
 			})
@@ -108,6 +108,10 @@ func ScrapeAll() (Catalog, error) {
 		}
 	})
 
+	// Menghapus resep yang mengandung elemen dari tier special
+	catalog = removeSpecialRecipes(catalog)
+
+	// Menyimpan file JSON
 	jsonFilePath := filepath.Join("data_scraping", "scraped_data.json")
 	err = SaveToJSON(catalog, jsonFilePath)
 	if err != nil {
@@ -161,4 +165,47 @@ func SaveToJSON(data interface{}, filePath string) error {
 	}
 
 	return nil
+}
+
+func removeSpecialRecipes(catalog Catalog) Catalog {
+	var filteredTiers []Tier
+	for _, tier := range catalog.Tiers {
+		if tier.Name == "Special element" {
+			continue
+		}
+		var filteredElements []Element
+		for _, element := range tier.Elements {
+			var filteredRecipes [][]string
+			for _, recipe := range element.Recipes {
+				if !containsSpecialElement(recipe, catalog) {
+					filteredRecipes = append(filteredRecipes, recipe)
+				}
+			}
+
+			element.Recipes = filteredRecipes
+			filteredElements = append(filteredElements, element)
+		}
+
+		tier.Elements = filteredElements
+		filteredTiers = append(filteredTiers, tier)
+	}
+
+	catalog.Tiers = filteredTiers
+	return catalog
+}
+
+func containsSpecialElement(recipe []string, catalog Catalog) bool {
+	for _, ingredient := range recipe {
+		for _, tier := range catalog.Tiers {
+			// Jika nama tier adalah "Special" dan ada elemen yang cocok, return true
+			if tier.Name == "Special element" {
+				for _, element := range tier.Elements {
+					if element.Name == ingredient {
+						return true
+					}
+				}
+			}
+		}
+	}
+	return false
 }

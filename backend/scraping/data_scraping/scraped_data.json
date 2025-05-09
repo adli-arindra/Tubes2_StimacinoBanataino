@@ -16,7 +16,7 @@
         },
         {
           "name": "Earth",
-          "recipes": [],
+          "recipes": null,
           "local_svg_path": "data_scraping/Starting_elements/Earth.svg",
           "original_svg_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/21/Earth_2.svg/revision/latest?cb=20210827132928"
         },
@@ -49,17 +49,6 @@
           ],
           "local_svg_path": "data_scraping/Starting_elements/Water.svg",
           "original_svg_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f4/Water_2.svg/revision/latest?cb=20210827124229"
-        }
-      ]
-    },
-    {
-      "name": "Special element",
-      "elements": [
-        {
-          "name": "Time",
-          "recipes": [],
-          "local_svg_path": "data_scraping/Special_element/Time.svg",
-          "original_svg_url": "https://static.wikia.nocookie.net/little-alchemy/images/6/63/Time_2.svg/revision/latest?cb=20210827124225"
         }
       ]
     },
@@ -243,10 +232,6 @@
             ],
             [
               "Campfire",
-              "Time"
-            ],
-            [
-              "Campfire",
               "Storm"
             ],
             [
@@ -382,10 +367,6 @@
             [
               "Pressure",
               "Lava"
-            ],
-            [
-              "Volcano",
-              "Time"
             ]
           ],
           "local_svg_path": "data_scraping/Tier_2_elements/Eruption.svg",
@@ -1436,10 +1417,6 @@
               "Stone"
             ],
             [
-              "Sky",
-              "Time"
-            ],
-            [
               "Stone",
               "Planet"
             ],
@@ -2185,10 +2162,6 @@
               "Big"
             ],
             [
-              "Rain",
-              "Time"
-            ],
-            [
               "House",
               "River"
             ],
@@ -2331,18 +2304,6 @@
             ],
             [
               "Sand",
-              "Time"
-            ],
-            [
-              "Sand",
-              "Container"
-            ],
-            [
-              "Glass",
-              "Time"
-            ],
-            [
-              "Time",
               "Container"
             ]
           ],
@@ -3044,16 +3005,8 @@
               "Moon"
             ],
             [
-              "Ocean",
-              "Time"
-            ],
-            [
               "Sea",
               "Moon"
-            ],
-            [
-              "Sea",
-              "Time"
             ]
           ],
           "local_svg_path": "data_scraping/Tier_5_elements/Tide.svg",
@@ -3401,14 +3354,6 @@
             [
               "Sun",
               "Night"
-            ],
-            [
-              "Sun",
-              "Time"
-            ],
-            [
-              "Time",
-              "Dawn"
             ]
           ],
           "local_svg_path": "data_scraping/Tier_6_elements/Day.svg",
@@ -3767,11 +3712,6 @@
             [
               "Primordial",
               "soup",
-              "Time"
-            ],
-            [
-              "Primordial",
-              "soup",
               "Storm"
             ],
             [
@@ -3921,18 +3861,6 @@
             [
               "Sky",
               "Moon"
-            ],
-            [
-              "Time",
-              "Moon"
-            ],
-            [
-              "Time",
-              "Day"
-            ],
-            [
-              "Time",
-              "Twilight"
             ]
           ],
           "local_svg_path": "data_scraping/Tier_6_elements/Night.svg",
@@ -4076,36 +4004,7 @@
         },
         {
           "name": "Ruins",
-          "recipes": [
-            [
-              "Time",
-              "Castle"
-            ],
-            [
-              "Time",
-              "House"
-            ],
-            [
-              "Time",
-              "Village"
-            ],
-            [
-              "Time",
-              "City"
-            ],
-            [
-              "Time",
-              "Skyscraper"
-            ],
-            [
-              "Time",
-              "Hospital"
-            ],
-            [
-              "Time",
-              "Farm"
-            ]
-          ],
+          "recipes": null,
           "local_svg_path": "data_scraping/Tier_6_elements/Ruins.svg",
           "original_svg_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f0/Ruins_2.svg/revision/latest?cb=20210903114747"
         },
@@ -4438,22 +4337,6 @@
           "name": "Clock",
           "recipes": [
             [
-              "Time",
-              "Electricity"
-            ],
-            [
-              "Time",
-              "Wheel"
-            ],
-            [
-              "Time",
-              "Tool"
-            ],
-            [
-              "Time",
-              "Machine"
-            ],
-            [
               "Sundial",
               "Machine"
             ],
@@ -4502,10 +4385,6 @@
             [
               "Day",
               "Night"
-            ],
-            [
-              "Time",
-              "Night"
             ]
           ],
           "local_svg_path": "data_scraping/Tier_7_elements/Dawn.svg",
@@ -4514,10 +4393,6 @@
         {
           "name": "Death",
           "recipes": [
-            [
-              "Time",
-              "Life"
-            ],
             [
               "Corpse",
               "Philosophy"
@@ -4568,14 +4443,6 @@
         {
           "name": "Human",
           "recipes": [
-            [
-              "Time",
-              "Animal"
-            ],
-            [
-              "Time",
-              "Monkey"
-            ],
             [
               "Clay",
               "Life"
@@ -4896,10 +4763,6 @@
             [
               "Day",
               "Night"
-            ],
-            [
-              "Day",
-              "Time"
             ]
           ],
           "local_svg_path": "data_scraping/Tier_7_elements/Twilight.svg",
@@ -5205,14 +5068,6 @@
             [
               "Egg",
               "Airplane"
-            ],
-            [
-              "Time",
-              "Dinosaur"
-            ],
-            [
-              "Time",
-              "Pterodactyl"
             ]
           ],
           "local_svg_path": "data_scraping/Tier_8_elements/Bird.svg",
@@ -5490,10 +5345,6 @@
               "Human",
               "Grim",
               "reaper"
-            ],
-            [
-              "Human",
-              "Time"
             ],
             [
               "Human",
@@ -6035,10 +5886,6 @@
               "Mountain",
               "range",
               "Snow"
-            ],
-            [
-              "Time",
-              "Ice"
             ]
           ],
           "local_svg_path": "data_scraping/Tier_8_elements/Glacier.svg",
@@ -7012,10 +6859,6 @@
           "name": "Sloth",
           "recipes": [
             [
-              "Animal",
-              "Time"
-            ],
-            [
               "Tree",
               "Manatee"
             ]
@@ -7750,10 +7593,6 @@
             ],
             [
               "Campfire",
-              "Time"
-            ],
-            [
-              "Campfire",
               "Rain"
             ],
             [
@@ -7850,10 +7689,6 @@
         {
           "name": "Bone",
           "recipes": [
-            [
-              "Time",
-              "Corpse"
-            ],
             [
               "Vulture",
               "Corpse"
@@ -8318,10 +8153,6 @@
               "Peat"
             ],
             [
-              "Time",
-              "Peat"
-            ],
-            [
               "Pressure",
               "Peat"
             ]
@@ -8484,10 +8315,6 @@
           "recipes": [
             [
               "Lizard",
-              "Time"
-            ],
-            [
-              "Lizard",
               "Big"
             ]
           ],
@@ -8604,10 +8431,6 @@
             ],
             [
               "Duckling",
-              "Time"
-            ],
-            [
-              "Duckling",
               "Big"
             ],
             [
@@ -8707,10 +8530,6 @@
             [
               "Tree",
               "Village"
-            ],
-            [
-              "Time",
-              "Family"
             ]
           ],
           "local_svg_path": "data_scraping/Tier_9_elements/Family_tree.svg",
@@ -8898,14 +8717,6 @@
               "Rock"
             ],
             [
-              "Dinosaur",
-              "Time"
-            ],
-            [
-              "Bone",
-              "Time"
-            ],
-            [
               "Bone",
               "Earth"
             ],
@@ -8926,10 +8737,6 @@
               "Rock"
             ],
             [
-              "Grave",
-              "Time"
-            ],
-            [
               "Skeleton",
               "Earth"
             ],
@@ -8940,10 +8747,6 @@
             [
               "Skeleton",
               "Rock"
-            ],
-            [
-              "Skeleton",
-              "Time"
             ]
           ],
           "local_svg_path": "data_scraping/Tier_9_elements/Fossil.svg",
@@ -10848,10 +10651,6 @@
           "name": "Skeleton",
           "recipes": [
             [
-              "Time",
-              "Corpse"
-            ],
-            [
               "Bone",
               "Bone"
             ],
@@ -11146,10 +10945,6 @@
             [
               "Plant",
               "Wood"
-            ],
-            [
-              "Plant",
-              "Time"
             ],
             [
               "Nest",
@@ -12334,10 +12129,6 @@
           "recipes": [
             [
               "Flower",
-              "Time"
-            ],
-            [
-              "Flower",
               "Rain"
             ],
             [
@@ -12867,10 +12658,6 @@
           "recipes": [
             [
               "Story",
-              "Time"
-            ],
-            [
-              "Story",
               "Story"
             ],
             [
@@ -12881,11 +12668,6 @@
               "Story",
               "Fairy",
               "tale"
-            ],
-            [
-              "Fairy",
-              "tale",
-              "Time"
             ],
             [
               "Fairy",
@@ -13017,23 +12799,11 @@
           "recipes": [
             [
               "Bread",
-              "Time"
-            ],
-            [
-              "Bread",
               "Bacteria"
             ],
             [
               "Fruit",
-              "Time"
-            ],
-            [
-              "Fruit",
               "Bacteria"
-            ],
-            [
-              "Vegetable",
-              "Time"
             ],
             [
               "Vegetable",
@@ -13338,15 +13108,7 @@
             ],
             [
               "Swamp",
-              "Time"
-            ],
-            [
-              "Swamp",
               "Pressure"
-            ],
-            [
-              "Time",
-              "Grass"
             ]
           ],
           "local_svg_path": "data_scraping/Tier_10_elements/Peat.svg",
@@ -13401,10 +13163,6 @@
             [
               "Fossil",
               "Pressure"
-            ],
-            [
-              "Fossil",
-              "Time"
             ],
             [
               "Fossil",
@@ -13768,10 +13526,6 @@
             [
               "Pollen",
               "Bee"
-            ],
-            [
-              "Time",
-              "Flower"
             ]
           ],
           "local_svg_path": "data_scraping/Tier_10_elements/Seed.svg",
@@ -14562,10 +14316,6 @@
           "name": "Alcohol",
           "recipes": [
             [
-              "Time",
-              "Juice"
-            ],
-            [
               "Wheat",
               "Fruit"
             ],
@@ -15188,10 +14938,6 @@
             [
               "Milk",
               "Tool"
-            ],
-            [
-              "Milk",
-              "Time"
             ],
             [
               "Milk",
@@ -15836,10 +15582,6 @@
             [
               "Bee",
               "Beehive"
-            ],
-            [
-              "Bee",
-              "Time"
             ],
             [
               "Bee",
@@ -19336,10 +19078,6 @@
         {
           "name": "Vinegar",
           "recipes": [
-            [
-              "Wine",
-              "Time"
-            ],
             [
               "Wine",
               "Air"
