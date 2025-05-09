@@ -16,7 +16,7 @@
         },
         {
           "name": "Earth",
-          "recipes": null,
+          "recipes": [],
           "local_svg_path": "data_scraping/Starting/Earth.svg",
           "original_svg_url": "https://static.wikia.nocookie.net/little-alchemy/images/2/21/Earth_2.svg/revision/latest?cb=20210827132928"
         },
@@ -1313,18 +1313,6 @@
             [
               "Steel",
               "Alchemist"
-            ],
-            [
-              "Metal",
-              "Philosopher's stone"
-            ],
-            [
-              "Steel",
-              "Philosopher's stone"
-            ],
-            [
-              "Quicksilver",
-              "Philosopher's stone"
             ]
           ],
           "local_svg_path": "data_scraping/4/Gold.svg",
@@ -2323,14 +2311,6 @@
             [
               "Volcano",
               "Ocean"
-            ],
-            [
-              "Maui's fishhook",
-              "Ocean"
-            ],
-            [
-              "Maui's fishhook",
-              "Sea"
             ]
           ],
           "local_svg_path": "data_scraping/5/Island.svg",
@@ -2563,10 +2543,6 @@
             [
               "Mummy",
               "Container"
-            ],
-            [
-              "Container",
-              "Book of the dead"
             ]
           ],
           "local_svg_path": "data_scraping/5/Pyramid.svg",
@@ -3158,10 +3134,6 @@
               "Goat"
             ],
             [
-              "House",
-              "Babe the blue ox"
-            ],
-            [
               "Container",
               "Livestock"
             ],
@@ -3192,10 +3164,6 @@
             [
               "Container",
               "Goat"
-            ],
-            [
-              "Container",
-              "Babe the blue ox"
             ]
           ],
           "local_svg_path": "data_scraping/6/Barn.svg",
@@ -3643,10 +3611,6 @@
               "Gas"
             ],
             [
-              "Planet",
-              "Zeus"
-            ],
-            [
               "Saturn",
               "Big"
             ]
@@ -3762,14 +3726,6 @@
             [
               "Land",
               "Storm"
-            ],
-            [
-              "Zeus",
-              "Tool"
-            ],
-            [
-              "Cyclops",
-              "Tool"
             ]
           ],
           "local_svg_path": "data_scraping/6/Lightning.svg",
@@ -3943,7 +3899,7 @@
         },
         {
           "name": "Ruins",
-          "recipes": null,
+          "recipes": [],
           "local_svg_path": "data_scraping/6/Ruins.svg",
           "original_svg_url": "https://static.wikia.nocookie.net/little-alchemy/images/f/f0/Ruins_2.svg/revision/latest?cb=20210903114747"
         },
@@ -4709,10 +4665,6 @@
             [
               "Galaxy cluster",
               "Container"
-            ],
-            [
-              "Primordial soup",
-              "Cosmic egg"
             ]
           ],
           "local_svg_path": "data_scraping/7/Universe.svg",
@@ -5265,14 +5217,6 @@
             [
               "Human",
               "Arrow"
-            ],
-            [
-              "Jiangshi",
-              "Mirror"
-            ],
-            [
-              "Jiangshi",
-              "Peach of immortality"
             ]
           ],
           "local_svg_path": "data_scraping/8/Corpse.svg",
@@ -6160,14 +6104,6 @@
             [
               "Human",
               "Human"
-            ],
-            [
-              "Cupid",
-              "Bow"
-            ],
-            [
-              "Cupid",
-              "Arrow"
             ]
           ],
           "local_svg_path": "data_scraping/8/Love.svg",
@@ -6404,14 +6340,6 @@
             [
               "Corpse",
               "Fabric"
-            ],
-            [
-              "Corpse",
-              "Book of the dead"
-            ],
-            [
-              "Human",
-              "Book of the dead"
             ]
           ],
           "local_svg_path": "data_scraping/8/Mummy.svg",
@@ -7384,22 +7312,6 @@
             [
               "Human",
               "Light"
-            ],
-            [
-              "Human",
-              "Heaven"
-            ],
-            [
-              "Human",
-              "Good"
-            ],
-            [
-              "Good",
-              "Demon"
-            ],
-            [
-              "Good",
-              "Deity"
             ]
           ],
           "local_svg_path": "data_scraping/9/Angel.svg",
@@ -7462,14 +7374,6 @@
             [
               "Vampire",
               "Dawn"
-            ],
-            [
-              "Vampire",
-              "Holy grail"
-            ],
-            [
-              "Vampire",
-              "Holy water"
             ]
           ],
           "local_svg_path": "data_scraping/9/Ash.svg",
@@ -7764,22 +7668,6 @@
             [
               "Monarch",
               "Wall"
-            ],
-            [
-              "Paladin",
-              "Stone"
-            ],
-            [
-              "Paladin",
-              "Wall"
-            ],
-            [
-              "Paladin",
-              "House"
-            ],
-            [
-              "Paladin",
-              "Container"
             ]
           ],
           "local_svg_path": "data_scraping/9/Castle.svg",
@@ -7799,10 +7687,6 @@
             [
               "Cat",
               "Flower"
-            ],
-            [
-              "Baast",
-              "Plant"
             ]
           ],
           "local_svg_path": "data_scraping/9/Catnip.svg",
@@ -8251,10 +8135,6 @@
             [
               "Lizard",
               "Legend"
-            ],
-            [
-              "Dinosaur",
-              "Monster"
             ]
           ],
           "local_svg_path": "data_scraping/9/Dragon.svg",
@@ -8619,14 +8499,6 @@
             [
               "Zombie",
               "Lightning"
-            ],
-            [
-              "Monster",
-              "Story"
-            ],
-            [
-              "Monster",
-              "Corpse"
             ]
           ],
           "local_svg_path": "data_scraping/9/Frankenstein's_monster.svg",
@@ -8753,10 +8625,6 @@
               "Legend"
             ],
             [
-              "Graveyard",
-              "Curse"
-            ],
-            [
               "Grave",
               "Night"
             ],
@@ -8767,10 +8635,6 @@
             [
               "Grave",
               "Legend"
-            ],
-            [
-              "Grave",
-              "Curse"
             ],
             [
               "Gravestone",
@@ -9524,10 +9388,6 @@
             [
               "Fish",
               "Swimmer"
-            ],
-            [
-              "Fish",
-              "Selkie"
             ],
             [
               "Swimmer",
@@ -10969,10 +10829,6 @@
             [
               "Human",
               "Werewolf"
-            ],
-            [
-              "Wolf",
-              "Monster"
             ]
           ],
           "local_svg_path": "data_scraping/9/Werewolf.svg",
@@ -11061,10 +10917,6 @@
             [
               "Human",
               "Zombie"
-            ],
-            [
-              "Corpse",
-              "Necromancer"
             ]
           ],
           "local_svg_path": "data_scraping/9/Zombie.svg",
@@ -11364,18 +11216,6 @@
             ],
             [
               "Chicken",
-              "Container"
-            ],
-            [
-              "Cockatrice",
-              "House"
-            ],
-            [
-              "Cockatrice",
-              "Barn"
-            ],
-            [
-              "Cockatrice",
               "Container"
             ]
           ],
@@ -11778,14 +11618,6 @@
             [
               "Story",
               "Unicorn"
-            ],
-            [
-              "Story",
-              "Faerie"
-            ],
-            [
-              "Story",
-              "Elf"
             ]
           ],
           "local_svg_path": "data_scraping/10/Fairy_tale.svg",
@@ -12301,14 +12133,6 @@
             [
               "Dinosaur",
               "Story"
-            ],
-            [
-              "Monster",
-              "City"
-            ],
-            [
-              "Monster",
-              "Skyscraper"
             ]
           ],
           "local_svg_path": "data_scraping/10/Kaiju.svg",
@@ -12564,10 +12388,6 @@
             [
               "Cow",
               "Legend"
-            ],
-            [
-              "Cow",
-              "Monster"
             ]
           ],
           "local_svg_path": "data_scraping/10/Minotaur.svg",
@@ -13500,74 +13320,6 @@
             [
               "Medusa",
               "Mirror"
-            ],
-            [
-              "Troll",
-              "Sun"
-            ],
-            [
-              "Troll",
-              "Dawn"
-            ],
-            [
-              "Cockatrice",
-              "Human"
-            ],
-            [
-              "Cockatrice",
-              "Hacker"
-            ],
-            [
-              "Cockatrice",
-              "Engineer"
-            ],
-            [
-              "Cockatrice",
-              "Lumberjack"
-            ],
-            [
-              "Cockatrice",
-              "Pilot"
-            ],
-            [
-              "Cockatrice",
-              "Sailor"
-            ],
-            [
-              "Cockatrice",
-              "Farmer"
-            ],
-            [
-              "Cockatrice",
-              "Firefighter"
-            ],
-            [
-              "Cockatrice",
-              "Surfer"
-            ],
-            [
-              "Cockatrice",
-              "Astronaut"
-            ],
-            [
-              "Cockatrice",
-              "Butcher"
-            ],
-            [
-              "Cockatrice",
-              "Doctor"
-            ],
-            [
-              "Cockatrice",
-              "Baker"
-            ],
-            [
-              "Cockatrice",
-              "Drunk"
-            ],
-            [
-              "Cockatrice",
-              "Mirror"
             ]
           ],
           "local_svg_path": "data_scraping/10/Statue.svg",
@@ -13945,14 +13697,6 @@
             [
               "Forest",
               "Lumberjack"
-            ],
-            [
-              "Tree",
-              "Paul bunyan"
-            ],
-            [
-              "Forest",
-              "Paul bunyan"
             ]
           ],
           "local_svg_path": "data_scraping/10/Wood.svg",
@@ -14030,22 +13774,6 @@
             [
               "Antarctica",
               "Legend"
-            ],
-            [
-              "Monster",
-              "Mountain"
-            ],
-            [
-              "Monster",
-              "Mountain range"
-            ],
-            [
-              "Monster",
-              "Glacier"
-            ],
-            [
-              "Monster",
-              "Antarctica"
             ]
           ],
           "local_svg_path": "data_scraping/10/Yeti.svg",
@@ -14207,10 +13935,6 @@
             [
               "Tool",
               "Lumberjack"
-            ],
-            [
-              "Tool",
-              "Paul bunyan"
             ]
           ],
           "local_svg_path": "data_scraping/11/Axe.svg",
@@ -14458,14 +14182,6 @@
             [
               "Wood",
               "Wire"
-            ],
-            [
-              "Tool",
-              "Elf"
-            ],
-            [
-              "Tool",
-              "Cupid"
             ]
           ],
           "local_svg_path": "data_scraping/11/Bow.svg",
@@ -14477,10 +14193,6 @@
             [
               "Wood",
               "Hay"
-            ],
-            [
-              "Tool",
-              "Baba yaga"
             ]
           ],
           "local_svg_path": "data_scraping/11/Broom.svg",
@@ -15222,10 +14934,6 @@
             [
               "River",
               "Scythe"
-            ],
-            [
-              "Scythe",
-              "Deity"
             ]
           ],
           "local_svg_path": "data_scraping/11/Grim_reaper.svg",
@@ -15639,10 +15347,6 @@
             [
               "Hay",
               "Steel"
-            ],
-            [
-              "Tool",
-              "Demon"
             ]
           ],
           "local_svg_path": "data_scraping/11/Pitchfork.svg",
@@ -17963,10 +17667,6 @@
             [
               "Alcohol",
               "Juice"
-            ],
-            [
-              "Tool",
-              "Dionysus"
             ]
           ],
           "local_svg_path": "data_scraping/12/Wine.svg",
