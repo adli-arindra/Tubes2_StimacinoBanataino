@@ -1,0 +1,21 @@
+{
+    "name": "Root",
+    "idx": 0,
+    "left": {
+      "name": "Child 1A",
+      "idx": 1
+    },
+    "right": {
+      "name": "Child 1B",
+      "idx": 2,
+      "left": {
+        "name": "Grandchild 1B-A",
+        "idx": 3
+      },
+      "right": {
+        "name": "Grandchild 1B-B",
+        "idx": 4
+      }
+    }
+  }
+  
