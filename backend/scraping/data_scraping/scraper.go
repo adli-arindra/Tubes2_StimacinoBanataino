@@ -113,8 +113,9 @@ func ScrapeAll() (Catalog, error) {
 	// Menghapus resep yang terdapat tier special
 	catalog = removeSpecialRecipes(catalog)
 
+	// Validasi resep agar tidak mengandung elemen dari myths dan monster
 	validateRecipes(&catalog)
-	
+
 	// Menyimpan file JSON
 	jsonFilePath := filepath.Join("data_scraping", "scraped_data.json")
 	err = SaveToJSON(catalog, jsonFilePath)
