@@ -66,12 +66,16 @@ func ScrapeAll() (Catalog, error) {
 			}
 
 			// Mengambil resep dari elemen
-			recipes := [][]string{}
-			cols.Eq(1).Find("li").Each(func(i int, li *goquery.Selection){
-				recipe := li.Text()
-				if recipe != "" {
-					recipe = strings.ReplaceAll(recipe, "+", "") // Hapus tanda + antara 2 elemen resep
-					recipes = append(recipes, strings.Fields(recipe))
+			recipes := make([][]string, 0)
+			cols.Eq(1).Find("ul li").Each(func(_ int, li *goquery.Selection) {
+				parts := li.Find("a[title]").Map(func(_ int, a *goquery.Selection) string {
+				return a.Text()
+				})
+
+				// Proses resep dan gabungkan langsung kata-kata yang seharusnya satu elemen
+				if len(parts) > 0 {
+				parts = mergeMultiWordElements(parts, catalog)  // Menggabungkan elemen otomatis
+				recipes = append(recipes, parts)
 				}
 			})
 
@@ -121,9 +125,14 @@ func ScrapeAll() (Catalog, error) {
 	return catalog, nil
 }
 
-func cleanTierName(rawTitle string) string {
-	return strings.TrimSpace(rawTitle)
-}
+func cleanTierName(raw string) string {
+	s := raw
+	// strip "Tier " prefix
+	s = strings.TrimPrefix(s, "Tier ")
+	s = strings.TrimSuffix(s, " elements")
+	s = strings.TrimSuffix(s, " element")
+	return s
+  }
 
 func downloadSVG(url, localPath string) error {
 	// Mengirimkan request untuk mengunduh SVG
@@ -170,7 +179,7 @@ func SaveToJSON(data interface{}, filePath string) error {
 func removeSpecialRecipes(catalog Catalog) Catalog {
 	var filteredTiers []Tier
 	for _, tier := range catalog.Tiers {
-		if tier.Name == "Special element" {
+		if tier.Name == "Special" {
 			continue
 		}
 		var filteredElements []Element
@@ -198,7 +207,7 @@ func containsSpecialElement(recipe []string, catalog Catalog) bool {
 	for _, ingredient := range recipe {
 		for _, tier := range catalog.Tiers {
 			// Jika nama tier adalah "Special" dan ada elemen yang cocok, return true
-			if tier.Name == "Special element" {
+			if tier.Name == "Special" {
 				for _, element := range tier.Elements {
 					if element.Name == ingredient {
 						return true
@@ -209,3 +218,29 @@ func containsSpecialElement(recipe []string, catalog Catalog) bool {
 	}
 	return false
 }
+
+func mergeMultiWordElements(parts []string, catalog Catalog) []string {
+	var result []string
+  
+	for _, part := range parts {
+	  // Periksa apakah elemen terdiri dari dua kata atau lebih
+	  if isMultiWordElement(part, catalog) {
+		result = append(result, part)  // Gabungkan elemen yang sudah terdiri lebih dari satu kata
+	  } else {
+		result = append(result, part)  // Tetapkan elemen tunggal
+	  }
+	}
+  
+	return result
+  }
+
+  func isMultiWordElement(element string, catalog Catalog) bool {
+	for _, tier := range catalog.Tiers {
+	  for _, elem := range tier.Elements {
+		if elem.Name == element && strings.Contains(element, " ") {
+		  return true // Menganggap elemen ini sebagai dua kata yang harus digabung
+		}
+	  }
+	}
+	return false
+  }
