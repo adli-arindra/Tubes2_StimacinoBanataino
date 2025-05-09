@@ -13,109 +13,152 @@ import (
 const baseURL = "https://little-alchemy.fandom.com/wiki/Elements_(Little_Alchemy_2)"
 
 func ScrapeAll() (Catalog, error) {
+	// Mengirim request untuk mendapatkan halaman web
 	resp, err := http.Get(baseURL)
 	if err != nil {
 		return Catalog{}, err
 	}
 	defer resp.Body.Close()
+
+	// Memparsing halaman HTML
 	doc, err := goquery.NewDocumentFromReader(resp.Body)
 	if err != nil {
 		return Catalog{}, err
 	}
 
 	var catalog Catalog
+
+	// Mendapatkan <h3> sebagai subjudul dari tier
 	doc.Find("h3").Each(func(_ int, hdr *goquery.Selection) {
 		rawTitle := hdr.Find("span.mw-headline").Text()
 		if rawTitle == "" {
 			return
 		}
 
+		// Mencari elemen-elemen dari tiap tier
 		tbl := hdr.NextAll().Filter("table.list-table").First()
 		if tbl.Length() == 0 {
 			return
 		}
 
+		// Menyimpan elemen ke dalam folder
 		tierName := cleanTierName(rawTitle)
 		tierFolderName := strings.ReplaceAll(tierName, " ", "_")
 		tierDir := filepath.Join("data_scraping", tierFolderName)
 
-		elems := []Element{}
-		if len(elems) > 0 {
-			os.MkdirAll(tierDir, 0755)
-			catalog.Tiers = append(catalog.Tiers, Tier{
-				Name:     tierName,
-				Elements: elems,
-			})
-		}
+		os.MkdirAll(tierDir, 0755)
 
+		elements := []Element{}
 		tbl.Find("tr").Each(func(i int, row *goquery.Selection) {
 			if i == 0 {
 				return
 			}
+
 			cols := row.Find("td")
 			if cols.Length() < 2 {
 				return
 			}
 
+			// Mengambil nama elemen
 			name := cols.Eq(0).Find("a[title]").First().Text()
 			if name == "" {
 				return
 			}
 
-			fileA := cols.Eq(0).Find("a.mw-file-description")
-			href, _ := fileA.Attr("href")
-			local := ""
-			if href != "" {
-				fname := strings.ReplaceAll(name, " ", "_") + ".svg"
-				local = filepath.Join(tierFolderName, fname)
-			}
-
+			// Mengambil resep dari elemen
 			recipes := [][]string{}
-			cols.Eq(1).Find("ul li").Each(func(_ int, li *goquery.Selection) {
-				parts := li.Find("a[title]").Map(func(_ int, a *goquery.Selection) string {
-					return a.Text()
-				})
-				if len(parts) == 2 {
-					recipes = append(recipes, []string{parts[0], parts[1]})
+			cols.Eq(1).Find("li").Each(func(i int, li *goquery.Selection){
+				recipe := li.Text()
+				if recipe != "" {
+					recipe = strings.ReplaceAll(recipe, "+", "")
+					recipes = append(recipes, strings.Fields(recipe))
 				}
 			})
 
-			elems = append(elems, Element{
+			// Mengambil link untuk file SVG
+			fileA := cols.Eq(0).Find("a.mw-file-description")
+			href, _ := fileA.Attr("href")
+			local := ""
+
+			// Menyimpan file SVG
+			if href != "" {
+				fname := strings.ReplaceAll(name, " ", "_") + ".svg"
+				local = filepath.Join(tierDir, fname)
+
+				err := downloadSVG(href, local)
+				if err != nil {
+					return
+				}
+			}
+
+			elements = append(elements, Element{
 				Name:           name,
-				LocalSVGPath:   local,
+				LocalSVGPath:   strings.ReplaceAll(local, "\\", "/"),
 				OriginalSVGURL: href,
 				Recipes:        recipes,
 			})
 		})
 
-		if len(elems) > 0 {
+		if len(elements) > 0 {
+			// Menambahkan tier ke dalam katalog
 			catalog.Tiers = append(catalog.Tiers, Tier{
 				Name:     tierName,
-				Elements: elems,
+				Elements: elements,
 			})
-		} else {
-			os.RemoveAll(tierDir)
 		}
 	})
+
+	jsonFilePath := filepath.Join("data_scraping", "scraped_data.json")
+	err = SaveToJSON(catalog, jsonFilePath)
+	if err != nil {
+		return Catalog{}, err
+	}
 
 	return catalog, nil
 }
 
-func SaveToJSON(catalog Catalog, filename string) error {
-	f, err := os.Create(filename)
+func cleanTierName(rawTitle string) string {
+	return strings.TrimSpace(rawTitle)
+}
+
+func downloadSVG(url, localPath string) error {
+	// Mengirimkan request untuk mengunduh SVG
+	resp, err := http.Get(url)
 	if err != nil {
 		return err
 	}
-	defer f.Close()
+	defer resp.Body.Close()
 
-	enc := json.NewEncoder(f)
-	enc.SetIndent("", "  ")
-	return enc.Encode(catalog)
+	// Membuat file baru untuk menyimpan hasil unduhan
+	file, err := os.Create(localPath)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+
+	// Membaca dan menulis konten dari body HTTP ke dalam file
+	_, err = file.ReadFrom(resp.Body)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
-func cleanTierName(raw string) string {
-	s := strings.TrimPrefix(raw, "Tier ")
-	s = strings.TrimSuffix(s, " elements")
-	s = strings.TrimSuffix(s, " element")
-	return s
+func SaveToJSON(data interface{}, filePath string) error {
+	file, err := os.Create(filePath)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+
+	// Mengonversi data ke format JSON dan menyimpannya dalam file
+	encoder := json.NewEncoder(file)
+	encoder.SetIndent("", "  ")
+	err = encoder.Encode(data)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
