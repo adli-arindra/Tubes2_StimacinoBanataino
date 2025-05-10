@@ -21,7 +21,7 @@ type levelResult struct {
 	Node    *graph.TreeNode
 }
 
-func MultiBFSLevelParallel(target string, g graph.Graph, maxRecipes int, tierMap map[string]int) (graph.MultiTreeResult, error) {
+func MultiBFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]int) (graph.MultiTreeResult, error) {
 	start := time.Now()
 
 	startingElements := []string{"Air", "Fire", "Water", "Earth"}
@@ -31,7 +31,7 @@ func MultiBFSLevelParallel(target string, g graph.Graph, maxRecipes int, tierMap
 
 	// Inisialisasi dari starting element
 	for _, e := range startingElements {
-		existing.Store(e, &graph.TreeNode{Name: e})
+		existing.Store(e, &graph.TreeNode{Name: e, Children: []*graph.TreeNode{}})
 		visitedElem.Store(e, true)
 	}
 

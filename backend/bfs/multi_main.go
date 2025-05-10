@@ -12,17 +12,17 @@ import (
 	"strings"
 )
 
-func main1() {
+func main() {
 	const recipeFile = "../scraping/data_scraping/scraped_data.json"
 
 	// Input Target
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Masukkan nama elemen target (misal: Brick): ")
+	fmt.Print("Masukkan nama elemen target: ")
 	rawTarget, _ := reader.ReadString('\n')
 	target := strings.TrimSpace(rawTarget)
 
 	// Input Jumlah Recipe yang diinginkan
-	fmt.Print("Masukkan jumlah maksimal recipe (misal: 5): ")
+	fmt.Print("Masukkan jumlah maksimal recipe: ")
 	rawCount, _ := reader.ReadString('\n')
 	countStr := strings.TrimSpace(rawCount)
 	maxRecipes, err := strconv.Atoi(countStr)
@@ -51,7 +51,7 @@ func main1() {
 	}
 
 	// Process Multiple BFS
-	result, err := search.MultiBFSLevelParallel(target, g, maxRecipes, tierMap)
+	result, err := search.MultiBFS(target, g, maxRecipes, tierMap)
 	if err != nil {
 		log.Fatalf("Gagal menjalankan multiple BFS: %v", err) // debugging
 	}

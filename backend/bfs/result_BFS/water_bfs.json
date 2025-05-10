@@ -1,6 +1,9 @@
 {
-  "tree": null,
+  "tree": {
+    "name": "Water",
+    "children": []
+  },
   "algorithm": "BFS",
-  "duration_ms": 30.5,
-  "visited_nodes": 717
+  "duration_ms": 0,
+  "visited_nodes": 1
 }

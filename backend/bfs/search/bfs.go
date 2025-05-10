@@ -17,8 +17,22 @@ func BFS(target string, g graph.Graph) (graph.TreeResult, error) {
 
 	// Inisialisasi dengan elemen dasar
 	for _, el := range startingElements {
-		discovered[el] = &graph.TreeNode{Name: el, Children: []*graph.TreeNode{}}
+		discovered[el] = &graph.TreeNode{
+			Name: el, 
+			Children: []*graph.TreeNode{},
+		}
 		queue = append(queue, el)
+	}
+
+	// Cek target starting element atau bukan
+	if node, ok := discovered[target]; ok {
+		duration := float64(time.Since(start).Microseconds()) / 1000.0
+		return graph.TreeResult{
+			Tree:         node,
+			Algorithm:    "BFS",
+			DurationMS:   duration,
+			VisitedNodes: 1,
+		}, nil
 	}
 
 	for len(queue) > 0 {
