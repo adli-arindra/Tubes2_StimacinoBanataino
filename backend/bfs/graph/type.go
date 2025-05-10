@@ -26,10 +26,18 @@ type TreeNode struct {
 	Children	[]*TreeNode		`json:"children,omitempty"`
 }
 
-// Menyimpan struktur output untuk BFS
+// Menyimpan struktur output untuk BFS One Recipe
 type TreeResult struct {
 	Tree        	*TreeNode 	`json:"tree"`       
 	Algorithm   	string    	`json:"algorithm"`  
 	DurationMS  	float64   	`json:"duration_ms"` 
 	VisitedNodes	int      	`json:"visited_nodes"` 
+}
+
+// Menyimpan struktur output untuk BFS Multiple
+type MultiTreeResult struct {
+	Trees			[]*TreeNode	`json:"trees"`
+	Algorithm		string 		`json:"algorithm"`
+	DurationMS		float64 	`json:"duration_ms"`
+	VisitedNodes	int			`json:"visited_nodes"`
 }
