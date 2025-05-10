@@ -1,96 +1,81 @@
 package search
 
 import (
-    "fmt"
-    "bfs/graph"
+	"time"
+	"bfs/graph"
 )
 
-type QueueItem struct {
-    Node    string
-    Paths   []string
-    Recipes [][]string
+// BFS untuk satu recipe
+func BFS(target string, g graph.Graph) (graph.TreeResult, error) {
+	start := time.Now()
+
+	startingElements := []string{"Air", "Fire", "Water", "Earth"}
+	discovered := map[string]*graph.TreeNode{}
+	parentMap := map[string][]string{}
+	queue := []string{}
+	visitedNodes := 0
+
+	// Inisialisasi dengan elemen dasar
+	for _, el := range startingElements {
+		discovered[el] = &graph.TreeNode{Name: el}
+		queue = append(queue, el)
+	}
+
+	for len(queue) > 0 {
+		curr := queue[0]
+		queue = queue[1:]
+		visitedNodes++
+
+		// Mengecek semua elemen dalam Graph
+		for product, recipes := range g {
+			if _, alreadyFound := discovered[product]; alreadyFound {
+				continue
+			}
+			for _, r := range recipes {
+				if len(r) != 2 {
+					continue
+				}
+				a, b := r[0], r[1]
+				if (a == curr || b == curr) && discovered[a] != nil && discovered[b] != nil {
+					discovered[product] = &graph.TreeNode{Name: product}
+					parentMap[product] = []string{a, b}
+					queue = append(queue, product)
+
+					if product == target {
+						duration := float64(time.Since(start).Microseconds()) / 1000.0
+						tree := buildTree(target, discovered, parentMap)
+						return graph.TreeResult{
+							Tree:         tree,
+							Algorithm:    "BFS",
+							DurationMS:   duration,
+							VisitedNodes: visitedNodes,
+						}, nil
+					}
+					break
+				}
+			}
+		}
+	}
+
+	// Kembalikan nil kalau misalnya elemen yang dicari ga ketemu
+	duration := float64(time.Since(start).Microseconds()) / 1000.0
+	return graph.TreeResult{
+		Tree:         nil,
+		Algorithm:    "BFS",
+		DurationMS:   duration,
+		VisitedNodes: visitedNodes,
+	}, nil
 }
 
-func BFS(target string, g graph.Graph) (map[string][][]string, error) {
-    queue := []QueueItem{}
-    startingElements := []string{"Air", "Fire", "Earth", "Water"}
-    visited := make(map[string]bool)
-    result := make(map[string][][]string)
-
-    // Inisialisasi elemen dasar
-    for _, elem := range startingElements {
-        visited[elem] = true
-        queue = append(queue, QueueItem{
-            Node:    elem,
-            Paths:   []string{elem},
-            Recipes: [][]string{},
-        })
-    }
-
-    for len(queue) > 0 {
-        item := queue[0]
-        queue = queue[1:]
-
-        if item.Node == target {
-            result[target] = item.Recipes
-            continue
-        }
-
-        if currentRecipes, exists := g[item.Node]; exists {
-            for _, recipe := range currentRecipes {
-                if len(recipe) != 2 {
-                    continue
-                }
-
-                resultElement := recipe[1] // Selemen yag dibuat
-                if visited[resultElement] {
-                    continue
-                }
-
-                if !visited[recipe[0]] {
-                    continue
-                }
-
-                visited[resultElement] = true
-                fullRecipe := []string{item.Node, recipe[0], resultElement}
-                newRecipes := append(item.Recipes, fullRecipe)
-                
-                queue = append(queue, QueueItem{
-                    Node:    resultElement,
-                    Paths:   append(item.Paths, resultElement),
-                    Recipes: newRecipes,
-                })
-            }
-        }
-
-        for resultElement, recipes := range g {
-            if visited[resultElement] {
-                continue
-            }
-
-            for _, recipe := range recipes {
-                if len(recipe) != 2 || !visited[recipe[0]] {
-                    continue
-                }
-
-                if recipe[1] == item.Node {
-                    visited[resultElement] = true
-                    fullRecipe := []string{recipe[0], item.Node, resultElement}
-                    newRecipes := append(item.Recipes, fullRecipe)
-                    
-                    queue = append(queue, QueueItem{
-                        Node:    resultElement,
-                        Paths:   append(item.Paths, resultElement),
-                        Recipes: newRecipes,
-                    })
-                }
-            }
-        }
-    }
-
-    if len(result) == 0 {
-        return nil, fmt.Errorf("target %s not found", target)
-    }
-
-    return result, nil
+func buildTree(current string, nodes map[string]*graph.TreeNode, parentMap map[string][]string) *graph.TreeNode {
+	node := &graph.TreeNode{Name: current}
+	parents, ok := parentMap[current]
+	if !ok {
+		return node
+	}
+	for _, p := range parents {
+		child := buildTree(p, nodes, parentMap)
+		node.Children = append(node.Children, child)
+	}
+	return node
 }

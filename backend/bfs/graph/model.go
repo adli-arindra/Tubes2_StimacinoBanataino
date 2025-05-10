@@ -9,7 +9,7 @@ type Element struct {
 // Menyimpan tier yang berisi nama tier dan element di setiap tier
 type Tier struct {
 	Name	string		`json:"name"`
-	Element []Element	`json:"elements"`
+	Elements []Element	`json:"elements"`
 }
 
 // Root dari JSON
