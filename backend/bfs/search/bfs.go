@@ -57,7 +57,9 @@ func BFS(target string, g graph.Graph) (graph.TreeResult, error) {
 
 					if product == target {
 						duration := float64(time.Since(start).Microseconds()) / 1000.0
-						tree := buildTree(target, discovered, parentMap)
+						tree := buildTree(target, discovered, parentMap) // Urutan buat fitur live update
+						index := 0
+						setDiscoveredIndex(tree, &index)
 						return graph.TreeResult{
 							Tree:         tree,
 							Algorithm:    "BFS",
@@ -93,4 +95,15 @@ func buildTree(current string, nodes map[string]*graph.TreeNode, parentMap map[s
 		node.Children = append(node.Children, child)
 	}
 	return node
+}
+
+func setDiscoveredIndex(node *graph.TreeNode, counter *int) {
+	if node == nil {
+		return
+	}
+	for _, child := range node.Children {
+		setDiscoveredIndex(child, counter)
+	}
+	node.NodeDiscovered = *counter
+	*counter++
 }

@@ -1,22 +1,27 @@
 {
   "tree": {
     "name": "Obsidian",
+    "node discovered": 4,
     "children": [
       {
         "name": "Lava",
+        "node discovered": 2,
         "children": [
           {
             "name": "Earth",
+            "node discovered": 0,
             "children": []
           },
           {
             "name": "Fire",
+            "node discovered": 1,
             "children": []
           }
         ]
       },
       {
         "name": "Water",
+        "node discovered": 3,
         "children": []
       }
     ]

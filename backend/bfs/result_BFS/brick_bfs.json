@@ -1,27 +1,32 @@
 {
   "tree": {
     "name": "Brick",
+    "node discovered": 4,
     "children": [
       {
         "name": "Mud",
+        "node discovered": 2,
         "children": [
           {
             "name": "Water",
+            "node discovered": 0,
             "children": []
           },
           {
             "name": "Earth",
+            "node discovered": 1,
             "children": []
           }
         ]
       },
       {
         "name": "Fire",
+        "node discovered": 3,
         "children": []
       }
     ]
   },
   "algorithm": "BFS",
-  "duration_ms": 0.555,
-  "visited_nodes": 15
+  "duration_ms": 0.537,
+  "visited_nodes": 14
 }

@@ -35,6 +35,20 @@ func MultiBFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]i
 		visitedElem.Store(e, true)
 	}
 
+	// Cek target starting element apa bukan
+	for _, e := range startingElements {
+		if e == target {
+			n := &graph.TreeNode{Name: e, Children: []*graph.TreeNode{}, NodeDiscovered: 0}
+			duration := float64(time.Since(start).Microseconds()) / 1000.0
+			return graph.MultiTreeResult{
+				Trees:        []*graph.TreeNode{n},
+				Algorithm:    "Multi_BFS",
+				DurationMS:   duration,
+				VisitedNodes: 1,
+			}, nil
+		}
+	}
+
 	foundRecipes := []*graph.TreeNode{}
 	tier := 0
 	numWorkers := runtime.NumCPU() * 2
@@ -113,7 +127,10 @@ func MultiBFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]i
 			nextCount++
 			
 			if res.Product == target {
-				foundRecipes = append(foundRecipes, res.Node)
+				cloned := deepCopyTree(res.Node)
+				index := 0
+				setDiscoveredIndexMultiple(cloned, &index)
+				foundRecipes = append(foundRecipes, cloned)
 				if len(foundRecipes) >= maxRecipes {
 					break
 				}
@@ -139,4 +156,29 @@ func MultiBFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]i
 		DurationMS:   duration,
 		VisitedNodes: nodeCount,
 	}, nil
+}
+
+func deepCopyTree(node *graph.TreeNode) *graph.TreeNode {
+	if node == nil {
+		return nil
+	}
+	copy := &graph.TreeNode{
+		Name:     node.Name,
+		Children: []*graph.TreeNode{},
+	}
+	for _, child := range node.Children {
+		copy.Children = append(copy.Children, deepCopyTree(child))
+	}
+	return copy
+}
+
+func setDiscoveredIndexMultiple(node *graph.TreeNode, counter *int) {
+	if node == nil {
+		return
+	}
+	for _, child := range node.Children {
+		setDiscoveredIndexMultiple(child, counter)
+	}
+	node.NodeDiscovered = *counter
+	*counter++
 }
