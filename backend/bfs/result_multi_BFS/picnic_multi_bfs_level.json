@@ -1,0 +1,3723 @@
+{
+  "trees": [
+    {
+      "name": "Picnic",
+      "children": [
+        {
+          "name": "Sandwich",
+          "children": [
+            {
+              "name": "Bread",
+              "children": [
+                {
+                  "name": "Dough",
+                  "children": [
+                    {
+                      "name": "Flour",
+                      "children": [
+                        {
+                          "name": "Wheat",
+                          "children": [
+                            {
+                              "name": "Grass",
+                              "children": [
+                                {
+                                  "name": "Plant",
+                                  "children": [
+                                    {
+                                      "name": "Rain",
+                                      "children": [
+                                        {
+                                          "name": "Cloud",
+                                          "children": [
+                                            {
+                                              "name": "Atmosphere",
+                                              "children": [
+                                                {
+                                                  "name": "Air"
+                                                },
+                                                {
+                                                  "name": "Planet",
+                                                  "children": [
+                                                    {
+                                                      "name": "Continent",
+                                                      "children": [
+                                                        {
+                                                          "name": "Land",
+                                                          "children": [
+                                                            {
+                                                              "name": "Earth"
+                                                            },
+                                                            {
+                                                              "name": "Earth"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Earth"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "name": "Continent",
+                                                      "children": [
+                                                        {
+                                                          "name": "Land",
+                                                          "children": [
+                                                            {
+                                                              "name": "Earth"
+                                                            },
+                                                            {
+                                                              "name": "Earth"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Earth"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Water"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Water"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Soil",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Life",
+                                          "children": [
+                                            {
+                                              "name": "Primordial soup",
+                                              "children": [
+                                                {
+                                                  "name": "Earth"
+                                                },
+                                                {
+                                                  "name": "Sea",
+                                                  "children": [
+                                                    {
+                                                      "name": "Lake",
+                                                      "children": [
+                                                        {
+                                                          "name": "Pond",
+                                                          "children": [
+                                                            {
+                                                              "name": "Puddle",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Water"
+                                                                },
+                                                                {
+                                                                  "name": "Water"
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "name": "Puddle",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Water"
+                                                                },
+                                                                {
+                                                                  "name": "Water"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Water"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "name": "Water"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Energy",
+                                              "children": [
+                                                {
+                                                  "name": "Fire"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Land",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Earth"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Field",
+                              "children": [
+                                {
+                                  "name": "Plow",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Metal",
+                                      "children": [
+                                        {
+                                          "name": "Stone",
+                                          "children": [
+                                            {
+                                              "name": "Air"
+                                            },
+                                            {
+                                              "name": "Lava",
+                                              "children": [
+                                                {
+                                                  "name": "Earth"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Heat",
+                                          "children": [
+                                            {
+                                              "name": "Air"
+                                            },
+                                            {
+                                              "name": "Energy",
+                                              "children": [
+                                                {
+                                                  "name": "Fire"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Land",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Earth"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Wheel",
+                          "children": [
+                            {
+                              "name": "Tool",
+                              "children": [
+                                {
+                                  "name": "Human",
+                                  "children": [
+                                    {
+                                      "name": "Clay",
+                                      "children": [
+                                        {
+                                          "name": "Mud",
+                                          "children": [
+                                            {
+                                              "name": "Water"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Stone",
+                                          "children": [
+                                            {
+                                              "name": "Air"
+                                            },
+                                            {
+                                              "name": "Lava",
+                                              "children": [
+                                                {
+                                                  "name": "Earth"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Life",
+                                      "children": [
+                                        {
+                                          "name": "Primordial soup",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Sea",
+                                              "children": [
+                                                {
+                                                  "name": "Lake",
+                                                  "children": [
+                                                    {
+                                                      "name": "Pond",
+                                                      "children": [
+                                                        {
+                                                          "name": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "name": "Water"
+                                                            },
+                                                            {
+                                                              "name": "Water"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "name": "Water"
+                                                            },
+                                                            {
+                                                              "name": "Water"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "name": "Water"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Energy",
+                                          "children": [
+                                            {
+                                              "name": "Fire"
+                                            },
+                                            {
+                                              "name": "Fire"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Stone",
+                                  "children": [
+                                    {
+                                      "name": "Air"
+                                    },
+                                    {
+                                      "name": "Lava",
+                                      "children": [
+                                        {
+                                          "name": "Earth"
+                                        },
+                                        {
+                                          "name": "Fire"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "River",
+                              "children": [
+                                {
+                                  "name": "Water"
+                                },
+                                {
+                                  "name": "Mountain",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Earthquake",
+                                      "children": [
+                                        {
+                                          "name": "Earth"
+                                        },
+                                        {
+                                          "name": "Energy",
+                                          "children": [
+                                            {
+                                              "name": "Fire"
+                                            },
+                                            {
+                                              "name": "Fire"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Rain",
+                      "children": [
+                        {
+                          "name": "Cloud",
+                          "children": [
+                            {
+                              "name": "Atmosphere",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Planet",
+                                  "children": [
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Water"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Water"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Energy",
+                  "children": [
+                    {
+                      "name": "Fire"
+                    },
+                    {
+                      "name": "Fire"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Vegetable",
+              "children": [
+                {
+                  "name": "Plant",
+                  "children": [
+                    {
+                      "name": "Rain",
+                      "children": [
+                        {
+                          "name": "Cloud",
+                          "children": [
+                            {
+                              "name": "Atmosphere",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Planet",
+                                  "children": [
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Water"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Water"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Soil",
+                      "children": [
+                        {
+                          "name": "Land",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Earth"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Life",
+                          "children": [
+                            {
+                              "name": "Primordial soup",
+                              "children": [
+                                {
+                                  "name": "Earth"
+                                },
+                                {
+                                  "name": "Sea",
+                                  "children": [
+                                    {
+                                      "name": "Lake",
+                                      "children": [
+                                        {
+                                          "name": "Pond",
+                                          "children": [
+                                            {
+                                              "name": "Puddle",
+                                              "children": [
+                                                {
+                                                  "name": "Water"
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Puddle",
+                                              "children": [
+                                                {
+                                                  "name": "Water"
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Water"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Water"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Energy",
+                              "children": [
+                                {
+                                  "name": "Fire"
+                                },
+                                {
+                                  "name": "Fire"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Field",
+                  "children": [
+                    {
+                      "name": "Plow",
+                      "children": [
+                        {
+                          "name": "Earth"
+                        },
+                        {
+                          "name": "Metal",
+                          "children": [
+                            {
+                              "name": "Stone",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Lava",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Fire"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Heat",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Energy",
+                                  "children": [
+                                    {
+                                      "name": "Fire"
+                                    },
+                                    {
+                                      "name": "Fire"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Land",
+                      "children": [
+                        {
+                          "name": "Earth"
+                        },
+                        {
+                          "name": "Earth"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Beach",
+          "children": [
+            {
+              "name": "Sand",
+              "children": [
+                {
+                  "name": "Stone",
+                  "children": [
+                    {
+                      "name": "Air"
+                    },
+                    {
+                      "name": "Lava",
+                      "children": [
+                        {
+                          "name": "Earth"
+                        },
+                        {
+                          "name": "Fire"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Wind",
+                  "children": [
+                    {
+                      "name": "Air"
+                    },
+                    {
+                      "name": "Pressure",
+                      "children": [
+                        {
+                          "name": "Air"
+                        },
+                        {
+                          "name": "Air"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Water"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Picnic",
+      "children": [
+        {
+          "name": "Sandwich",
+          "children": [
+            {
+              "name": "Bread",
+              "children": [
+                {
+                  "name": "Dough",
+                  "children": [
+                    {
+                      "name": "Flour",
+                      "children": [
+                        {
+                          "name": "Wheat",
+                          "children": [
+                            {
+                              "name": "Grass",
+                              "children": [
+                                {
+                                  "name": "Plant",
+                                  "children": [
+                                    {
+                                      "name": "Rain",
+                                      "children": [
+                                        {
+                                          "name": "Cloud",
+                                          "children": [
+                                            {
+                                              "name": "Atmosphere",
+                                              "children": [
+                                                {
+                                                  "name": "Air"
+                                                },
+                                                {
+                                                  "name": "Planet",
+                                                  "children": [
+                                                    {
+                                                      "name": "Continent",
+                                                      "children": [
+                                                        {
+                                                          "name": "Land",
+                                                          "children": [
+                                                            {
+                                                              "name": "Earth"
+                                                            },
+                                                            {
+                                                              "name": "Earth"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Earth"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "name": "Continent",
+                                                      "children": [
+                                                        {
+                                                          "name": "Land",
+                                                          "children": [
+                                                            {
+                                                              "name": "Earth"
+                                                            },
+                                                            {
+                                                              "name": "Earth"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Earth"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Water"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Water"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Soil",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Life",
+                                          "children": [
+                                            {
+                                              "name": "Primordial soup",
+                                              "children": [
+                                                {
+                                                  "name": "Earth"
+                                                },
+                                                {
+                                                  "name": "Sea",
+                                                  "children": [
+                                                    {
+                                                      "name": "Lake",
+                                                      "children": [
+                                                        {
+                                                          "name": "Pond",
+                                                          "children": [
+                                                            {
+                                                              "name": "Puddle",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Water"
+                                                                },
+                                                                {
+                                                                  "name": "Water"
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "name": "Puddle",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Water"
+                                                                },
+                                                                {
+                                                                  "name": "Water"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Water"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "name": "Water"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Energy",
+                                              "children": [
+                                                {
+                                                  "name": "Fire"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Land",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Earth"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Field",
+                              "children": [
+                                {
+                                  "name": "Plow",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Metal",
+                                      "children": [
+                                        {
+                                          "name": "Stone",
+                                          "children": [
+                                            {
+                                              "name": "Air"
+                                            },
+                                            {
+                                              "name": "Lava",
+                                              "children": [
+                                                {
+                                                  "name": "Earth"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Heat",
+                                          "children": [
+                                            {
+                                              "name": "Air"
+                                            },
+                                            {
+                                              "name": "Energy",
+                                              "children": [
+                                                {
+                                                  "name": "Fire"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Land",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Earth"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Wheel",
+                          "children": [
+                            {
+                              "name": "Tool",
+                              "children": [
+                                {
+                                  "name": "Human",
+                                  "children": [
+                                    {
+                                      "name": "Clay",
+                                      "children": [
+                                        {
+                                          "name": "Mud",
+                                          "children": [
+                                            {
+                                              "name": "Water"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Stone",
+                                          "children": [
+                                            {
+                                              "name": "Air"
+                                            },
+                                            {
+                                              "name": "Lava",
+                                              "children": [
+                                                {
+                                                  "name": "Earth"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Life",
+                                      "children": [
+                                        {
+                                          "name": "Primordial soup",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Sea",
+                                              "children": [
+                                                {
+                                                  "name": "Lake",
+                                                  "children": [
+                                                    {
+                                                      "name": "Pond",
+                                                      "children": [
+                                                        {
+                                                          "name": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "name": "Water"
+                                                            },
+                                                            {
+                                                              "name": "Water"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "name": "Water"
+                                                            },
+                                                            {
+                                                              "name": "Water"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "name": "Water"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Energy",
+                                          "children": [
+                                            {
+                                              "name": "Fire"
+                                            },
+                                            {
+                                              "name": "Fire"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Stone",
+                                  "children": [
+                                    {
+                                      "name": "Air"
+                                    },
+                                    {
+                                      "name": "Lava",
+                                      "children": [
+                                        {
+                                          "name": "Earth"
+                                        },
+                                        {
+                                          "name": "Fire"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "River",
+                              "children": [
+                                {
+                                  "name": "Water"
+                                },
+                                {
+                                  "name": "Mountain",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Earthquake",
+                                      "children": [
+                                        {
+                                          "name": "Earth"
+                                        },
+                                        {
+                                          "name": "Energy",
+                                          "children": [
+                                            {
+                                              "name": "Fire"
+                                            },
+                                            {
+                                              "name": "Fire"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Rain",
+                      "children": [
+                        {
+                          "name": "Cloud",
+                          "children": [
+                            {
+                              "name": "Atmosphere",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Planet",
+                                  "children": [
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Water"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Water"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Energy",
+                  "children": [
+                    {
+                      "name": "Fire"
+                    },
+                    {
+                      "name": "Fire"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Vegetable",
+              "children": [
+                {
+                  "name": "Plant",
+                  "children": [
+                    {
+                      "name": "Rain",
+                      "children": [
+                        {
+                          "name": "Cloud",
+                          "children": [
+                            {
+                              "name": "Atmosphere",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Planet",
+                                  "children": [
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Water"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Water"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Soil",
+                      "children": [
+                        {
+                          "name": "Land",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Earth"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Life",
+                          "children": [
+                            {
+                              "name": "Primordial soup",
+                              "children": [
+                                {
+                                  "name": "Earth"
+                                },
+                                {
+                                  "name": "Sea",
+                                  "children": [
+                                    {
+                                      "name": "Lake",
+                                      "children": [
+                                        {
+                                          "name": "Pond",
+                                          "children": [
+                                            {
+                                              "name": "Puddle",
+                                              "children": [
+                                                {
+                                                  "name": "Water"
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Puddle",
+                                              "children": [
+                                                {
+                                                  "name": "Water"
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Water"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Water"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Energy",
+                              "children": [
+                                {
+                                  "name": "Fire"
+                                },
+                                {
+                                  "name": "Fire"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Field",
+                  "children": [
+                    {
+                      "name": "Plow",
+                      "children": [
+                        {
+                          "name": "Earth"
+                        },
+                        {
+                          "name": "Metal",
+                          "children": [
+                            {
+                              "name": "Stone",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Lava",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Fire"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Heat",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Energy",
+                                  "children": [
+                                    {
+                                      "name": "Fire"
+                                    },
+                                    {
+                                      "name": "Fire"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Land",
+                      "children": [
+                        {
+                          "name": "Earth"
+                        },
+                        {
+                          "name": "Earth"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Grass",
+          "children": [
+            {
+              "name": "Plant",
+              "children": [
+                {
+                  "name": "Rain",
+                  "children": [
+                    {
+                      "name": "Cloud",
+                      "children": [
+                        {
+                          "name": "Atmosphere",
+                          "children": [
+                            {
+                              "name": "Air"
+                            },
+                            {
+                              "name": "Planet",
+                              "children": [
+                                {
+                                  "name": "Continent",
+                                  "children": [
+                                    {
+                                      "name": "Land",
+                                      "children": [
+                                        {
+                                          "name": "Earth"
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Earth"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Continent",
+                                  "children": [
+                                    {
+                                      "name": "Land",
+                                      "children": [
+                                        {
+                                          "name": "Earth"
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Earth"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Water"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Water"
+                    }
+                  ]
+                },
+                {
+                  "name": "Soil",
+                  "children": [
+                    {
+                      "name": "Land",
+                      "children": [
+                        {
+                          "name": "Earth"
+                        },
+                        {
+                          "name": "Earth"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Life",
+                      "children": [
+                        {
+                          "name": "Primordial soup",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Sea",
+                              "children": [
+                                {
+                                  "name": "Lake",
+                                  "children": [
+                                    {
+                                      "name": "Pond",
+                                      "children": [
+                                        {
+                                          "name": "Puddle",
+                                          "children": [
+                                            {
+                                              "name": "Water"
+                                            },
+                                            {
+                                              "name": "Water"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Puddle",
+                                          "children": [
+                                            {
+                                              "name": "Water"
+                                            },
+                                            {
+                                              "name": "Water"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Water"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Water"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Energy",
+                          "children": [
+                            {
+                              "name": "Fire"
+                            },
+                            {
+                              "name": "Fire"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Land",
+              "children": [
+                {
+                  "name": "Earth"
+                },
+                {
+                  "name": "Earth"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Picnic",
+      "children": [
+        {
+          "name": "Sandwich",
+          "children": [
+            {
+              "name": "Bread",
+              "children": [
+                {
+                  "name": "Dough",
+                  "children": [
+                    {
+                      "name": "Flour",
+                      "children": [
+                        {
+                          "name": "Wheat",
+                          "children": [
+                            {
+                              "name": "Grass",
+                              "children": [
+                                {
+                                  "name": "Plant",
+                                  "children": [
+                                    {
+                                      "name": "Rain",
+                                      "children": [
+                                        {
+                                          "name": "Cloud",
+                                          "children": [
+                                            {
+                                              "name": "Atmosphere",
+                                              "children": [
+                                                {
+                                                  "name": "Air"
+                                                },
+                                                {
+                                                  "name": "Planet",
+                                                  "children": [
+                                                    {
+                                                      "name": "Continent",
+                                                      "children": [
+                                                        {
+                                                          "name": "Land",
+                                                          "children": [
+                                                            {
+                                                              "name": "Earth"
+                                                            },
+                                                            {
+                                                              "name": "Earth"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Earth"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "name": "Continent",
+                                                      "children": [
+                                                        {
+                                                          "name": "Land",
+                                                          "children": [
+                                                            {
+                                                              "name": "Earth"
+                                                            },
+                                                            {
+                                                              "name": "Earth"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Earth"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Water"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Water"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Soil",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Life",
+                                          "children": [
+                                            {
+                                              "name": "Primordial soup",
+                                              "children": [
+                                                {
+                                                  "name": "Earth"
+                                                },
+                                                {
+                                                  "name": "Sea",
+                                                  "children": [
+                                                    {
+                                                      "name": "Lake",
+                                                      "children": [
+                                                        {
+                                                          "name": "Pond",
+                                                          "children": [
+                                                            {
+                                                              "name": "Puddle",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Water"
+                                                                },
+                                                                {
+                                                                  "name": "Water"
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "name": "Puddle",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Water"
+                                                                },
+                                                                {
+                                                                  "name": "Water"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Water"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "name": "Water"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Energy",
+                                              "children": [
+                                                {
+                                                  "name": "Fire"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Land",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Earth"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Field",
+                              "children": [
+                                {
+                                  "name": "Plow",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Metal",
+                                      "children": [
+                                        {
+                                          "name": "Stone",
+                                          "children": [
+                                            {
+                                              "name": "Air"
+                                            },
+                                            {
+                                              "name": "Lava",
+                                              "children": [
+                                                {
+                                                  "name": "Earth"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Heat",
+                                          "children": [
+                                            {
+                                              "name": "Air"
+                                            },
+                                            {
+                                              "name": "Energy",
+                                              "children": [
+                                                {
+                                                  "name": "Fire"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Land",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Earth"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Wheel",
+                          "children": [
+                            {
+                              "name": "Tool",
+                              "children": [
+                                {
+                                  "name": "Human",
+                                  "children": [
+                                    {
+                                      "name": "Clay",
+                                      "children": [
+                                        {
+                                          "name": "Mud",
+                                          "children": [
+                                            {
+                                              "name": "Water"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Stone",
+                                          "children": [
+                                            {
+                                              "name": "Air"
+                                            },
+                                            {
+                                              "name": "Lava",
+                                              "children": [
+                                                {
+                                                  "name": "Earth"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Life",
+                                      "children": [
+                                        {
+                                          "name": "Primordial soup",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Sea",
+                                              "children": [
+                                                {
+                                                  "name": "Lake",
+                                                  "children": [
+                                                    {
+                                                      "name": "Pond",
+                                                      "children": [
+                                                        {
+                                                          "name": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "name": "Water"
+                                                            },
+                                                            {
+                                                              "name": "Water"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "name": "Water"
+                                                            },
+                                                            {
+                                                              "name": "Water"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "name": "Water"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Energy",
+                                          "children": [
+                                            {
+                                              "name": "Fire"
+                                            },
+                                            {
+                                              "name": "Fire"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Stone",
+                                  "children": [
+                                    {
+                                      "name": "Air"
+                                    },
+                                    {
+                                      "name": "Lava",
+                                      "children": [
+                                        {
+                                          "name": "Earth"
+                                        },
+                                        {
+                                          "name": "Fire"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "River",
+                              "children": [
+                                {
+                                  "name": "Water"
+                                },
+                                {
+                                  "name": "Mountain",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Earthquake",
+                                      "children": [
+                                        {
+                                          "name": "Earth"
+                                        },
+                                        {
+                                          "name": "Energy",
+                                          "children": [
+                                            {
+                                              "name": "Fire"
+                                            },
+                                            {
+                                              "name": "Fire"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Rain",
+                      "children": [
+                        {
+                          "name": "Cloud",
+                          "children": [
+                            {
+                              "name": "Atmosphere",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Planet",
+                                  "children": [
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Water"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Water"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Energy",
+                  "children": [
+                    {
+                      "name": "Fire"
+                    },
+                    {
+                      "name": "Fire"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Vegetable",
+              "children": [
+                {
+                  "name": "Plant",
+                  "children": [
+                    {
+                      "name": "Rain",
+                      "children": [
+                        {
+                          "name": "Cloud",
+                          "children": [
+                            {
+                              "name": "Atmosphere",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Planet",
+                                  "children": [
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Water"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Water"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Soil",
+                      "children": [
+                        {
+                          "name": "Land",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Earth"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Life",
+                          "children": [
+                            {
+                              "name": "Primordial soup",
+                              "children": [
+                                {
+                                  "name": "Earth"
+                                },
+                                {
+                                  "name": "Sea",
+                                  "children": [
+                                    {
+                                      "name": "Lake",
+                                      "children": [
+                                        {
+                                          "name": "Pond",
+                                          "children": [
+                                            {
+                                              "name": "Puddle",
+                                              "children": [
+                                                {
+                                                  "name": "Water"
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Puddle",
+                                              "children": [
+                                                {
+                                                  "name": "Water"
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Water"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Water"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Energy",
+                              "children": [
+                                {
+                                  "name": "Fire"
+                                },
+                                {
+                                  "name": "Fire"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Field",
+                  "children": [
+                    {
+                      "name": "Plow",
+                      "children": [
+                        {
+                          "name": "Earth"
+                        },
+                        {
+                          "name": "Metal",
+                          "children": [
+                            {
+                              "name": "Stone",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Lava",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Fire"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Heat",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Energy",
+                                  "children": [
+                                    {
+                                      "name": "Fire"
+                                    },
+                                    {
+                                      "name": "Fire"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Land",
+                      "children": [
+                        {
+                          "name": "Earth"
+                        },
+                        {
+                          "name": "Earth"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Lawn",
+          "children": [
+            {
+              "name": "Grass",
+              "children": [
+                {
+                  "name": "Plant",
+                  "children": [
+                    {
+                      "name": "Rain",
+                      "children": [
+                        {
+                          "name": "Cloud",
+                          "children": [
+                            {
+                              "name": "Atmosphere",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Planet",
+                                  "children": [
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Water"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Water"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Soil",
+                      "children": [
+                        {
+                          "name": "Land",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Earth"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Life",
+                          "children": [
+                            {
+                              "name": "Primordial soup",
+                              "children": [
+                                {
+                                  "name": "Earth"
+                                },
+                                {
+                                  "name": "Sea",
+                                  "children": [
+                                    {
+                                      "name": "Lake",
+                                      "children": [
+                                        {
+                                          "name": "Pond",
+                                          "children": [
+                                            {
+                                              "name": "Puddle",
+                                              "children": [
+                                                {
+                                                  "name": "Water"
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Puddle",
+                                              "children": [
+                                                {
+                                                  "name": "Water"
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Water"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Water"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Energy",
+                              "children": [
+                                {
+                                  "name": "Fire"
+                                },
+                                {
+                                  "name": "Fire"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Land",
+                  "children": [
+                    {
+                      "name": "Earth"
+                    },
+                    {
+                      "name": "Earth"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "House",
+              "children": [
+                {
+                  "name": "Wall",
+                  "children": [
+                    {
+                      "name": "Stone",
+                      "children": [
+                        {
+                          "name": "Air"
+                        },
+                        {
+                          "name": "Lava",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Fire"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Stone",
+                      "children": [
+                        {
+                          "name": "Air"
+                        },
+                        {
+                          "name": "Lava",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Fire"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Wall",
+                  "children": [
+                    {
+                      "name": "Stone",
+                      "children": [
+                        {
+                          "name": "Air"
+                        },
+                        {
+                          "name": "Lava",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Fire"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Stone",
+                      "children": [
+                        {
+                          "name": "Air"
+                        },
+                        {
+                          "name": "Lava",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Fire"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Picnic",
+      "children": [
+        {
+          "name": "Sandwich",
+          "children": [
+            {
+              "name": "Bread",
+              "children": [
+                {
+                  "name": "Dough",
+                  "children": [
+                    {
+                      "name": "Flour",
+                      "children": [
+                        {
+                          "name": "Wheat",
+                          "children": [
+                            {
+                              "name": "Grass",
+                              "children": [
+                                {
+                                  "name": "Plant",
+                                  "children": [
+                                    {
+                                      "name": "Rain",
+                                      "children": [
+                                        {
+                                          "name": "Cloud",
+                                          "children": [
+                                            {
+                                              "name": "Atmosphere",
+                                              "children": [
+                                                {
+                                                  "name": "Air"
+                                                },
+                                                {
+                                                  "name": "Planet",
+                                                  "children": [
+                                                    {
+                                                      "name": "Continent",
+                                                      "children": [
+                                                        {
+                                                          "name": "Land",
+                                                          "children": [
+                                                            {
+                                                              "name": "Earth"
+                                                            },
+                                                            {
+                                                              "name": "Earth"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Earth"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "name": "Continent",
+                                                      "children": [
+                                                        {
+                                                          "name": "Land",
+                                                          "children": [
+                                                            {
+                                                              "name": "Earth"
+                                                            },
+                                                            {
+                                                              "name": "Earth"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Earth"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Water"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Water"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Soil",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Life",
+                                          "children": [
+                                            {
+                                              "name": "Primordial soup",
+                                              "children": [
+                                                {
+                                                  "name": "Earth"
+                                                },
+                                                {
+                                                  "name": "Sea",
+                                                  "children": [
+                                                    {
+                                                      "name": "Lake",
+                                                      "children": [
+                                                        {
+                                                          "name": "Pond",
+                                                          "children": [
+                                                            {
+                                                              "name": "Puddle",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Water"
+                                                                },
+                                                                {
+                                                                  "name": "Water"
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "name": "Puddle",
+                                                              "children": [
+                                                                {
+                                                                  "name": "Water"
+                                                                },
+                                                                {
+                                                                  "name": "Water"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Water"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "name": "Water"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Energy",
+                                              "children": [
+                                                {
+                                                  "name": "Fire"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Land",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Earth"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Field",
+                              "children": [
+                                {
+                                  "name": "Plow",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Metal",
+                                      "children": [
+                                        {
+                                          "name": "Stone",
+                                          "children": [
+                                            {
+                                              "name": "Air"
+                                            },
+                                            {
+                                              "name": "Lava",
+                                              "children": [
+                                                {
+                                                  "name": "Earth"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Heat",
+                                          "children": [
+                                            {
+                                              "name": "Air"
+                                            },
+                                            {
+                                              "name": "Energy",
+                                              "children": [
+                                                {
+                                                  "name": "Fire"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Land",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Earth"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Wheel",
+                          "children": [
+                            {
+                              "name": "Tool",
+                              "children": [
+                                {
+                                  "name": "Human",
+                                  "children": [
+                                    {
+                                      "name": "Clay",
+                                      "children": [
+                                        {
+                                          "name": "Mud",
+                                          "children": [
+                                            {
+                                              "name": "Water"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Stone",
+                                          "children": [
+                                            {
+                                              "name": "Air"
+                                            },
+                                            {
+                                              "name": "Lava",
+                                              "children": [
+                                                {
+                                                  "name": "Earth"
+                                                },
+                                                {
+                                                  "name": "Fire"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Life",
+                                      "children": [
+                                        {
+                                          "name": "Primordial soup",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Sea",
+                                              "children": [
+                                                {
+                                                  "name": "Lake",
+                                                  "children": [
+                                                    {
+                                                      "name": "Pond",
+                                                      "children": [
+                                                        {
+                                                          "name": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "name": "Water"
+                                                            },
+                                                            {
+                                                              "name": "Water"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "name": "Puddle",
+                                                          "children": [
+                                                            {
+                                                              "name": "Water"
+                                                            },
+                                                            {
+                                                              "name": "Water"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "name": "Water"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Energy",
+                                          "children": [
+                                            {
+                                              "name": "Fire"
+                                            },
+                                            {
+                                              "name": "Fire"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Stone",
+                                  "children": [
+                                    {
+                                      "name": "Air"
+                                    },
+                                    {
+                                      "name": "Lava",
+                                      "children": [
+                                        {
+                                          "name": "Earth"
+                                        },
+                                        {
+                                          "name": "Fire"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "River",
+                              "children": [
+                                {
+                                  "name": "Water"
+                                },
+                                {
+                                  "name": "Mountain",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Earthquake",
+                                      "children": [
+                                        {
+                                          "name": "Earth"
+                                        },
+                                        {
+                                          "name": "Energy",
+                                          "children": [
+                                            {
+                                              "name": "Fire"
+                                            },
+                                            {
+                                              "name": "Fire"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Rain",
+                      "children": [
+                        {
+                          "name": "Cloud",
+                          "children": [
+                            {
+                              "name": "Atmosphere",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Planet",
+                                  "children": [
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Water"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Water"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Energy",
+                  "children": [
+                    {
+                      "name": "Fire"
+                    },
+                    {
+                      "name": "Fire"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Vegetable",
+              "children": [
+                {
+                  "name": "Plant",
+                  "children": [
+                    {
+                      "name": "Rain",
+                      "children": [
+                        {
+                          "name": "Cloud",
+                          "children": [
+                            {
+                              "name": "Atmosphere",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Planet",
+                                  "children": [
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Continent",
+                                      "children": [
+                                        {
+                                          "name": "Land",
+                                          "children": [
+                                            {
+                                              "name": "Earth"
+                                            },
+                                            {
+                                              "name": "Earth"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Water"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Water"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Soil",
+                      "children": [
+                        {
+                          "name": "Land",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Earth"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Life",
+                          "children": [
+                            {
+                              "name": "Primordial soup",
+                              "children": [
+                                {
+                                  "name": "Earth"
+                                },
+                                {
+                                  "name": "Sea",
+                                  "children": [
+                                    {
+                                      "name": "Lake",
+                                      "children": [
+                                        {
+                                          "name": "Pond",
+                                          "children": [
+                                            {
+                                              "name": "Puddle",
+                                              "children": [
+                                                {
+                                                  "name": "Water"
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Puddle",
+                                              "children": [
+                                                {
+                                                  "name": "Water"
+                                                },
+                                                {
+                                                  "name": "Water"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Water"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Water"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Energy",
+                              "children": [
+                                {
+                                  "name": "Fire"
+                                },
+                                {
+                                  "name": "Fire"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Field",
+                  "children": [
+                    {
+                      "name": "Plow",
+                      "children": [
+                        {
+                          "name": "Earth"
+                        },
+                        {
+                          "name": "Metal",
+                          "children": [
+                            {
+                              "name": "Stone",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Lava",
+                                  "children": [
+                                    {
+                                      "name": "Earth"
+                                    },
+                                    {
+                                      "name": "Fire"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Heat",
+                              "children": [
+                                {
+                                  "name": "Air"
+                                },
+                                {
+                                  "name": "Energy",
+                                  "children": [
+                                    {
+                                      "name": "Fire"
+                                    },
+                                    {
+                                      "name": "Fire"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Land",
+                      "children": [
+                        {
+                          "name": "Earth"
+                        },
+                        {
+                          "name": "Earth"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Garden",
+          "children": [
+            {
+              "name": "Plant",
+              "children": [
+                {
+                  "name": "Rain",
+                  "children": [
+                    {
+                      "name": "Cloud",
+                      "children": [
+                        {
+                          "name": "Atmosphere",
+                          "children": [
+                            {
+                              "name": "Air"
+                            },
+                            {
+                              "name": "Planet",
+                              "children": [
+                                {
+                                  "name": "Continent",
+                                  "children": [
+                                    {
+                                      "name": "Land",
+                                      "children": [
+                                        {
+                                          "name": "Earth"
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Earth"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Continent",
+                                  "children": [
+                                    {
+                                      "name": "Land",
+                                      "children": [
+                                        {
+                                          "name": "Earth"
+                                        },
+                                        {
+                                          "name": "Earth"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Earth"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Water"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Water"
+                    }
+                  ]
+                },
+                {
+                  "name": "Soil",
+                  "children": [
+                    {
+                      "name": "Land",
+                      "children": [
+                        {
+                          "name": "Earth"
+                        },
+                        {
+                          "name": "Earth"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Life",
+                      "children": [
+                        {
+                          "name": "Primordial soup",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Sea",
+                              "children": [
+                                {
+                                  "name": "Lake",
+                                  "children": [
+                                    {
+                                      "name": "Pond",
+                                      "children": [
+                                        {
+                                          "name": "Puddle",
+                                          "children": [
+                                            {
+                                              "name": "Water"
+                                            },
+                                            {
+                                              "name": "Water"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Puddle",
+                                          "children": [
+                                            {
+                                              "name": "Water"
+                                            },
+                                            {
+                                              "name": "Water"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Water"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Water"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Energy",
+                          "children": [
+                            {
+                              "name": "Fire"
+                            },
+                            {
+                              "name": "Fire"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "House",
+              "children": [
+                {
+                  "name": "Wall",
+                  "children": [
+                    {
+                      "name": "Stone",
+                      "children": [
+                        {
+                          "name": "Air"
+                        },
+                        {
+                          "name": "Lava",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Fire"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Stone",
+                      "children": [
+                        {
+                          "name": "Air"
+                        },
+                        {
+                          "name": "Lava",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Fire"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Wall",
+                  "children": [
+                    {
+                      "name": "Stone",
+                      "children": [
+                        {
+                          "name": "Air"
+                        },
+                        {
+                          "name": "Lava",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Fire"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Stone",
+                      "children": [
+                        {
+                          "name": "Air"
+                        },
+                        {
+                          "name": "Lava",
+                          "children": [
+                            {
+                              "name": "Earth"
+                            },
+                            {
+                              "name": "Fire"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "algorithm": "Multi_BFS",
+  "duration_ms": 220.189,
+  "visited_nodes": 614
+}

@@ -12,7 +12,7 @@ import (
 	"bfs/search"
 )
 
-func main() {
+func main1() {
 	const recipeFile = "../scraping/data_scraping/scraped_data.json"
 
     // Input
@@ -42,18 +42,18 @@ func main() {
 		log.Fatalf("Gagal encode hasil ke JSON: %v", err) // debugging
 	}
 
-	err = os.MkdirAll("result", os.ModePerm)
+	err = os.MkdirAll("result_BFS", os.ModePerm)
 	if err != nil {
 		log.Fatalf("Gagal membuat folder result: %v", err) // debugging
 	}
 
 	fileSafeName := strings.ReplaceAll(strings.ToLower(target), " ", "_")
-	filePath := fmt.Sprintf("result/%s_bfs.json", fileSafeName)
+	filePath := fmt.Sprintf("result_BFS/%s_bfs.json", fileSafeName)
 
 	err = os.WriteFile(filePath, output, 0644)
 	if err != nil {
 		log.Fatalf("Gagal menulis file hasil: %v", err) // debugging
 	}
 
-	fmt.Printf("Berhasil menyimpan hasil ke %s\n", filePath)
+	fmt.Printf("Berhasil menyimpan hasil\n")
 }

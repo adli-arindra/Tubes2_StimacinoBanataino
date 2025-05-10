@@ -1,0 +1,26 @@
+{
+  "trees": [
+    {
+      "name": "Brick",
+      "children": [
+        {
+          "name": "Mud",
+          "children": [
+            {
+              "name": "Water"
+            },
+            {
+              "name": "Earth"
+            }
+          ]
+        },
+        {
+          "name": "Fire"
+        }
+      ]
+    }
+  ],
+  "algorithm": "Multi_BFS",
+  "duration_ms": 7.682,
+  "visited_nodes": 31
+}

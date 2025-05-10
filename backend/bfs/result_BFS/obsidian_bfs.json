@@ -1,0 +1,24 @@
+{
+  "tree": {
+    "name": "Obsidian",
+    "children": [
+      {
+        "name": "Lava",
+        "children": [
+          {
+            "name": "Earth"
+          },
+          {
+            "name": "Fire"
+          }
+        ]
+      },
+      {
+        "name": "Water"
+      }
+    ]
+  },
+  "algorithm": "BFS",
+  "duration_ms": 3.924,
+  "visited_nodes": 3
+}

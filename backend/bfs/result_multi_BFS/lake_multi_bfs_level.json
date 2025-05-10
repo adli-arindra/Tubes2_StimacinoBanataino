@@ -1,0 +1,101 @@
+{
+  "trees": [
+    {
+      "name": "Lake",
+      "children": [
+        {
+          "name": "Pond",
+          "children": [
+            {
+              "name": "Puddle",
+              "children": [
+                {
+                  "name": "Water"
+                },
+                {
+                  "name": "Water"
+                }
+              ]
+            },
+            {
+              "name": "Puddle",
+              "children": [
+                {
+                  "name": "Water"
+                },
+                {
+                  "name": "Water"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Water"
+        }
+      ]
+    },
+    {
+      "name": "Lake",
+      "children": [
+        {
+          "name": "Pond",
+          "children": [
+            {
+              "name": "Puddle",
+              "children": [
+                {
+                  "name": "Water"
+                },
+                {
+                  "name": "Water"
+                }
+              ]
+            },
+            {
+              "name": "Puddle",
+              "children": [
+                {
+                  "name": "Water"
+                },
+                {
+                  "name": "Water"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Pond",
+          "children": [
+            {
+              "name": "Puddle",
+              "children": [
+                {
+                  "name": "Water"
+                },
+                {
+                  "name": "Water"
+                }
+              ]
+            },
+            {
+              "name": "Puddle",
+              "children": [
+                {
+                  "name": "Water"
+                },
+                {
+                  "name": "Water"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "algorithm": "Multi_BFS",
+  "duration_ms": 20.65,
+  "visited_nodes": 45
+}
