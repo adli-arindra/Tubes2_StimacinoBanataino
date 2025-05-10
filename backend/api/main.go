@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
@@ -25,7 +26,7 @@ type SearchRequest struct {
 }
 
 type SearchResponse struct {
-	Trees         []Node  `json:"trees"`
+	Trees         Node    `json:"trees"`
 	NumberOfPaths int     `json:"numberOfPaths"`
 	NodesVisited  int     `json:"nodesVisited"`
 	ElapsedTime   float64 `json:"elapsedTime"`
@@ -57,29 +58,25 @@ func processSearchRequest(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	dummyTree := Node{
-		Name: "Brick",
-		Idx:  0,
-		Left: &Node{
-			Name: "Mud",
-			Idx:  1,
-			Left: &Node{
-				Name: "Water",
-				Idx:  2,
-			},
-			Right: &Node{
-				Name: "Earth",
-				Idx:  3,
-			},
-		},
-		Right: &Node{
-			Name: "Fire",
-			Idx:  4,
-		},
+	jsonFile, err := os.Open("../../frontend/example5.json")
+	if err != nil {
+		fmt.Println("Error opening JSON file:", err)
+		http.Error(w, "Error reading file", http.StatusInternalServerError)
+		return
+	}
+
+	defer jsonFile.Close()
+
+	var trees Node
+	err = json.NewDecoder(jsonFile).Decode(&trees)
+	if err != nil {
+		fmt.Println("Error decoding JSON file:", err)
+		http.Error(w, "Error parsing tree data", http.StatusInternalServerError)
+		return
 	}
 
 	response := SearchResponse{
-		Trees:         []Node{dummyTree},
+		Trees:         trees,
 		NumberOfPaths: 1,
 		NodesVisited:  11,
 		ElapsedTime:   0.23,
@@ -87,8 +84,11 @@ func processSearchRequest(w http.ResponseWriter, r *http.Request) {
 
 	treeJSON, err := json.MarshalIndent(response, "", "  ")
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("Error marshalling response:", err)
 	} else {
 		fmt.Println(string(treeJSON))
 	}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(response)
 }
