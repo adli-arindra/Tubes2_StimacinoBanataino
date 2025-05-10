@@ -17,7 +17,7 @@ func BFS(target string, g graph.Graph) (graph.TreeResult, error) {
 
 	// Inisialisasi dengan elemen dasar
 	for _, el := range startingElements {
-		discovered[el] = &graph.TreeNode{Name: el}
+		discovered[el] = &graph.TreeNode{Name: el, Children: []*graph.TreeNode{}}
 		queue = append(queue, el)
 	}
 
@@ -71,6 +71,7 @@ func buildTree(current string, nodes map[string]*graph.TreeNode, parentMap map[s
 	node := &graph.TreeNode{Name: current}
 	parents, ok := parentMap[current]
 	if !ok {
+		node.Children = []*graph.TreeNode{}
 		return node
 	}
 	for _, p := range parents {

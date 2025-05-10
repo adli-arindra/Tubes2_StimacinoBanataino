@@ -3,10 +3,12 @@
     "name": "Mud",
     "children": [
       {
-        "name": "Water"
+        "name": "Water",
+        "children": []
       },
       {
-        "name": "Earth"
+        "name": "Earth",
+        "children": []
       }
     ]
   },

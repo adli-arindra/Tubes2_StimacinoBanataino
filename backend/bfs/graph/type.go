@@ -23,7 +23,7 @@ type Graph map[string][][]string
 // Menyimpan satu node dalam pohon
 type TreeNode struct {
 	Name		string			`json:"name"`
-	Children	[]*TreeNode		`json:"children,omitempty"`
+	Children	[]*TreeNode		`json:"children"`
 }
 
 // Menyimpan struktur output untuk BFS One Recipe

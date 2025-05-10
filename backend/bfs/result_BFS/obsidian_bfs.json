@@ -6,19 +6,22 @@
         "name": "Lava",
         "children": [
           {
-            "name": "Earth"
+            "name": "Earth",
+            "children": []
           },
           {
-            "name": "Fire"
+            "name": "Fire",
+            "children": []
           }
         ]
       },
       {
-        "name": "Water"
+        "name": "Water",
+        "children": []
       }
     ]
   },
   "algorithm": "BFS",
-  "duration_ms": 3.924,
+  "duration_ms": 0,
   "visited_nodes": 3
 }
