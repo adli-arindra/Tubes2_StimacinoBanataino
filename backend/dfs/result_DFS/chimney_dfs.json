@@ -6,35 +6,40 @@
         "name": "Smoke",
         "children": [
           {
-            "name": "Fire"
+            "name": "Fire",
+            "children": []
           },
           {
-            "name": "Air"
+            "name": "Air",
+            "children": []
           }
         ]
       },
       {
-        "name": "Brick",
+        "name": "Stone",
         "children": [
           {
-            "name": "Mud",
-            "children": [
-              {
-                "name": "Water"
-              },
-              {
-                "name": "Earth"
-              }
-            ]
+            "name": "Air",
+            "children": []
           },
           {
-            "name": "Fire"
+            "name": "Lava",
+            "children": [
+              {
+                "name": "Earth",
+                "children": []
+              },
+              {
+                "name": "Fire",
+                "children": []
+              }
+            ]
           }
         ]
       }
     ]
   },
   "algorithm": "DFS",
-  "duration_ms": 0.549,
-  "visited_nodes": 23
+  "duration_ms": 6.536,
+  "visited_nodes": 36
 }

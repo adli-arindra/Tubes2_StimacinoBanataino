@@ -1,6 +1,6 @@
 {
   "tree": null,
   "algorithm": "DFS",
-  "duration_ms": 54.552,
-  "visited_nodes": 1387
+  "duration_ms": 0,
+  "visited_nodes": 0
 }

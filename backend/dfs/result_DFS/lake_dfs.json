@@ -9,10 +9,12 @@
             "name": "Puddle",
             "children": [
               {
-                "name": "Water"
+                "name": "Water",
+                "children": []
               },
               {
-                "name": "Water"
+                "name": "Water",
+                "children": []
               }
             ]
           },
@@ -20,21 +22,24 @@
             "name": "Puddle",
             "children": [
               {
-                "name": "Water"
+                "name": "Water",
+                "children": []
               },
               {
-                "name": "Water"
+                "name": "Water",
+                "children": []
               }
             ]
           }
         ]
       },
       {
-        "name": "Water"
+        "name": "Water",
+        "children": []
       }
     ]
   },
   "algorithm": "DFS",
-  "duration_ms": 3.275,
+  "duration_ms": 4.053,
   "visited_nodes": 17
 }

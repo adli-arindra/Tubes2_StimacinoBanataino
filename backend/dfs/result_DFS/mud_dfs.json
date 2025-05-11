@@ -3,14 +3,16 @@
     "name": "Mud",
     "children": [
       {
-        "name": "Water"
+        "name": "Water",
+        "children": []
       },
       {
-        "name": "Earth"
+        "name": "Earth",
+        "children": []
       }
     ]
   },
   "algorithm": "DFS",
-  "duration_ms": 12.895,
+  "duration_ms": 2.15,
   "visited_nodes": 12
 }

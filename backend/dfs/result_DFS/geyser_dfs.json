@@ -6,26 +6,12 @@
         "name": "Steam",
         "children": [
           {
-            "name": "Water"
+            "name": "Water",
+            "children": []
           },
           {
-            "name": "Heat",
-            "children": [
-              {
-                "name": "Air"
-              },
-              {
-                "name": "Energy",
-                "children": [
-                  {
-                    "name": "Fire"
-                  },
-                  {
-                    "name": "Fire"
-                  }
-                ]
-              }
-            ]
+            "name": "Fire",
+            "children": []
           }
         ]
       },
@@ -33,16 +19,18 @@
         "name": "Pressure",
         "children": [
           {
-            "name": "Air"
+            "name": "Air",
+            "children": []
           },
           {
-            "name": "Air"
+            "name": "Air",
+            "children": []
           }
         ]
       }
     ]
   },
   "algorithm": "DFS",
-  "duration_ms": 0.637,
-  "visited_nodes": 14
+  "duration_ms": 3.009,
+  "visited_nodes": 13
 }
