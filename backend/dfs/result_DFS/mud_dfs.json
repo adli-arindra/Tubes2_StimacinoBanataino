@@ -1,16 +1,21 @@
 {
   "tree": {
     "name": "Mud",
+    "node_discovered": 0,
     "children": [
       {
-        "name": "Water"
+        "name": "Water",
+        "node_discovered": 1,
+        "children": []
       },
       {
-        "name": "Earth"
+        "name": "Earth",
+        "node_discovered": 2,
+        "children": []
       }
     ]
   },
   "algorithm": "DFS",
-  "duration_ms": 12.895,
-  "visited_nodes": 12
+  "duration_ms": 2.13,
+  "visited_nodes": 13
 }
