@@ -12,7 +12,7 @@ import (
 	"bfs/search"
 )
 
-func main1() {
+func main() {
 	const recipeFile = "../scraping/data_scraping/scraped_data.json"
 
     // Input
@@ -24,6 +24,13 @@ func main1() {
 	}
 	target := strings.TrimSpace(rawInput)
 
+	catalog, err := graph.LoadCatalog(recipeFile)
+	if err != nil {
+		log.Fatalf("Gagal load catalog: %v", err)
+	}
+
+	elementTier := graph.MapElementToTier(catalog)
+
 	// Load scraped_data
 	g, err := graph.LoadRecipes(recipeFile)
 	if err != nil {
@@ -31,7 +38,7 @@ func main1() {
 	}
 
 	// Process
-	result, err := search.BFS(target, g)
+	result, err := search.BFS(target, g, elementTier)
 	if err != nil {
 		log.Fatalf("Gagal menjalankan BFS: %v", err) // debugging
 	}

@@ -6,7 +6,7 @@ import (
 )
 
 // BFS untuk satu recipe
-func BFS(target string, g graph.Graph) (graph.TreeResult, error) {
+func BFS(target string, g graph.Graph, elementTier map[string]int) (graph.TreeResult, error) {
 	start := time.Now()
 
 	startingElements := []string{"Air", "Fire", "Water", "Earth"}
@@ -51,6 +51,15 @@ func BFS(target string, g graph.Graph) (graph.TreeResult, error) {
 				}
 				a, b := r[0], r[1]
 				if (a == curr || b == curr) && discovered[a] != nil && discovered[b] != nil {
+
+					// Buat pengecekan recipe harus dari elemen yang lebih rendah
+					productTier, productOk := elementTier[product]
+					aTier, aOk := elementTier[a]
+					bTier, bOk := elementTier[b]
+					if !productOk || !aOk || !bOk || aTier > productTier || bTier > productTier {
+						continue
+					}
+
 					discovered[product] = &graph.TreeNode{Name: product}
 					parentMap[product] = []string{a, b}
 					queue = append(queue, product)
