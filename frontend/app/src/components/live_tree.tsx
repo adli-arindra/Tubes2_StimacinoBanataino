@@ -1,15 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 
-type Recipe = {
-    first: TreeNode;
-    second: TreeNode;
-};
-
 type TreeNode = {
     name: string;
-    idx: number;
-    children?: Recipe[];
+    node_discovered: number;
+    children?: TreeNode[];
 };
 
 type TreeProps = {
@@ -19,15 +14,23 @@ type TreeProps = {
 };
 
 function Tree({ node, currentIdx, type }: TreeProps) {
-    if (node.idx > currentIdx) return null;
-    const isCurrent = node.idx === currentIdx;
+    if (node.node_discovered > currentIdx) return null;
+    const isCurrent = node.node_discovered === currentIdx;
     const nodeColor = isCurrent ? "bg-blue-500" : "bg-green-500";
+
+    const showFirst = node.children && node.children.length > 0 
+        ? node.children[0].node_discovered <= currentIdx 
+        : false;
+
+    const showSecond = node.children && node.children.length > 1 
+        ? node.children[1].node_discovered <= currentIdx 
+        : false;
+
     return (
         <div className="flex flex-col-reverse items-center">
             <div className="relative flex flex-col items-center w-full">
                 {node.children && node.children.length > 1 && (
                     <>
-                        <div className="w-full h-px bg-white" />
                         <div className="w-px h-12 bg-white" />
                     </>
                 )}
@@ -46,35 +49,28 @@ function Tree({ node, currentIdx, type }: TreeProps) {
             {node.children && (
                 <div className="flex space-x-8 relative pt-4">
                     <div className="flex space-x-8">
-                        {node.children.map((child, index) => {
-                            const showFirst = child.first.idx <= currentIdx;
-                            const showSecond = child.second.idx <= currentIdx;
-
-                            if (!showFirst && !showSecond) return null;
-
-                            return (
-                                <div key={index} className="flex flex-col-reverse items-center">
-                                    {showFirst && showSecond && (
-                                        <>
-                                            <div className="w-px h-12 bg-white" />
-                                            <div className="w-full h-px bg-white" />
-                                        </>
-                                    )}
-                                    <div className="relative">
-                                        <div className="flex space-x-8">
-                                            <div className="flex flex-col items-center justify-end">
-                                                <Tree node={child.first} currentIdx={currentIdx} type="left"/>
-                                                {showFirst && <div className="w-px h-24 bg-white" />}
-                                            </div>
-                                            <div className="flex flex-col items-center justify-end">
-                                                <Tree node={child.second} currentIdx={currentIdx} type="right"/>
-                                                {showSecond && <div className="w-px h-24 bg-white" />}
-                                            </div>
+                        {(showFirst || showSecond) && (
+                            <div className="flex flex-col-reverse items-center">
+                                {showFirst && showSecond && (
+                                    <>
+                                        <div className="w-px h-12 bg-white" />
+                                        <div className="w-full h-px bg-white" />
+                                    </>
+                                )}
+                                <div className="relative">
+                                    <div className="flex space-x-8">
+                                        <div className="flex flex-col items-center justify-end">
+                                            <Tree node={node.children[0]} currentIdx={currentIdx} type="left" />
+                                            {showFirst && <div className="w-px h-24 bg-white" />}
+                                        </div>
+                                        <div className="flex flex-col items-center justify-end">
+                                            <Tree node={node.children[1]} currentIdx={currentIdx} type="right" />
+                                            {showSecond && <div className="w-px h-24 bg-white" />}
                                         </div>
                                     </div>
                                 </div>
-                            );
-                        })}
+                            </div>
+                        )}
                     </div>
                 </div>
             )}
@@ -124,11 +120,11 @@ export default function LiveTree({
 }
 
 function getMaxIdx(node: TreeNode): number {
-    let maxIdx = node.idx;
+    let maxIdx = node.node_discovered;
 
     if (node.children) {
         for (const child of node.children) {
-            maxIdx = Math.max(maxIdx, getMaxIdx(child.first), getMaxIdx(child.second));
+            maxIdx = Math.max(maxIdx, getMaxIdx(node.children[0]), getMaxIdx(node.children[1]));
         }
     }
 

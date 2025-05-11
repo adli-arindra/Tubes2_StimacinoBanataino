@@ -4,154 +4,59 @@ import { useEffect, useState } from "react";
 import LiveTree from "@/components/live_tree";
 
 
-const treeData1 = {
-  name: "Root",
-  idx: 0,
-  children: [
-    {
-      first: {
-        name: "Child 1A",
-        idx: 1,
-      },
-      second: {
-        name: "Child 1B",
-        idx: 2,
+const data = {
+    tree: {
+        name: "Dust",
+        node_discovered: 2,
         children: [
-          {
-            first: {
-              name: "Grandchild 1B-A",
-              idx: 3,
+            {
+                name: "Earth",
+                node_discovered: 0,
+                children: []
             },
-            second: {
-              name: "Grandchild 1B-B",
-              idx: 4,
-            },
-          }
+            {
+                name: "Air",
+                node_discovered: 1,
+                children: []
+            }
         ]
-      }
     },
-    {
-      first: {
-        name: "Child 2A",
-        idx: 5,
-      },
-      second: {
-        name: "Child 2B",
-        idx: 6,
-      }
-    }
-  ]
+    algorithm: "BFS",
+    duration_ms: 0,
+    visited_nodes: 1
 };
 
-const treeData2 = {
-  name: "Root",
-  idx: 0,
-  children: [
-    {
-      first: {
-        name: "Child 1A",
-        idx: 1,
-        children: [
-          {
-            first: {
-              name: "Grandchild 1A-A",
-              idx: 3,
-              children: [
-                {
-                  first: { name: "Great-Grandchild 1A-A-1", idx: 7 },
-                  second: { name: "Great-Grandchild 1A-A-2", idx: 8 }
-                }
-              ]
-            },
-            second: {
-              name: "Grandchild 1A-B",
-              idx: 4,
-              children: [
-                {
-                  first: { name: "Great-Grandchild 1A-B-1", idx: 9 },
-                  second: { name: "Great-Grandchild 1A-B-2", idx: 10 }
-                }
-              ]
-            }
-          }
-        ]
-      },
-      second: {
-        name: "Child 1B",
-        idx: 2,
-        children: [
-          {
-            first: { 
-              name: "Grandchild 1B-A", 
-              idx: 5,
-              children: [
-                {
-                  first: { name: "Great-Grandchild 1B-A-1", idx: 11 },
-                  second: { name: "Great-Grandchild 1B-A-2", idx: 12 }
-                }
-              ]
-            },
-            second: { 
-              name: "Grandchild 1B-B", 
-              idx: 6,
-              children: [
-                {
-                  first: { name: "Great-Grandchild 1B-B-1", idx: 13 },
-                  second: { name: "Great-Grandchild 1B-B-2", idx: 14 }
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      first: {
-        name: "Child 2A",
-        idx: 15,
-        children: [
-          {
-            first: { name: "Grandchild 2A-A", idx: 19 },
-            second: { name: "Grandchild 2A-B", idx: 20 }
-          }
-        ]
-      },
-      second: {
-        name: "Child 2B",
-        idx: 16,
-        children: [
-          {
-            first: { name: "Grandchild 2B-A", idx: 21 },
-            second: { name: "Grandchild 2B-B", idx: 22 }
-          }
-        ]
-      }
-    },
-    {
-      first: {
-        name: "Child 3A",
-        idx: 17
-      },
-      second: {
-        name: "Child 3B",
-        idx: 18,
-        children: [
-          {
-            first: { name: "Grandchild 3B-A", idx: 23 },
-            second: { name: "Grandchild 3B-B", idx: 24 }
-          }
-        ]
-      }
-    }
-  ]
-};
 
 export default function Home() {
   const [startAnimation, setStartAnimation] = useState(false);
-  const [treeData, setTreeData] = useState(treeData1);
+  const [treeData, setTreeData] = useState(data.tree);
   const [inputValue, setInputValue] = useState('');
   const [resetAnimation, setResetAnimation] = useState(false);
   const [showLive, setShowLive] = useState(false);
+
+  const [target, setTarget] = useState('');
+  const [algorithm, setAlgorithm] = useState<'BFS' | 'DFS'>('BFS');
+  const [mode, setMode] = useState<'single' | 'multiple'>('single');
+  const [maxRecipes, setMaxRecipes] = useState<number>(30);
+
+  const handleSubmit = async () => {
+    const payload = {
+      target,
+      algorithm,
+      mode,
+      max_recipes: maxRecipes,
+    };
+
+    const res = await fetch(process.env.NEXT_PUBLIC_ENDPOINT as string, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await res.json();
+    setTreeData(data.tree);
+    console.log('API Response:', data);
+  };
 
   const handle_submit = () => {
     if (inputValue !== '') {
@@ -178,7 +83,7 @@ export default function Home() {
     setShowLive(false);
   }
 
-  console.log(startAnimation);
+
   return (
     <div className="flex flex-col items-center w-full h-screen bg-gray-800 p-4 space-y-4">
       <h1 className="text-4xl">Recipe Tree</h1>
@@ -198,27 +103,64 @@ export default function Home() {
           }
         </div>
       </div>
-      <div className="w-2/3 h-32 flex flex-row justify-center">
-        <textarea
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          placeholder="Input your JSON here!"
-          className="bg-white w-9/10 h-32 rounded-2xl border-4 border-black text-black p-4 resize-none overflow-x-auto overflow-y-auto whitespace-pre text-wrap"
-          spellCheck={false}
+
+        <div className="max-w-md mx-auto p-4 border rounded-xl shadow space-y-4 bg-white text-black">
+        <input
+          type="text"
+          placeholder="Enter target (e.g., Dust)"
+          value={target}
+          onChange={(e) => setTarget(e.target.value)}
+          className="w-full p-2 border rounded"
         />
-        <button onClick={handle_submit}
-          className={`w-1/10 h-full rounded-2xl border-black ml-4 text-xl ${startAnimation ? 'bg-gray-500' : 'bg-green-500'}`}
-          disabled={startAnimation}>
-          Enter
-        </button>
-      </div>
-      <button 
-          onClick={onStartLive}
-          className={`p-2 rounded text-white mt-4 ${startAnimation ? 'bg-gray-500' : 'bg-blue-500'}`}
-          disabled={startAnimation}
+          <div className="flex justify-between">
+            <label>
+              Algorithm:
+              <select
+                value={algorithm}
+                onChange={(e) => setAlgorithm(e.target.value as 'BFS' | 'DFS')}
+                className="ml-2 p-1 border rounded"
+              >
+                <option value="BFS">BFS</option>
+                <option value="DFS">DFS</option>
+              </select>
+            </label>
+
+            <label>
+              Mode:
+              <select
+                value={mode}
+                onChange={(e) => setMode(e.target.value as 'single' | 'multiple')}
+                className="ml-2 p-1 border rounded"
+              >
+                <option value="single">Single</option>
+                <option value="multiple">Multiple</option>
+              </select>
+            </label>
+          </div>
+
+          <input
+            type="number"
+            value={maxRecipes}
+            onChange={(e) => setMaxRecipes(Number(e.target.value))}
+            className="w-full p-2 border rounded"
+            placeholder="Max Recipes"
+            min={1}
+          />
+
+          <button
+            onClick={handleSubmit}
+            className="w-full bg-blue-600  py-2 rounded hover:bg-blue-700 text-white"
           >
-          Start Animation
-      </button>
+            Search
+          </button>
+        </div>
+        <button 
+            onClick={onStartLive}
+            className={`p-2 rounded  mt-4 ${startAnimation ? 'bg-gray-500' : 'bg-blue-500'}`}
+            disabled={startAnimation}
+            >
+            Start Animation
+        </button>
     </div>
   );
 }
