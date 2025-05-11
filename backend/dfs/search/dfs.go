@@ -121,6 +121,8 @@ func DFS(target string, g graph.Graph, elementTier map[string]int) (graph.TreeRe
 	}
 
 	tree := buildTree(target, discovered, parentMap)
+	index := 0
+	setDiscoveredIndex(tree, &index)
 	return graph.TreeResult{
 		Tree:         tree,
 		Algorithm:    "DFS",
@@ -146,4 +148,15 @@ func buildTree(current string, nodes map[string]*graph.TreeNode, parentMap map[s
 	}
 
 	return node
+}
+
+func setDiscoveredIndex(node *graph.TreeNode, counter *int) {
+	if node == nil {
+		return
+	}
+	for _, child := range node.Children {
+		setDiscoveredIndex(child, counter)
+	}
+	node.NodeDiscovered = *counter
+	*counter++
 }

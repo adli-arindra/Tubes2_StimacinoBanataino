@@ -1,27 +1,32 @@
 {
   "tree": {
     "name": "Obsidian",
+    "node discovered": 4,
     "children": [
       {
         "name": "Lava",
+        "node discovered": 2,
         "children": [
           {
             "name": "Earth",
+            "node discovered": 0,
             "children": []
           },
           {
             "name": "Fire",
+            "node discovered": 1,
             "children": []
           }
         ]
       },
       {
         "name": "Water",
+        "node discovered": 3,
         "children": []
       }
     ]
   },
   "algorithm": "DFS",
-  "duration_ms": 4.509,
-  "visited_nodes": 20
+  "duration_ms": 4.042,
+  "visited_nodes": 16
 }

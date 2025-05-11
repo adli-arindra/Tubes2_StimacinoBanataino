@@ -1,20 +1,25 @@
 {
   "tree": {
     "name": "Heat",
+    "node discovered": 4,
     "children": [
       {
         "name": "Air",
+        "node discovered": 0,
         "children": []
       },
       {
         "name": "Energy",
+        "node discovered": 3,
         "children": [
           {
             "name": "Fire",
+            "node discovered": 1,
             "children": []
           },
           {
             "name": "Fire",
+            "node discovered": 2,
             "children": []
           }
         ]
@@ -22,6 +27,6 @@
     ]
   },
   "algorithm": "DFS",
-  "duration_ms": 1.882,
-  "visited_nodes": 6
+  "duration_ms": 1.129,
+  "visited_nodes": 5
 }

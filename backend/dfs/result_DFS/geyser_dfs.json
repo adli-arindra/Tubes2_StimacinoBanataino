@@ -1,29 +1,36 @@
 {
   "tree": {
     "name": "Geyser",
+    "node discovered": 6,
     "children": [
       {
         "name": "Steam",
+        "node discovered": 2,
         "children": [
           {
             "name": "Water",
+            "node discovered": 0,
             "children": []
           },
           {
             "name": "Fire",
+            "node discovered": 1,
             "children": []
           }
         ]
       },
       {
         "name": "Pressure",
+        "node discovered": 5,
         "children": [
           {
             "name": "Air",
+            "node discovered": 3,
             "children": []
           },
           {
             "name": "Air",
+            "node discovered": 4,
             "children": []
           }
         ]
@@ -31,6 +38,6 @@
     ]
   },
   "algorithm": "DFS",
-  "duration_ms": 3.009,
+  "duration_ms": 2.849,
   "visited_nodes": 13
 }

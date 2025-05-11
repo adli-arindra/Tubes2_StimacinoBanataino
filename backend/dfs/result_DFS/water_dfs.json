@@ -1,6 +1,7 @@
 {
   "tree": {
     "name": "Water",
+    "node discovered": 0,
     "children": []
   },
   "algorithm": "DFS",
