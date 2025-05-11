@@ -1,40 +1,54 @@
 {
   "tree": {
     "name": "Chimney",
+    "node_discovered": 0,
     "children": [
       {
         "name": "Smoke",
+        "node_discovered": 1,
         "children": [
           {
-            "name": "Fire"
+            "name": "Fire",
+            "node_discovered": 2,
+            "children": []
           },
           {
-            "name": "Air"
+            "name": "Air",
+            "node_discovered": 3,
+            "children": []
           }
         ]
       },
       {
-        "name": "Brick",
+        "name": "Stone",
+        "node_discovered": 4,
         "children": [
           {
-            "name": "Mud",
-            "children": [
-              {
-                "name": "Water"
-              },
-              {
-                "name": "Earth"
-              }
-            ]
+            "name": "Air",
+            "node_discovered": 5,
+            "children": []
           },
           {
-            "name": "Fire"
+            "name": "Lava",
+            "node_discovered": 6,
+            "children": [
+              {
+                "name": "Earth",
+                "node_discovered": 7,
+                "children": []
+              },
+              {
+                "name": "Fire",
+                "node_discovered": 8,
+                "children": []
+              }
+            ]
           }
         ]
       }
     ]
   },
   "algorithm": "DFS",
-  "duration_ms": 0.549,
-  "visited_nodes": 23
+  "duration_ms": 6.727,
+  "visited_nodes": 38
 }

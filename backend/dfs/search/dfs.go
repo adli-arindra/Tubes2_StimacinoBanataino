@@ -17,6 +17,22 @@ func DFS(target string, g graph.Graph, elementTier map[string]int) (graph.TreeRe
 	visitedNodes := 0
 	found := false
 
+	// Jika target adalah starting element
+	for _, base := range startingElements {
+		if base == target {
+			duration := float64(time.Since(start).Microseconds()) / 1000.0
+			return graph.TreeResult{
+				Tree: &graph.TreeNode{
+					Name: base,
+					Children: []*graph.TreeNode{},
+				},
+				Algorithm: "DFS",
+				DurationMS: duration,
+				VisitedNodes: 1,
+			}, nil
+		}
+	}
+
 	// Mengambil tier dari target
 	maxTier, ok := elementTier[target]
 	if !ok {
@@ -105,6 +121,8 @@ func DFS(target string, g graph.Graph, elementTier map[string]int) (graph.TreeRe
 	}
 
 	tree := buildTree(target, discovered, parentMap)
+	index := 0
+	setDiscoveredIndex(tree, &index)
 	return graph.TreeResult{
 		Tree:         tree,
 		Algorithm:    "DFS",
@@ -114,7 +132,10 @@ func DFS(target string, g graph.Graph, elementTier map[string]int) (graph.TreeRe
 }
 
 func buildTree(current string, nodes map[string]*graph.TreeNode, parentMap map[string][]string) *graph.TreeNode {
-	node := &graph.TreeNode{Name: current}
+	node := &graph.TreeNode{
+		Name: current,
+		Children: []*graph.TreeNode{},
+	}
 	parents, ok := parentMap[current]
 	
 	if !ok {
@@ -127,4 +148,16 @@ func buildTree(current string, nodes map[string]*graph.TreeNode, parentMap map[s
 	}
 
 	return node
+}
+
+// Node discovered dari root ke leaf
+func setDiscoveredIndex(node *graph.TreeNode, counter *int) {
+	if node == nil {
+		return
+	}
+	node.NodeDiscovered = *counter
+	*counter++
+	for _, child := range node.Children {
+		setDiscoveredIndex(child, counter)
+	}
 }

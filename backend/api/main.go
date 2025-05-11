@@ -20,7 +20,7 @@ import (
 
 type Node struct {
 	Name           string `json:"name"`
-	NodeDiscovered int    `json:"node discovered"`
+	NodeDiscovered int    `json:"node_discovered"`
 	Children       []Node `json:"children"`
 }
 
@@ -105,9 +105,17 @@ func processSearchRequest(w http.ResponseWriter, r *http.Request) {
 		var result interface{}
 		switch req.Algorithm {
 		case "BFS":
-			result, err = bfsSearch.BFS(req.Target, graphBFS)
+			if req.Mode == "single" {
+				result, err = bfsSearch.BFS(req.Target, graphBFS, elementTiers)
+			} else {
+				// result, err = bfsSearch.MultiBFS(req.Target, graphDFS, *req.MaxRecipes,elementTiers)
+			}
 		case "DFS":
-			result, err = dfsSearch.DFS(req.Target, graphDFS, elementTiers)
+			if req.Mode == "single" {
+				result, err = dfsSearch.DFS(req.Target, graphDFS, elementTiers)
+			} else {
+				// result, err = dfsSearch.MultiDFS(req.Target, graphDFS, *req.MaxRecipes,elementTiers)
+			}
 		}
 		if err != nil {
 			http.Error(w, "Pencarian gagal: "+err.Error(), http.StatusInternalServerError)

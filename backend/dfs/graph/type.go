@@ -22,8 +22,9 @@ type Graph map[string][][]string
 
 // Menyimpan satu node dalam pohon
 type TreeNode struct {
-	Name		string			`json:"name"`
-	Children	[]*TreeNode		`json:"children,omitempty"`
+	Name			string			`json:"name"`
+	NodeDiscovered 	int           	`json:"node_discovered"`
+	Children		[]*TreeNode		`json:"children"`
 }
 
 // Menyimpan struktur output untuk DFS One Recipe

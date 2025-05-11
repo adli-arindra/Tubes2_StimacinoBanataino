@@ -1,48 +1,67 @@
 {
   "tree": {
     "name": "Barn",
+    "node_discovered": 0,
     "children": [
       {
         "name": "House",
+        "node_discovered": 1,
         "children": [
           {
             "name": "Wall",
+            "node_discovered": 2,
             "children": [
               {
-                "name": "Stone",
+                "name": "Brick",
+                "node_discovered": 3,
                 "children": [
                   {
-                    "name": "Earth"
-                  },
-                  {
-                    "name": "Pressure",
+                    "name": "Mud",
+                    "node_discovered": 4,
                     "children": [
                       {
-                        "name": "Air"
+                        "name": "Water",
+                        "node_discovered": 5,
+                        "children": []
                       },
                       {
-                        "name": "Air"
+                        "name": "Earth",
+                        "node_discovered": 6,
+                        "children": []
                       }
                     ]
+                  },
+                  {
+                    "name": "Fire",
+                    "node_discovered": 7,
+                    "children": []
                   }
                 ]
               },
               {
-                "name": "Stone",
+                "name": "Brick",
+                "node_discovered": 8,
                 "children": [
                   {
-                    "name": "Earth"
-                  },
-                  {
-                    "name": "Pressure",
+                    "name": "Mud",
+                    "node_discovered": 9,
                     "children": [
                       {
-                        "name": "Air"
+                        "name": "Water",
+                        "node_discovered": 10,
+                        "children": []
                       },
                       {
-                        "name": "Air"
+                        "name": "Earth",
+                        "node_discovered": 11,
+                        "children": []
                       }
                     ]
+                  },
+                  {
+                    "name": "Fire",
+                    "node_discovered": 12,
+                    "children": []
                   }
                 ]
               }
@@ -50,42 +69,59 @@
           },
           {
             "name": "Wall",
+            "node_discovered": 13,
             "children": [
               {
-                "name": "Stone",
+                "name": "Brick",
+                "node_discovered": 14,
                 "children": [
                   {
-                    "name": "Earth"
-                  },
-                  {
-                    "name": "Pressure",
+                    "name": "Mud",
+                    "node_discovered": 15,
                     "children": [
                       {
-                        "name": "Air"
+                        "name": "Water",
+                        "node_discovered": 16,
+                        "children": []
                       },
                       {
-                        "name": "Air"
+                        "name": "Earth",
+                        "node_discovered": 17,
+                        "children": []
                       }
                     ]
+                  },
+                  {
+                    "name": "Fire",
+                    "node_discovered": 18,
+                    "children": []
                   }
                 ]
               },
               {
-                "name": "Stone",
+                "name": "Brick",
+                "node_discovered": 19,
                 "children": [
                   {
-                    "name": "Earth"
-                  },
-                  {
-                    "name": "Pressure",
+                    "name": "Mud",
+                    "node_discovered": 20,
                     "children": [
                       {
-                        "name": "Air"
+                        "name": "Water",
+                        "node_discovered": 21,
+                        "children": []
                       },
                       {
-                        "name": "Air"
+                        "name": "Earth",
+                        "node_discovered": 22,
+                        "children": []
                       }
                     ]
+                  },
+                  {
+                    "name": "Fire",
+                    "node_discovered": 23,
+                    "children": []
                   }
                 ]
               }
@@ -95,50 +131,67 @@
       },
       {
         "name": "Field",
+        "node_discovered": 24,
         "children": [
           {
             "name": "Plow",
+            "node_discovered": 25,
             "children": [
               {
-                "name": "Earth"
+                "name": "Earth",
+                "node_discovered": 26,
+                "children": []
               },
               {
                 "name": "Metal",
+                "node_discovered": 27,
                 "children": [
                   {
                     "name": "Stone",
+                    "node_discovered": 28,
                     "children": [
                       {
-                        "name": "Earth"
+                        "name": "Earth",
+                        "node_discovered": 29,
+                        "children": []
                       },
                       {
                         "name": "Pressure",
+                        "node_discovered": 30,
                         "children": [
                           {
-                            "name": "Air"
+                            "name": "Air",
+                            "node_discovered": 31,
+                            "children": []
                           },
                           {
-                            "name": "Air"
+                            "name": "Air",
+                            "node_discovered": 32,
+                            "children": []
                           }
                         ]
                       }
                     ]
                   },
                   {
-                    "name": "Fire"
+                    "name": "Fire",
+                    "node_discovered": 33,
+                    "children": []
                   }
                 ]
               }
             ]
           },
           {
-            "name": "Earth"
+            "name": "Earth",
+            "node_discovered": 34,
+            "children": []
           }
         ]
       }
     ]
   },
   "algorithm": "DFS",
-  "duration_ms": 19.232,
-  "visited_nodes": 90
+  "duration_ms": 38.304,
+  "visited_nodes": 187
 }

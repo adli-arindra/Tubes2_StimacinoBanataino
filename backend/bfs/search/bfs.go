@@ -6,7 +6,7 @@ import (
 )
 
 // BFS untuk satu recipe
-func BFS(target string, g graph.Graph) (graph.TreeResult, error) {
+func BFS(target string, g graph.Graph, elementTier map[string]int) (graph.TreeResult, error) {
 	start := time.Now()
 
 	startingElements := []string{"Air", "Fire", "Water", "Earth"}
@@ -51,6 +51,15 @@ func BFS(target string, g graph.Graph) (graph.TreeResult, error) {
 				}
 				a, b := r[0], r[1]
 				if (a == curr || b == curr) && discovered[a] != nil && discovered[b] != nil {
+
+					// Buat pengecekan recipe harus dari elemen yang lebih rendah
+					productTier, productOk := elementTier[product]
+					aTier, aOk := elementTier[a]
+					bTier, bOk := elementTier[b]
+					if !productOk || !aOk || !bOk || aTier > productTier || bTier > productTier {
+						continue
+					}
+
 					discovered[product] = &graph.TreeNode{Name: product}
 					parentMap[product] = []string{a, b}
 					queue = append(queue, product)
@@ -97,13 +106,21 @@ func buildTree(current string, nodes map[string]*graph.TreeNode, parentMap map[s
 	return node
 }
 
-func setDiscoveredIndex(node *graph.TreeNode, counter *int) {
-	if node == nil {
+// Node discovered dimulai dari root ke leaf
+func setDiscoveredIndex(root *graph.TreeNode, counter *int) {
+	if root == nil {
 		return
 	}
-	for _, child := range node.Children {
-		setDiscoveredIndex(child, counter)
+
+	queue := []*graph.TreeNode{root}
+
+	for len(queue) > 0 {
+		curr := queue[0]
+		queue = queue[1:]
+
+		curr.NodeDiscovered = *counter
+		*counter++
+
+		queue = append(queue, curr.Children...)
 	}
-	node.NodeDiscovered = *counter
-	*counter++
 }
