@@ -1,0 +1,752 @@
+{
+  "tree": {
+    "name": "Grilled cheese",
+    "children": [
+      {
+        "name": "Cheese",
+        "children": [
+          {
+            "name": "Milk",
+            "children": [
+              {
+                "name": "Cow",
+                "children": [
+                  {
+                    "name": "Livestock",
+                    "children": [
+                      {
+                        "name": "Animal",
+                        "children": [
+                          {
+                            "name": "Life",
+                            "children": [
+                              {
+                                "name": "Primordial soup",
+                                "children": [
+                                  {
+                                    "name": "Earth"
+                                  },
+                                  {
+                                    "name": "Sea",
+                                    "children": [
+                                      {
+                                        "name": "Lake",
+                                        "children": [
+                                          {
+                                            "name": "Pond",
+                                            "children": [
+                                              {
+                                                "name": "Puddle",
+                                                "children": [
+                                                  {
+                                                    "name": "Water"
+                                                  },
+                                                  {
+                                                    "name": "Water"
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "name": "Water"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "name": "Pond",
+                                            "children": [
+                                              {
+                                                "name": "Puddle",
+                                                "children": [
+                                                  {
+                                                    "name": "Water"
+                                                  },
+                                                  {
+                                                    "name": "Water"
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "name": "Water"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "Water"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "Energy",
+                                "children": [
+                                  {
+                                    "name": "Fire"
+                                  },
+                                  {
+                                    "name": "Fire"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Beach",
+                            "children": [
+                              {
+                                "name": "Sand",
+                                "children": [
+                                  {
+                                    "name": "Stone",
+                                    "children": [
+                                      {
+                                        "name": "Earth"
+                                      },
+                                      {
+                                        "name": "Pressure",
+                                        "children": [
+                                          {
+                                            "name": "Air"
+                                          },
+                                          {
+                                            "name": "Air"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Air"
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "Sea",
+                                "children": [
+                                  {
+                                    "name": "Lake",
+                                    "children": [
+                                      {
+                                        "name": "Pond",
+                                        "children": [
+                                          {
+                                            "name": "Puddle",
+                                            "children": [
+                                              {
+                                                "name": "Water"
+                                              },
+                                              {
+                                                "name": "Water"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "name": "Water"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "Pond",
+                                        "children": [
+                                          {
+                                            "name": "Puddle",
+                                            "children": [
+                                              {
+                                                "name": "Water"
+                                              },
+                                              {
+                                                "name": "Water"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "name": "Water"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Water"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Field",
+                        "children": [
+                          {
+                            "name": "Plow",
+                            "children": [
+                              {
+                                "name": "Earth"
+                              },
+                              {
+                                "name": "Metal",
+                                "children": [
+                                  {
+                                    "name": "Stone",
+                                    "children": [
+                                      {
+                                        "name": "Earth"
+                                      },
+                                      {
+                                        "name": "Pressure",
+                                        "children": [
+                                          {
+                                            "name": "Air"
+                                          },
+                                          {
+                                            "name": "Air"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Heat",
+                                    "children": [
+                                      {
+                                        "name": "Air"
+                                      },
+                                      {
+                                        "name": "Energy",
+                                        "children": [
+                                          {
+                                            "name": "Fire"
+                                          },
+                                          {
+                                            "name": "Fire"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Earth"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Field",
+                    "children": [
+                      {
+                        "name": "Plow",
+                        "children": [
+                          {
+                            "name": "Earth"
+                          },
+                          {
+                            "name": "Metal",
+                            "children": [
+                              {
+                                "name": "Stone",
+                                "children": [
+                                  {
+                                    "name": "Earth"
+                                  },
+                                  {
+                                    "name": "Pressure",
+                                    "children": [
+                                      {
+                                        "name": "Air"
+                                      },
+                                      {
+                                        "name": "Air"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "Heat",
+                                "children": [
+                                  {
+                                    "name": "Air"
+                                  },
+                                  {
+                                    "name": "Energy",
+                                    "children": [
+                                      {
+                                        "name": "Fire"
+                                      },
+                                      {
+                                        "name": "Fire"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Earth"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Water"
+              }
+            ]
+          },
+          {
+            "name": "Bacteria",
+            "children": [
+              {
+                "name": "Life",
+                "children": [
+                  {
+                    "name": "Primordial soup",
+                    "children": [
+                      {
+                        "name": "Earth"
+                      },
+                      {
+                        "name": "Sea",
+                        "children": [
+                          {
+                            "name": "Lake",
+                            "children": [
+                              {
+                                "name": "Pond",
+                                "children": [
+                                  {
+                                    "name": "Puddle",
+                                    "children": [
+                                      {
+                                        "name": "Water"
+                                      },
+                                      {
+                                        "name": "Water"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Water"
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "Pond",
+                                "children": [
+                                  {
+                                    "name": "Puddle",
+                                    "children": [
+                                      {
+                                        "name": "Water"
+                                      },
+                                      {
+                                        "name": "Water"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Water"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Water"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Energy",
+                    "children": [
+                      {
+                        "name": "Fire"
+                      },
+                      {
+                        "name": "Fire"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Primordial soup",
+                "children": [
+                  {
+                    "name": "Earth"
+                  },
+                  {
+                    "name": "Sea",
+                    "children": [
+                      {
+                        "name": "Lake",
+                        "children": [
+                          {
+                            "name": "Pond",
+                            "children": [
+                              {
+                                "name": "Puddle",
+                                "children": [
+                                  {
+                                    "name": "Water"
+                                  },
+                                  {
+                                    "name": "Water"
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "Water"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Pond",
+                            "children": [
+                              {
+                                "name": "Puddle",
+                                "children": [
+                                  {
+                                    "name": "Water"
+                                  },
+                                  {
+                                    "name": "Water"
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "Water"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Water"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Toast",
+        "children": [
+          {
+            "name": "Bread",
+            "children": [
+              {
+                "name": "Dough",
+                "children": [
+                  {
+                    "name": "Flour",
+                    "children": [
+                      {
+                        "name": "Wheat",
+                        "children": [
+                          {
+                            "name": "Grass",
+                            "children": [
+                              {
+                                "name": "Plant",
+                                "children": [
+                                  {
+                                    "name": "Life",
+                                    "children": [
+                                      {
+                                        "name": "Primordial soup",
+                                        "children": [
+                                          {
+                                            "name": "Earth"
+                                          },
+                                          {
+                                            "name": "Sea",
+                                            "children": [
+                                              {
+                                                "name": "Lake",
+                                                "children": [
+                                                  {
+                                                    "name": "Pond",
+                                                    "children": [
+                                                      {
+                                                        "name": "Puddle",
+                                                        "children": [
+                                                          {
+                                                            "name": "Water"
+                                                          },
+                                                          {
+                                                            "name": "Water"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "name": "Water"
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "name": "Pond",
+                                                    "children": [
+                                                      {
+                                                        "name": "Puddle",
+                                                        "children": [
+                                                          {
+                                                            "name": "Water"
+                                                          },
+                                                          {
+                                                            "name": "Water"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "name": "Water"
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "name": "Water"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "Energy",
+                                        "children": [
+                                          {
+                                            "name": "Fire"
+                                          },
+                                          {
+                                            "name": "Fire"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Soil",
+                                    "children": [
+                                      {
+                                        "name": "Earth"
+                                      },
+                                      {
+                                        "name": "Life",
+                                        "children": [
+                                          {
+                                            "name": "Primordial soup",
+                                            "children": [
+                                              {
+                                                "name": "Earth"
+                                              },
+                                              {
+                                                "name": "Sea",
+                                                "children": [
+                                                  {
+                                                    "name": "Lake",
+                                                    "children": [
+                                                      {
+                                                        "name": "Pond",
+                                                        "children": [
+                                                          {
+                                                            "name": "Puddle",
+                                                            "children": [
+                                                              {
+                                                                "name": "Water"
+                                                              },
+                                                              {
+                                                                "name": "Water"
+                                                              }
+                                                            ]
+                                                          },
+                                                          {
+                                                            "name": "Water"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "name": "Pond",
+                                                        "children": [
+                                                          {
+                                                            "name": "Puddle",
+                                                            "children": [
+                                                              {
+                                                                "name": "Water"
+                                                              },
+                                                              {
+                                                                "name": "Water"
+                                                              }
+                                                            ]
+                                                          },
+                                                          {
+                                                            "name": "Water"
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "name": "Water"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "name": "Energy",
+                                            "children": [
+                                              {
+                                                "name": "Fire"
+                                              },
+                                              {
+                                                "name": "Fire"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "Earth"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Field",
+                            "children": [
+                              {
+                                "name": "Plow",
+                                "children": [
+                                  {
+                                    "name": "Earth"
+                                  },
+                                  {
+                                    "name": "Metal",
+                                    "children": [
+                                      {
+                                        "name": "Stone",
+                                        "children": [
+                                          {
+                                            "name": "Earth"
+                                          },
+                                          {
+                                            "name": "Pressure",
+                                            "children": [
+                                              {
+                                                "name": "Air"
+                                              },
+                                              {
+                                                "name": "Air"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "Heat",
+                                        "children": [
+                                          {
+                                            "name": "Air"
+                                          },
+                                          {
+                                            "name": "Energy",
+                                            "children": [
+                                              {
+                                                "name": "Fire"
+                                              },
+                                              {
+                                                "name": "Fire"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "Earth"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Stone",
+                        "children": [
+                          {
+                            "name": "Earth"
+                          },
+                          {
+                            "name": "Pressure",
+                            "children": [
+                              {
+                                "name": "Air"
+                              },
+                              {
+                                "name": "Air"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Puddle",
+                    "children": [
+                      {
+                        "name": "Water"
+                      },
+                      {
+                        "name": "Water"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Energy",
+                "children": [
+                  {
+                    "name": "Fire"
+                  },
+                  {
+                    "name": "Fire"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Fire"
+          }
+        ]
+      }
+    ]
+  },
+  "algorithm": "DFS",
+  "duration_ms": 161.944,
+  "visited_nodes": 286
+}
