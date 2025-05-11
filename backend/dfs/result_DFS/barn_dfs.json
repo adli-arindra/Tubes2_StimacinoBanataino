@@ -1,0 +1,144 @@
+{
+  "tree": {
+    "name": "Barn",
+    "children": [
+      {
+        "name": "House",
+        "children": [
+          {
+            "name": "Wall",
+            "children": [
+              {
+                "name": "Stone",
+                "children": [
+                  {
+                    "name": "Earth"
+                  },
+                  {
+                    "name": "Pressure",
+                    "children": [
+                      {
+                        "name": "Air"
+                      },
+                      {
+                        "name": "Air"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Stone",
+                "children": [
+                  {
+                    "name": "Earth"
+                  },
+                  {
+                    "name": "Pressure",
+                    "children": [
+                      {
+                        "name": "Air"
+                      },
+                      {
+                        "name": "Air"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Wall",
+            "children": [
+              {
+                "name": "Stone",
+                "children": [
+                  {
+                    "name": "Earth"
+                  },
+                  {
+                    "name": "Pressure",
+                    "children": [
+                      {
+                        "name": "Air"
+                      },
+                      {
+                        "name": "Air"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Stone",
+                "children": [
+                  {
+                    "name": "Earth"
+                  },
+                  {
+                    "name": "Pressure",
+                    "children": [
+                      {
+                        "name": "Air"
+                      },
+                      {
+                        "name": "Air"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Field",
+        "children": [
+          {
+            "name": "Plow",
+            "children": [
+              {
+                "name": "Earth"
+              },
+              {
+                "name": "Metal",
+                "children": [
+                  {
+                    "name": "Stone",
+                    "children": [
+                      {
+                        "name": "Earth"
+                      },
+                      {
+                        "name": "Pressure",
+                        "children": [
+                          {
+                            "name": "Air"
+                          },
+                          {
+                            "name": "Air"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Fire"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Earth"
+          }
+        ]
+      }
+    ]
+  },
+  "algorithm": "DFS",
+  "duration_ms": 19.232,
+  "visited_nodes": 90
+}

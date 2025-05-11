@@ -1,0 +1,40 @@
+{
+  "tree": {
+    "name": "Lake",
+    "children": [
+      {
+        "name": "Pond",
+        "children": [
+          {
+            "name": "Puddle",
+            "children": [
+              {
+                "name": "Water"
+              },
+              {
+                "name": "Water"
+              }
+            ]
+          },
+          {
+            "name": "Puddle",
+            "children": [
+              {
+                "name": "Water"
+              },
+              {
+                "name": "Water"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Water"
+      }
+    ]
+  },
+  "algorithm": "DFS",
+  "duration_ms": 3.275,
+  "visited_nodes": 17
+}

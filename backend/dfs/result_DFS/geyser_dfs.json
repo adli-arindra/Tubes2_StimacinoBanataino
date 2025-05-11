@@ -1,0 +1,48 @@
+{
+  "tree": {
+    "name": "Geyser",
+    "children": [
+      {
+        "name": "Steam",
+        "children": [
+          {
+            "name": "Water"
+          },
+          {
+            "name": "Heat",
+            "children": [
+              {
+                "name": "Air"
+              },
+              {
+                "name": "Energy",
+                "children": [
+                  {
+                    "name": "Fire"
+                  },
+                  {
+                    "name": "Fire"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pressure",
+        "children": [
+          {
+            "name": "Air"
+          },
+          {
+            "name": "Air"
+          }
+        ]
+      }
+    ]
+  },
+  "algorithm": "DFS",
+  "duration_ms": 0.637,
+  "visited_nodes": 14
+}

@@ -1,0 +1,10 @@
+{
+  "tree": {
+    "name": "Water",
+    "node discovered": 0,
+    "children": []
+  },
+  "algorithm": "BFS",
+  "duration_ms": 0,
+  "visited_nodes": 1
+}
