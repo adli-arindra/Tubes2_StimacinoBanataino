@@ -33,3 +33,14 @@ func LoadRecipes(path string) (Graph, error) {
 	}
 	return graph, nil
 }
+
+// Menyimpan map dari nama elemen ke indeks tier
+func MapElementToTier(catalog ScrapedData) map[string]int {
+	elementTier := make(map[string]int)
+	for t, tier := range catalog.Tiers {
+		for _, e := range tier.Elements {
+			elementTier[e.Name] = t
+		}
+	}
+	return elementTier
+}
