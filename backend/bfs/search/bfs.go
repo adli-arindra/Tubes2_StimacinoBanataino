@@ -106,13 +106,21 @@ func buildTree(current string, nodes map[string]*graph.TreeNode, parentMap map[s
 	return node
 }
 
-func setDiscoveredIndex(node *graph.TreeNode, counter *int) {
-	if node == nil {
+// Node discovered dimulai dari root ke leaf
+func setDiscoveredIndex(root *graph.TreeNode, counter *int) {
+	if root == nil {
 		return
 	}
-	for _, child := range node.Children {
-		setDiscoveredIndex(child, counter)
+
+	queue := []*graph.TreeNode{root}
+
+	for len(queue) > 0 {
+		curr := queue[0]
+		queue = queue[1:]
+
+		curr.NodeDiscovered = *counter
+		*counter++
+
+		queue = append(queue, curr.Children...)
 	}
-	node.NodeDiscovered = *counter
-	*counter++
 }

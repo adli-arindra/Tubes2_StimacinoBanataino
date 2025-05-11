@@ -1,21 +1,21 @@
 {
   "tree": {
     "name": "Mud",
-    "node discovered": 2,
+    "node_discovered": 0,
     "children": [
       {
         "name": "Water",
-        "node discovered": 0,
+        "node_discovered": 1,
         "children": []
       },
       {
         "name": "Earth",
-        "node discovered": 1,
+        "node_discovered": 2,
         "children": []
       }
     ]
   },
   "algorithm": "BFS",
-  "duration_ms": 0.542,
+  "duration_ms": 0,
   "visited_nodes": 3
 }

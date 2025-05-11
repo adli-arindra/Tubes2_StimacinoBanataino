@@ -1,6 +1,6 @@
 {
   "tree": null,
   "algorithm": "BFS",
-  "duration_ms": 30.87,
+  "duration_ms": 19.6,
   "visited_nodes": 630
 }
