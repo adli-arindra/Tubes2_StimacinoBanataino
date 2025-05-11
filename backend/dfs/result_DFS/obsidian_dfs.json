@@ -1,0 +1,24 @@
+{
+  "tree": {
+    "name": "Obsidian",
+    "children": [
+      {
+        "name": "Lava",
+        "children": [
+          {
+            "name": "Earth"
+          },
+          {
+            "name": "Fire"
+          }
+        ]
+      },
+      {
+        "name": "Water"
+      }
+    ]
+  },
+  "algorithm": "DFS",
+  "duration_ms": 5.514,
+  "visited_nodes": 29
+}

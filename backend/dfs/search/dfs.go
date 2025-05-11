@@ -3,34 +3,70 @@ package search
 import (
 	"dfs/graph"
 	"time"
+
+	"fmt"
 )
 
-func DFS(target string, g graph.Graph) (graph.TreeResult, error) {
+func DFS(target string, g graph.Graph, elementTier map[string]int) (graph.TreeResult, error) {
 	start := time.Now()
 
+	// Starting element
 	startingElements := []string{"Air", "Fire", "Water", "Earth"}
 	discovered := map[string]*graph.TreeNode{}
 	parentMap := map[string][]string{}
 	visitedNodes := 0
 	found := false
 
+	// Mengambil tier dari target
+	maxTier, ok := elementTier[target]
+	if !ok {
+		return graph.TreeResult{
+			Tree: nil, 
+			Algorithm: "DFS",
+			DurationMS: 0,
+			VisitedNodes: 0,
+		}, nil
+	}
+
 	var dfs func(current string)
 	dfs = func(current string) {
 		if found {
 			return
 		}
+		fmt.Printf("DFS visiting: %s\n", current)
 		visitedNodes++
 
 		for product, recipes := range g {
+			productTier, productOk := elementTier[product]
+			if !productOk {
+				continue
+			}
+
+			// Kalau elemen lebih tinggi dari target, skip ae
+			if productTier > maxTier {
+				continue
+			}
+
+			// Kalau elemen sudah pernah didapatkan, skip ae 
 			if _, alreadyFound := discovered[product]; alreadyFound {
 				continue
 			}
+
 			for _, r := range recipes {
 				if len(r) != 2 {
 					continue
 				}
 				a, b := r[0], r[1]
 				if (a == current || b == current) && discovered[a] != nil && discovered[b] != nil {
+					// Cek dulu elemen di recipe jangan sampe lebih tinggi dari elemen yang akan dihasilkan
+					aTier, aOk := elementTier[a]
+					bTier, bOk := elementTier[b]
+					if !aOk || !bOk || aTier > productTier || bTier > productTier {
+						continue
+					}
+
+					fmt.Printf("Membuat: %s dari %s + %s (tier: %d)\n", product, a, b, productTier) // debugging
+
 					discovered[product] = &graph.TreeNode{Name: product}
 					parentMap[product] = []string{a, b}
 
@@ -48,6 +84,7 @@ func DFS(target string, g graph.Graph) (graph.TreeResult, error) {
 		}
 	}
 
+	// Inisialisasi DFS dari starting element
 	for _, element := range startingElements {
 		discovered[element] = &graph.TreeNode{Name: element}
 		dfs(element)
