@@ -6,15 +6,22 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
+
+	bfsGraph "bfs/graph"
+	bfsSearch "bfs/search"
+
+	dfsGraph "dfs/graph"
+	dfsSearch "dfs/search"
 
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 )
 
 type Node struct {
-	Name           string  `json:"name"`
-	NodeDiscovered int     `json:"node discovered"`
-	Children       []Node  `json:"children"`
+	Name           string `json:"name"`
+	NodeDiscovered int    `json:"node discovered"`
+	Children       []Node `json:"children"`
 }
 
 type SearchRequest struct {
@@ -50,46 +57,90 @@ func main() {
 
 func processSearchRequest(w http.ResponseWriter, r *http.Request) {
 	var req SearchRequest
-	err := json.NewDecoder(r.Body).Decode(&req)
-	if err != nil {
-		fmt.Println("Error decoding body:", err)
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
 		http.Error(w, "Invalid request", http.StatusBadRequest)
 		return
 	}
 
+	target := strings.ReplaceAll(strings.ToLower(strings.TrimSpace(req.Target)), " ", "_")
+
 	var filePath string
+	var directory string
 
 	switch req.Algorithm {
 	case "BFS":
 		if req.Mode == "single" {
-			filePath = fmt.Sprintf("../bfs/result_BFS/%s_bfs.json", req.Target)
+			directory = "../bfs/result_BFS"
+			filePath = fmt.Sprintf("%s/%s_bfs.json", directory, target)
 		} else {
-			filePath = fmt.Sprintf("../bfs/result_multi_BFS/%s_multi_bfs_level.json", req.Target)
+			directory = "../bfs/result_multi_BFS"
+			filePath = fmt.Sprintf("%s/%s_multi_bfs_level.json", directory, target)
 		}
 	case "DFS":
 		if req.Mode == "single" {
-			filePath = fmt.Sprintf("../dfs/result_BFS/%s_bfs.json", req.Target)
+			directory = "../dfs/result_DFS"
+			filePath = fmt.Sprintf("%s/%s_dfs.json", directory, target)
 		} else {
-			filePath = fmt.Sprintf("../dfs/result_multi_BFS/%s_multi_bfs_level.json", req.Target)
+			directory = "../dfs/result_multi_DFS"
+			filePath = fmt.Sprintf("%s/%s_multi_dfs_level.json", directory, target)
 		}
 	default:
 		http.Error(w, "Algoritma tidak ada", http.StatusBadRequest)
 		return
 	}
 
+	if _, err := os.Stat(filePath); os.IsNotExist(err) {
+		fmt.Println("File belum ada, file akan dibuat untuk mencari target")
+
+		graphBFS, err := bfsGraph.LoadRecipes("../scraping/data_scraping/scraped_data.json")
+		graphDFS, err := dfsGraph.LoadRecipes("../scraping/data_scraping/scraped_data.json")
+		catalog, err := dfsGraph.LoadCatalog("../scraping/data_scraping/scraped_data.json")
+		elementTiers := dfsGraph.MapElementToTier(catalog)
+
+		if err != nil {
+			http.Error(w, "Gagal load graph: "+err.Error(), http.StatusInternalServerError)
+			return
+		}
+
+		var result interface{}
+		switch req.Algorithm {
+		case "BFS":
+			result, err = bfsSearch.BFS(req.Target, graphBFS)
+		case "DFS":
+			result, err = dfsSearch.DFS(req.Target, graphDFS, elementTiers)
+		}
+		if err != nil {
+			http.Error(w, "Pencarian gagal: "+err.Error(), http.StatusInternalServerError)
+			return
+		}
+
+		output, err := json.MarshalIndent(result, "", "  ")
+		if err != nil {
+			http.Error(w, "Gagal encode hasil", http.StatusInternalServerError)
+			return
+		}
+
+		if err := os.MkdirAll(directory, os.ModePerm); err != nil {
+			http.Error(w, "Gagal membuat folder", http.StatusInternalServerError)
+			return
+		}
+
+		if err := os.WriteFile(filePath, output, 0644); err != nil {
+			http.Error(w, "Gagal menulis file hasil", http.StatusInternalServerError)
+			return
+		}
+	}
+
 	jsonFile, err := os.Open(filePath)
 	if err != nil {
-		fmt.Println("Error opening JSON file:", err)
-		http.Error(w, "Error reading file", http.StatusInternalServerError)
+		http.Error(w, "Gagal membuka file hasil", http.StatusInternalServerError)
 		return
 	}
 	defer jsonFile.Close()
 
 	var response SearchResponse
-	err = json.NewDecoder(jsonFile).Decode(&response)
-	if err != nil {
-		fmt.Println("Error decoding JSON file:", err)
-		http.Error(w, "Error parsing tree data", http.StatusInternalServerError)
+	if err := json.NewDecoder(jsonFile).Decode(&response); err != nil {
+		http.Error(w, "Gagal decode hasil pencarian", http.StatusInternalServerError)
 		return
 	}
 
