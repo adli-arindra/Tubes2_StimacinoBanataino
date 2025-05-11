@@ -1,0 +1,1106 @@
+{
+  "trees": [
+    {
+      "name": "Flying fish",
+      "node discovered": 116,
+      "children": [
+        {
+          "name": "Fish",
+          "node discovered": 42,
+          "children": [
+            {
+              "name": "Animal",
+              "node discovered": 32,
+              "children": [
+                {
+                  "name": "Life",
+                  "node discovered": 16,
+                  "children": [
+                    {
+                      "name": "Primordial soup",
+                      "node discovered": 12,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node discovered": 0,
+                          "children": []
+                        },
+                        {
+                          "name": "Sea",
+                          "node discovered": 11,
+                          "children": [
+                            {
+                              "name": "Lake",
+                              "node discovered": 9,
+                              "children": [
+                                {
+                                  "name": "Pond",
+                                  "node discovered": 7,
+                                  "children": [
+                                    {
+                                      "name": "Puddle",
+                                      "node discovered": 3,
+                                      "children": [
+                                        {
+                                          "name": "Water",
+                                          "node discovered": 1,
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "Water",
+                                          "node discovered": 2,
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Puddle",
+                                      "node discovered": 6,
+                                      "children": [
+                                        {
+                                          "name": "Water",
+                                          "node discovered": 4,
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "Water",
+                                          "node discovered": 5,
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Water",
+                                  "node discovered": 8,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Water",
+                              "node discovered": 10,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Energy",
+                      "node discovered": 15,
+                      "children": [
+                        {
+                          "name": "Fire",
+                          "node discovered": 13,
+                          "children": []
+                        },
+                        {
+                          "name": "Fire",
+                          "node discovered": 14,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Desert",
+                  "node discovered": 31,
+                  "children": [
+                    {
+                      "name": "Sand",
+                      "node discovered": 27,
+                      "children": [
+                        {
+                          "name": "Stone",
+                          "node discovered": 21,
+                          "children": [
+                            {
+                              "name": "Air",
+                              "node discovered": 17,
+                              "children": []
+                            },
+                            {
+                              "name": "Lava",
+                              "node discovered": 20,
+                              "children": [
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 18,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Fire",
+                                  "node discovered": 19,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Wind",
+                          "node discovered": 26,
+                          "children": [
+                            {
+                              "name": "Air",
+                              "node discovered": 22,
+                              "children": []
+                            },
+                            {
+                              "name": "Pressure",
+                              "node discovered": 25,
+                              "children": [
+                                {
+                                  "name": "Air",
+                                  "node discovered": 23,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Air",
+                                  "node discovered": 24,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Land",
+                      "node discovered": 30,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node discovered": 28,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node discovered": 29,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Lake",
+              "node discovered": 41,
+              "children": [
+                {
+                  "name": "Pond",
+                  "node discovered": 39,
+                  "children": [
+                    {
+                      "name": "Puddle",
+                      "node discovered": 35,
+                      "children": [
+                        {
+                          "name": "Water",
+                          "node discovered": 33,
+                          "children": []
+                        },
+                        {
+                          "name": "Water",
+                          "node discovered": 34,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Puddle",
+                      "node discovered": 38,
+                      "children": [
+                        {
+                          "name": "Water",
+                          "node discovered": 36,
+                          "children": []
+                        },
+                        {
+                          "name": "Water",
+                          "node discovered": 37,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Water",
+                  "node discovered": 40,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Bird",
+          "node discovered": 115,
+          "children": [
+            {
+              "name": "Animal",
+              "node discovered": 75,
+              "children": [
+                {
+                  "name": "Life",
+                  "node discovered": 59,
+                  "children": [
+                    {
+                      "name": "Primordial soup",
+                      "node discovered": 55,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node discovered": 43,
+                          "children": []
+                        },
+                        {
+                          "name": "Sea",
+                          "node discovered": 54,
+                          "children": [
+                            {
+                              "name": "Lake",
+                              "node discovered": 52,
+                              "children": [
+                                {
+                                  "name": "Pond",
+                                  "node discovered": 50,
+                                  "children": [
+                                    {
+                                      "name": "Puddle",
+                                      "node discovered": 46,
+                                      "children": [
+                                        {
+                                          "name": "Water",
+                                          "node discovered": 44,
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "Water",
+                                          "node discovered": 45,
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Puddle",
+                                      "node discovered": 49,
+                                      "children": [
+                                        {
+                                          "name": "Water",
+                                          "node discovered": 47,
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "Water",
+                                          "node discovered": 48,
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Water",
+                                  "node discovered": 51,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Water",
+                              "node discovered": 53,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Energy",
+                      "node discovered": 58,
+                      "children": [
+                        {
+                          "name": "Fire",
+                          "node discovered": 56,
+                          "children": []
+                        },
+                        {
+                          "name": "Fire",
+                          "node discovered": 57,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Desert",
+                  "node discovered": 74,
+                  "children": [
+                    {
+                      "name": "Sand",
+                      "node discovered": 70,
+                      "children": [
+                        {
+                          "name": "Stone",
+                          "node discovered": 64,
+                          "children": [
+                            {
+                              "name": "Air",
+                              "node discovered": 60,
+                              "children": []
+                            },
+                            {
+                              "name": "Lava",
+                              "node discovered": 63,
+                              "children": [
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 61,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Fire",
+                                  "node discovered": 62,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Wind",
+                          "node discovered": 69,
+                          "children": [
+                            {
+                              "name": "Air",
+                              "node discovered": 65,
+                              "children": []
+                            },
+                            {
+                              "name": "Pressure",
+                              "node discovered": 68,
+                              "children": [
+                                {
+                                  "name": "Air",
+                                  "node discovered": 66,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Air",
+                                  "node discovered": 67,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Land",
+                      "node discovered": 73,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node discovered": 71,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node discovered": 72,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Sky",
+              "node discovered": 114,
+              "children": [
+                {
+                  "name": "Sun",
+                  "node discovered": 92,
+                  "children": [
+                    {
+                      "name": "Planet",
+                      "node discovered": 90,
+                      "children": [
+                        {
+                          "name": "Continent",
+                          "node discovered": 82,
+                          "children": [
+                            {
+                              "name": "Land",
+                              "node discovered": 78,
+                              "children": [
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 76,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 77,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Land",
+                              "node discovered": 81,
+                              "children": [
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 79,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 80,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Continent",
+                          "node discovered": 89,
+                          "children": [
+                            {
+                              "name": "Land",
+                              "node discovered": 85,
+                              "children": [
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 83,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 84,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Land",
+                              "node discovered": 88,
+                              "children": [
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 86,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 87,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Fire",
+                      "node discovered": 91,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Moon",
+                  "node discovered": 113,
+                  "children": [
+                    {
+                      "name": "Stone",
+                      "node discovered": 97,
+                      "children": [
+                        {
+                          "name": "Air",
+                          "node discovered": 93,
+                          "children": []
+                        },
+                        {
+                          "name": "Lava",
+                          "node discovered": 96,
+                          "children": [
+                            {
+                              "name": "Earth",
+                              "node discovered": 94,
+                              "children": []
+                            },
+                            {
+                              "name": "Fire",
+                              "node discovered": 95,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Planet",
+                      "node discovered": 112,
+                      "children": [
+                        {
+                          "name": "Continent",
+                          "node discovered": 104,
+                          "children": [
+                            {
+                              "name": "Land",
+                              "node discovered": 100,
+                              "children": [
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 98,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 99,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Land",
+                              "node discovered": 103,
+                              "children": [
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 101,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 102,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Continent",
+                          "node discovered": 111,
+                          "children": [
+                            {
+                              "name": "Land",
+                              "node discovered": 107,
+                              "children": [
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 105,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 106,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Land",
+                              "node discovered": 110,
+                              "children": [
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 108,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 109,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Flying fish",
+      "node discovered": 82,
+      "children": [
+        {
+          "name": "Fish",
+          "node discovered": 42,
+          "children": [
+            {
+              "name": "Animal",
+              "node discovered": 32,
+              "children": [
+                {
+                  "name": "Life",
+                  "node discovered": 16,
+                  "children": [
+                    {
+                      "name": "Primordial soup",
+                      "node discovered": 12,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node discovered": 0,
+                          "children": []
+                        },
+                        {
+                          "name": "Sea",
+                          "node discovered": 11,
+                          "children": [
+                            {
+                              "name": "Lake",
+                              "node discovered": 9,
+                              "children": [
+                                {
+                                  "name": "Pond",
+                                  "node discovered": 7,
+                                  "children": [
+                                    {
+                                      "name": "Puddle",
+                                      "node discovered": 3,
+                                      "children": [
+                                        {
+                                          "name": "Water",
+                                          "node discovered": 1,
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "Water",
+                                          "node discovered": 2,
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Puddle",
+                                      "node discovered": 6,
+                                      "children": [
+                                        {
+                                          "name": "Water",
+                                          "node discovered": 4,
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "Water",
+                                          "node discovered": 5,
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Water",
+                                  "node discovered": 8,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Water",
+                              "node discovered": 10,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Energy",
+                      "node discovered": 15,
+                      "children": [
+                        {
+                          "name": "Fire",
+                          "node discovered": 13,
+                          "children": []
+                        },
+                        {
+                          "name": "Fire",
+                          "node discovered": 14,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Desert",
+                  "node discovered": 31,
+                  "children": [
+                    {
+                      "name": "Sand",
+                      "node discovered": 27,
+                      "children": [
+                        {
+                          "name": "Stone",
+                          "node discovered": 21,
+                          "children": [
+                            {
+                              "name": "Air",
+                              "node discovered": 17,
+                              "children": []
+                            },
+                            {
+                              "name": "Lava",
+                              "node discovered": 20,
+                              "children": [
+                                {
+                                  "name": "Earth",
+                                  "node discovered": 18,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Fire",
+                                  "node discovered": 19,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Wind",
+                          "node discovered": 26,
+                          "children": [
+                            {
+                              "name": "Air",
+                              "node discovered": 22,
+                              "children": []
+                            },
+                            {
+                              "name": "Pressure",
+                              "node discovered": 25,
+                              "children": [
+                                {
+                                  "name": "Air",
+                                  "node discovered": 23,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Air",
+                                  "node discovered": 24,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Land",
+                      "node discovered": 30,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node discovered": 28,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node discovered": 29,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Lake",
+              "node discovered": 41,
+              "children": [
+                {
+                  "name": "Pond",
+                  "node discovered": 39,
+                  "children": [
+                    {
+                      "name": "Puddle",
+                      "node discovered": 35,
+                      "children": [
+                        {
+                          "name": "Water",
+                          "node discovered": 33,
+                          "children": []
+                        },
+                        {
+                          "name": "Water",
+                          "node discovered": 34,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Puddle",
+                      "node discovered": 38,
+                      "children": [
+                        {
+                          "name": "Water",
+                          "node discovered": 36,
+                          "children": []
+                        },
+                        {
+                          "name": "Water",
+                          "node discovered": 37,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Water",
+                  "node discovered": 40,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Sky",
+          "node discovered": 81,
+          "children": [
+            {
+              "name": "Sun",
+              "node discovered": 59,
+              "children": [
+                {
+                  "name": "Planet",
+                  "node discovered": 57,
+                  "children": [
+                    {
+                      "name": "Continent",
+                      "node discovered": 49,
+                      "children": [
+                        {
+                          "name": "Land",
+                          "node discovered": 45,
+                          "children": [
+                            {
+                              "name": "Earth",
+                              "node discovered": 43,
+                              "children": []
+                            },
+                            {
+                              "name": "Earth",
+                              "node discovered": 44,
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Land",
+                          "node discovered": 48,
+                          "children": [
+                            {
+                              "name": "Earth",
+                              "node discovered": 46,
+                              "children": []
+                            },
+                            {
+                              "name": "Earth",
+                              "node discovered": 47,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Continent",
+                      "node discovered": 56,
+                      "children": [
+                        {
+                          "name": "Land",
+                          "node discovered": 52,
+                          "children": [
+                            {
+                              "name": "Earth",
+                              "node discovered": 50,
+                              "children": []
+                            },
+                            {
+                              "name": "Earth",
+                              "node discovered": 51,
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Land",
+                          "node discovered": 55,
+                          "children": [
+                            {
+                              "name": "Earth",
+                              "node discovered": 53,
+                              "children": []
+                            },
+                            {
+                              "name": "Earth",
+                              "node discovered": 54,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Fire",
+                  "node discovered": 58,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Moon",
+              "node discovered": 80,
+              "children": [
+                {
+                  "name": "Stone",
+                  "node discovered": 64,
+                  "children": [
+                    {
+                      "name": "Air",
+                      "node discovered": 60,
+                      "children": []
+                    },
+                    {
+                      "name": "Lava",
+                      "node discovered": 63,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node discovered": 61,
+                          "children": []
+                        },
+                        {
+                          "name": "Fire",
+                          "node discovered": 62,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Planet",
+                  "node discovered": 79,
+                  "children": [
+                    {
+                      "name": "Continent",
+                      "node discovered": 71,
+                      "children": [
+                        {
+                          "name": "Land",
+                          "node discovered": 67,
+                          "children": [
+                            {
+                              "name": "Earth",
+                              "node discovered": 65,
+                              "children": []
+                            },
+                            {
+                              "name": "Earth",
+                              "node discovered": 66,
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Land",
+                          "node discovered": 70,
+                          "children": [
+                            {
+                              "name": "Earth",
+                              "node discovered": 68,
+                              "children": []
+                            },
+                            {
+                              "name": "Earth",
+                              "node discovered": 69,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Continent",
+                      "node discovered": 78,
+                      "children": [
+                        {
+                          "name": "Land",
+                          "node discovered": 74,
+                          "children": [
+                            {
+                              "name": "Earth",
+                              "node discovered": 72,
+                              "children": []
+                            },
+                            {
+                              "name": "Earth",
+                              "node discovered": 73,
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Land",
+                          "node discovered": 77,
+                          "children": [
+                            {
+                              "name": "Earth",
+                              "node discovered": 75,
+                              "children": []
+                            },
+                            {
+                              "name": "Earth",
+                              "node discovered": 76,
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "algorithm": "Multi_BFS",
+  "duration_ms": 73.671,
+  "visited_nodes": 404
+}
