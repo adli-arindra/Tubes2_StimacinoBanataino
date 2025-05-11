@@ -150,13 +150,14 @@ func buildTree(current string, nodes map[string]*graph.TreeNode, parentMap map[s
 	return node
 }
 
+// Node discovered dari root ke leaf
 func setDiscoveredIndex(node *graph.TreeNode, counter *int) {
 	if node == nil {
 		return
 	}
+	node.NodeDiscovered = *counter
+	*counter++
 	for _, child := range node.Children {
 		setDiscoveredIndex(child, counter)
 	}
-	node.NodeDiscovered = *counter
-	*counter++
 }

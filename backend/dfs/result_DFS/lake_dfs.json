@@ -1,40 +1,40 @@
 {
   "tree": {
     "name": "Lake",
-    "node discovered": 8,
+    "node_discovered": 0,
     "children": [
       {
         "name": "Pond",
-        "node discovered": 6,
+        "node_discovered": 1,
         "children": [
           {
             "name": "Puddle",
-            "node discovered": 2,
+            "node_discovered": 2,
             "children": [
               {
                 "name": "Water",
-                "node discovered": 0,
+                "node_discovered": 3,
                 "children": []
               },
               {
                 "name": "Water",
-                "node discovered": 1,
+                "node_discovered": 4,
                 "children": []
               }
             ]
           },
           {
             "name": "Puddle",
-            "node discovered": 5,
+            "node_discovered": 5,
             "children": [
               {
                 "name": "Water",
-                "node discovered": 3,
+                "node_discovered": 6,
                 "children": []
               },
               {
                 "name": "Water",
-                "node discovered": 4,
+                "node_discovered": 7,
                 "children": []
               }
             ]
@@ -43,12 +43,12 @@
       },
       {
         "name": "Water",
-        "node discovered": 7,
+        "node_discovered": 8,
         "children": []
       }
     ]
   },
   "algorithm": "DFS",
-  "duration_ms": 6.097,
-  "visited_nodes": 14
+  "duration_ms": 3.812,
+  "visited_nodes": 17
 }

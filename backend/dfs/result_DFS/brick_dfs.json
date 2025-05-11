@@ -1,32 +1,32 @@
 {
   "tree": {
     "name": "Brick",
-    "node discovered": 4,
+    "node_discovered": 0,
     "children": [
       {
         "name": "Mud",
-        "node discovered": 2,
+        "node_discovered": 1,
         "children": [
           {
             "name": "Water",
-            "node discovered": 0,
+            "node_discovered": 2,
             "children": []
           },
           {
             "name": "Earth",
-            "node discovered": 1,
+            "node_discovered": 3,
             "children": []
           }
         ]
       },
       {
         "name": "Fire",
-        "node discovered": 3,
+        "node_discovered": 4,
         "children": []
       }
     ]
   },
   "algorithm": "DFS",
-  "duration_ms": 4.464,
-  "visited_nodes": 19
+  "duration_ms": 4.485,
+  "visited_nodes": 24
 }
