@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-func main1() {
+func main() {
 	const recipeFile = "../scraping/data_scraping/scraped_data.json"
 
 	// Input Target

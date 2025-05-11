@@ -12,7 +12,7 @@ import (
 	"bfs/search"
 )
 
-func main() {
+func main1() {
 	const recipeFile = "../scraping/data_scraping/scraped_data.json"
 
     // Input
