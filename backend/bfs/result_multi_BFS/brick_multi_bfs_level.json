@@ -1,0 +1,34 @@
+{
+  "trees": [
+    {
+      "name": "Brick",
+      "node_discovered": 0,
+      "children": [
+        {
+          "name": "Mud",
+          "node_discovered": 1,
+          "children": [
+            {
+              "name": "Water",
+              "node_discovered": 3,
+              "children": []
+            },
+            {
+              "name": "Earth",
+              "node_discovered": 4,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Fire",
+          "node_discovered": 2,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "algorithm": "Multi_BFS_All_Paths",
+  "duration_ms": 0.507,
+  "visited_nodes": 15
+}

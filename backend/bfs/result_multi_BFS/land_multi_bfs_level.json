@@ -1,0 +1,23 @@
+{
+  "trees": [
+    {
+      "name": "Land",
+      "node_discovered": 0,
+      "children": [
+        {
+          "name": "Earth",
+          "node_discovered": 1,
+          "children": []
+        },
+        {
+          "name": "Earth",
+          "node_discovered": 2,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "algorithm": "Multi_BFS_All_Paths",
+  "duration_ms": 0,
+  "visited_nodes": 5
+}
