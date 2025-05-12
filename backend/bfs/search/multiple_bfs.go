@@ -13,34 +13,38 @@ import (
 type levelTask struct {
 	Product string
 	Recipe  []string
+	Left	*graph.TreeNode
+	Right	*graph.TreeNode
 }
 
 func MultiBFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]int) (graph.MultiTreeResult, error) {
 	start := time.Now()
 
 	startingElements := []string{"Air", "Fire", "Water", "Earth"}
-	existing := map[string][]*graph.TreeNode{}
-	visitedCombo := map[string]bool{}
+
+	existing := map[string][]*graph.TreeNode{} // Menyimpan node yang sudah dibuat
+	var visitedCombo sync.Map // Nanti digunain untuk cek duplikat
 	visitedElem := map[string]bool{}
 
-	// Inisialisasi dari starting element
+	// Inisialisasi node dasar
 	for _, e := range startingElements {
-		existing[e] = []*graph.TreeNode{{Name: e, Children: []*graph.TreeNode{}}}
+		node := &graph.TreeNode{Name: e, Children: []*graph.TreeNode{}}
+		existing[e] = []*graph.TreeNode{node}
 		visitedElem[e] = true
 	}
 
-	// Jika target elemen dasar
+	// kalau target elemen dasar, lgsg return aja
 	if contains(startingElements, target) {
 		n := &graph.TreeNode{
 			Name: target, 
-			NodeDiscovered: 0,
+			NodeDiscovered: 0, 
 			Children: []*graph.TreeNode{},
 		}
 		return graph.MultiTreeResult{
-		Trees:        []*graph.TreeNode{n},
-		Algorithm:    "Multi_BFS",
-		DurationMS:   float64(time.Since(start).Microseconds()) / 1000.0,
-		VisitedNodes: 1,
+			Trees:        []*graph.TreeNode{n},
+			Algorithm:    "Multi_BFS",
+			DurationMS:   float64(time.Since(start).Microseconds()) / 1000.0,
+			VisitedNodes: 1,
 		}, nil
 	}
 
@@ -48,18 +52,44 @@ func MultiBFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]i
 	tier := 0
 	numWorkers := runtime.NumCPU() * 2
 	targetTier := tierMap[target]
-	done := false
-	maxCombinationPerPair := 100 // Batasi kombinasi untuk tiap percobaan
+	maxCombinationPerPair := 100 // Batas kombinasi per pasang node
 	var recipeMutex sync.Mutex
 
-	// Proses utama Multiple BFS
-	for !done {
-		newNodesThisTier := map[string][]*graph.TreeNode{}
-		var mutex sync.Mutex
-		tasks := make(chan levelTask, 1000)
+	queue := make([]levelTask, 0)
+
+	// Inisialsiasi kombinasi dari awal
+	for product, recipes := range g {
+		for _, recipe := range recipes {
+			if len(recipe) != 2 {
+				continue
+			}
+			if _, ok1 := existing[recipe[0]]; !ok1 {
+				continue
+			}
+			if _, ok2 := existing[recipe[1]]; !ok2 {
+				continue
+			}
+			for _, l := range existing[recipe[0]] {
+				for _, r := range existing[recipe[1]] {
+					queue = append(queue, levelTask{
+						Product: product,
+						Recipe:  recipe,
+						Left:    l,
+						Right:   r,
+					})
+				}
+			}
+		}
+	}
+
+	for len(queue) > 0 && (maxRecipes <= 0 || len(foundRecipes) < maxRecipes) {
+		fmt.Printf("\nTier %d: Memproses %d kombinasi\n", tier, len(queue)) // debugging
+
+		tasks := make(chan levelTask, len(queue))
+		results := make(chan *graph.TreeNode, len(queue))
 		var wg sync.WaitGroup
 
-		// Worker pool untuk memproses recipe secara paralel
+		// Worker BFS
 		for i := 0; i < numWorkers; i++ {
 			wg.Add(1)
 			go func() {
@@ -69,89 +99,87 @@ func MultiBFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]i
 					recipe := task.Recipe
 					productTier := tierMap[product]
 
-					// Cek elemen pembentuk tidak lebih tinggi dari elemen yang dibentuk
+					// Elemen pembentuk harus lebih rendah tiernya dari elemen yang dibetuk
 					if tierMap[recipe[0]] >= productTier || tierMap[recipe[1]] >= productTier {
 						continue
 					}
-
-					lefts, ok1 := existing[recipe[0]]
-					rights, ok2 := existing[recipe[1]]
-					if !ok1 || !ok2 {
+					
+					// Key dibuat untuk mendeteksi kombinasi duplikat
+					key := fmt.Sprintf("%s+%s>%s#%p|%p", recipe[0], recipe[1], product, task.Left, task.Right)
+					if _, exists := visitedCombo.LoadOrStore(key, true); exists {
 						continue
 					}
 
-					// Build semua kombinasi dari elemen yang sudah ada
-					count := 0
-					for _, l := range lefts {
-						for _, r := range rights {
-							key := fmt.Sprintf("%s+%s>%s#%p|%p", recipe[0], recipe[1], product, l, r)
-							mutex.Lock()
-							if visitedCombo[key] {
-								mutex.Unlock()
-								continue
-							}
-							
-							visitedCombo[key] = true
-							mutex.Unlock()
+					n := &graph.TreeNode{Name: product, Children: []*graph.TreeNode{task.Left, task.Right}}
+					results <- n
+				}
+			}()
+		}
 
-       						newNode := &graph.TreeNode{Name: product, Children: []*graph.TreeNode{l, r}}
+		for _, t := range queue {
+			tasks <- t
+		}
+		close(tasks)
+		wg.Wait()
+		close(results)
 
-							mutex.Lock()
-							newNodesThisTier[product] = append(newNodesThisTier[product], newNode)
-							if product == target {
-								recipeMutex.Lock()
-								foundRecipes = append(foundRecipes, deepCopyTree(newNode))
-								if maxRecipes > 0 && len(foundRecipes) >= maxRecipes {
-									done = true
-        						}
-								recipeMutex.Unlock()
-      						}
-       						mutex.Unlock()
-							count++
-      					}
+		nextQueue := []levelTask{}
+		newNodes := map[string][]*graph.TreeNode{}
+
+		for res := range results {
+			newNodes[res.Name] = append(newNodes[res.Name], res)
+			visitedElem[res.Name] = true
+			if res.Name == target {
+				clone := deepCopyTree(res)
+				recipeMutex.Lock()
+				if maxRecipes <= 0 || len(foundRecipes) < maxRecipes {
+					foundRecipes = append(foundRecipes, clone)
+				}
+				recipeMutex.Unlock()
+			}
+		}
+
+		// Menambahkan node yang ditemukan ke existing
+		for product, list := range newNodes {
+			existing[product] = append(existing[product], list...)
+		}
+
+		// Menyiapkan kombinasi untuk tier berikutnya
+		for product, recipes := range g {
+			if tierMap[product] != tier+1 {
+				continue
+			}
+			for _, recipe := range recipes {
+				if len(recipe) != 2 {
+					continue
+				}
+				lefts, ok1 := existing[recipe[0]]
+				rights, ok2 := existing[recipe[1]]
+				if !ok1 || !ok2 {
+					continue
+				}
+				count := 0
+				for _, l := range lefts {
+					for _, r := range rights {
 						if count >= maxCombinationPerPair {
 							break
 						}
-     				}
-    			}
-   			}()
-  		}
-
-		// Enqueue semua recipe yang valid
-  		for product, recipes := range g {
-			productTier := tierMap[product]
-			if productTier > targetTier {
-				continue
-			}
-			if productTier == targetTier && product != target {
-				continue
-			}
-			for _, r := range recipes {
-				if len(r) != 2 {
-					continue
+						nextQueue = append(nextQueue, levelTask{Product: product, Recipe: recipe, Left: l, Right: r})
+						count++
+					}
+					if count >= maxCombinationPerPair {
+						break
+					}
 				}
-				recipeMutex.Lock()
-				if maxRecipes > 0 && len(foundRecipes) >= maxRecipes {
-					recipeMutex.Unlock()
-					break
-				}
-				recipeMutex.Unlock()
-				tasks <- levelTask{Product: product, Recipe: r}
 			}
-  		}
-		close(tasks)
-		wg.Wait()
+		}
+		queue = nextQueue
+		tier++
 
-		if len(newNodesThisTier) == 0 {
+		// Cek tier biar ga semua tier di kombinasiin (tewas goroutinenya)
+		if tier > targetTier {
 			break
 		}
-
-		for k, v := range newNodesThisTier {
-			existing[k] = append(existing[k], v...)
-			visitedElem[k] = true
-		}
-
-		tier++
 	}
 
 	// Ambil rute pertama sebagai primary rute sebagai live update
@@ -194,7 +222,6 @@ func deepCopyTree(node *graph.TreeNode) *graph.TreeNode {
 	return copy
 }
 
-// Sama kayak di BFS
 func setDiscoveredIndexMultiple(node *graph.TreeNode, counter *int) {
 if node == nil {
 		return
