@@ -134,7 +134,23 @@ func processSearchRequest(w http.ResponseWriter, r *http.Request) {
 		if req.Mode == "single" {
 			result, err = dfsSearch.DFS(req.Target, graphDFS, elementTiers)
 		} else {
-			// result, err = dfsSearch.MultiDFS(req.Target, graphDFS, *req.MaxRecipes,elementTiers)
+			// multiResult, err := dfsSearch.MultiDFS(req.Target, graphDFS, *req.MaxRecipes, elementTiers)
+			// if err != nil {
+			// 	http.Error(w, "Pencarian gagal: "+err.Error(), http.StatusInternalServerError)
+			// 	return
+			// }
+
+			// var nodes []Node
+			// for _, t := range multiResult.Trees {
+			// 	nodes = append(nodes, convertTreeNodeToNode(t))
+			// }
+
+			// result = MultipleSearchResponse{
+			// 	Tree:         nodes,
+			// 	Algorithm:    multiResult.Algorithm,
+			// 	Duration:     multiResult.DurationMS,
+			// 	VisitedNodes: multiResult.VisitedNodes,
+			// }
 		}
 	}
 	if err != nil {
