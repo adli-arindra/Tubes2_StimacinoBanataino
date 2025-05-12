@@ -10,7 +10,6 @@ type TreeProps = {
 };
 
 export default function Tree({ node, type }: TreeProps) {
-    console.log(node);
     return (
         <div className="flex flex-col-reverse items-center">
             <div className="relative flex flex-col items-center w-full">

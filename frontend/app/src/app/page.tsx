@@ -2,7 +2,7 @@
 import Tree from "@/components/tree";
 import { useEffect, useState } from "react";
 import LiveTree from "@/components/live_tree";
-
+import NumberStepper from "@/components/number_stepper";
 
 const data = {
     tree: {
@@ -30,6 +30,8 @@ const data = {
 export default function Home() {
   const [startAnimation, setStartAnimation] = useState(false);
   const [treeData, setTreeData] = useState(data.tree);
+  const [treeArray, setTreeArray] = useState([]);
+  const [index, setIndex] = useState(0);
   const [inputValue, setInputValue] = useState('');
   const [resetAnimation, setResetAnimation] = useState(false);
   const [showLive, setShowLive] = useState(false);
@@ -39,24 +41,51 @@ export default function Home() {
   const [mode, setMode] = useState<'single' | 'multiple'>('single');
   const [maxRecipes, setMaxRecipes] = useState<number>(30);
 
+  const [loading, setLoading] = useState(false);
+  const [apiStats, setApiStats] = useState({
+    duration_ms: 0,
+    visited_nodes: 0,
+    algorithm: 'BFS'
+  });
+
   const handleSubmit = async () => {
-    const payload = {
-      target,
-      algorithm,
-      mode,
-      max_recipes: maxRecipes,
-    };
+  setLoading(true);
+  const payload = {
+    target,
+    algorithm,
+    mode,
+    max_recipes: maxRecipes,
+  };
 
-    const res = await fetch(process.env.NEXT_PUBLIC_ENDPOINT as string, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
+  const res = await fetch(process.env.NEXT_PUBLIC_ENDPOINT as string, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
 
+  console.log('API Response:', data);
+  if (mode === "single") {
     const data = await res.json();
     setTreeData(data.tree);
-    console.log('API Response:', data);
-  };
+    setTreeArray([]);
+    setApiStats({
+      duration_ms: data.duration_ms,
+      visited_nodes: data.visited_nodes,
+      algorithm: data.algorithm
+    });
+  }
+  else {
+    const data = await res.json();
+    setTreeArray(data.trees);
+    setTreeData(data.trees[0]);
+    setApiStats({
+      duration_ms: data.duration_ms,
+      visited_nodes: data.visited_nodes,
+      algorithm: data.algorithm
+    });
+  }
+  setLoading(false);
+};
 
   const handle_submit = () => {
     if (inputValue !== '') {
@@ -73,6 +102,9 @@ export default function Home() {
 
   const onStartLive = () => {
     if (startAnimation) return;
+    if (treeArray.length > 0) {
+      setTreeData(treeArray[0]);
+    }
     setStartAnimation(true);
     setShowLive(true);
   }
@@ -83,27 +115,48 @@ export default function Home() {
     setShowLive(false);
   }
 
+  useEffect(() => {
+    if (treeArray.length > 0) {
+      setTreeData(treeArray[index]);
+    }
+  }, [index]);
 
   return (
     <div className="flex flex-col items-center w-full h-screen bg-gray-800 p-4 space-y-4">
       <h1 className="text-4xl">Recipe Tree</h1>
       <div className="relative w-4/5 h-[600px] overflow-auto border border-gray-600 rounded-lg">
-        <div className="absolute min-w-full min-h-full flex justify-center items-start p-8">
-          {
-            !showLive ?
-            <Tree node={treeData} type="root"/>
-            :
-            <LiveTree
-            root={treeData}
-            start={startAnimation}
-            delay={800}
-            onAnimationComplete={onStoppedLive}
-            resetAnimation={resetAnimation}
-            />
-          }
-        </div>
+        { loading ?
+          <div className="flex items-center justify-center h-full">
+            <h1>Loading...</h1>
+          </div>
+          :
+          <div className="absolute min-w-full min-h-full flex justify-center items-start p-8">
+            {
+              !showLive ?
+              <Tree node={treeData} type="root"/>
+              :
+              <LiveTree
+              root={treeData}
+              start={startAnimation}
+              delay={800}
+              onAnimationComplete={onStoppedLive}
+              resetAnimation={resetAnimation}
+              />
+            }
+          </div>
+        }
       </div>
-
+        <div className="flex space-x-4">
+          <div>
+            <span className="font-bold">Algorithm:</span> {apiStats.algorithm}
+          </div>
+          <div>
+            <span className="font-bold">Duration:</span> {apiStats.duration_ms} ms
+          </div>
+          <div>
+            <span className="font-bold">Visited Nodes:</span> {apiStats.visited_nodes}
+          </div>
+        </div>
         <div className="max-w-md mx-auto p-4 border rounded-xl shadow space-y-4 bg-white text-black">
         <input
           type="text"
@@ -154,13 +207,21 @@ export default function Home() {
             Search
           </button>
         </div>
-        <button 
-            onClick={onStartLive}
-            className={`p-2 rounded  mt-4 ${startAnimation ? 'bg-gray-500' : 'bg-blue-500'}`}
-            disabled={startAnimation}
-            >
-            Start Animation
-        </button>
+        <div className="flex flex-row space-x-8">
+          { treeArray.length > 0 &&
+            <div className="flex flex-col items-center justify-center">
+              <h1>Select the recipe</h1>
+              <NumberStepper value={index} setValue={setIndex} min={0} max={treeArray.length - 1}/>
+            </div>
+          }
+          <button 
+              onClick={onStartLive}
+              className={`p-2 rounded  mt-4 ${startAnimation ? 'bg-gray-500' : 'bg-blue-500'}`}
+              disabled={startAnimation}
+              >
+              Start Animation
+          </button>
+        </div>
     </div>
   );
 }
