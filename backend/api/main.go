@@ -38,6 +38,13 @@ type SearchResponse struct {
 	VisitedNodes int     `json:"visited_nodes"`
 }
 
+type MultipleSearchResponse struct {
+	Tree         []Node  `json:"trees"`
+	Algorithm    string  `json:"algorithm"`
+	Duration     float64 `json:"duration_ms"`
+	VisitedNodes int     `json:"visited_nodes"`
+}
+
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/search", processSearchRequest).Methods("POST")
@@ -89,54 +96,66 @@ func processSearchRequest(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if _, err := os.Stat(filePath); os.IsNotExist(err) {
-		fmt.Println("File belum ada, file akan dibuat untuk mencari target")
+	graphBFS, err := bfsGraph.LoadRecipes("../scraping/data_scraping/scraped_data.json")
+	graphDFS, err := dfsGraph.LoadRecipes("../scraping/data_scraping/scraped_data.json")
+	catalog, err := dfsGraph.LoadCatalog("../scraping/data_scraping/scraped_data.json")
+	elementTiers := dfsGraph.MapElementToTier(catalog)
 
-		graphBFS, err := bfsGraph.LoadRecipes("../scraping/data_scraping/scraped_data.json")
-		graphDFS, err := dfsGraph.LoadRecipes("../scraping/data_scraping/scraped_data.json")
-		catalog, err := dfsGraph.LoadCatalog("../scraping/data_scraping/scraped_data.json")
-		elementTiers := dfsGraph.MapElementToTier(catalog)
+	if err != nil {
+		http.Error(w, "Gagal load graph: "+err.Error(), http.StatusInternalServerError)
+		return
+	}
 
-		if err != nil {
-			http.Error(w, "Gagal load graph: "+err.Error(), http.StatusInternalServerError)
-			return
-		}
-
-		var result interface{}
-		switch req.Algorithm {
-		case "BFS":
-			if req.Mode == "single" {
-				result, err = bfsSearch.BFS(req.Target, graphBFS, elementTiers)
-			} else {
-				// result, err = bfsSearch.MultiBFS(req.Target, graphDFS, *req.MaxRecipes,elementTiers)
+	var result interface{}
+	switch req.Algorithm {
+	case "BFS":
+		if req.Mode == "single" {
+			result, err = bfsSearch.BFS(req.Target, graphBFS, elementTiers)
+		} else {
+			multiResult, err := bfsSearch.MultiBFS(req.Target, graphBFS, *req.MaxRecipes, elementTiers)
+			if err != nil {
+				http.Error(w, "Pencarian gagal: "+err.Error(), http.StatusInternalServerError)
+				return
 			}
-		case "DFS":
-			if req.Mode == "single" {
-				result, err = dfsSearch.DFS(req.Target, graphDFS, elementTiers)
-			} else {
-				// result, err = dfsSearch.MultiDFS(req.Target, graphDFS, *req.MaxRecipes,elementTiers)
+
+			var nodes []Node
+			for _, t := range multiResult.Trees {
+				nodes = append(nodes, convertTreeNodeToNode(t))
+			}
+
+			result = MultipleSearchResponse{
+				Tree:         nodes,
+				Algorithm:    multiResult.Algorithm,
+				Duration:     multiResult.DurationMS,
+				VisitedNodes: multiResult.VisitedNodes,
 			}
 		}
-		if err != nil {
-			http.Error(w, "Pencarian gagal: "+err.Error(), http.StatusInternalServerError)
-			return
+	case "DFS":
+		if req.Mode == "single" {
+			result, err = dfsSearch.DFS(req.Target, graphDFS, elementTiers)
+		} else {
+			// result, err = dfsSearch.MultiDFS(req.Target, graphDFS, *req.MaxRecipes,elementTiers)
 		}
+	}
+	if err != nil {
+		http.Error(w, "Pencarian gagal: "+err.Error(), http.StatusInternalServerError)
+		return
+	}
 
-		output, err := json.MarshalIndent(result, "", "  ")
-		if err != nil {
-			http.Error(w, "Gagal encode hasil", http.StatusInternalServerError)
-			return
-		}
+	output, err := json.MarshalIndent(result, "", "  ")
+	if err != nil {
+		http.Error(w, "Gagal encode hasil", http.StatusInternalServerError)
+		return
+	}
 
-		if err := os.MkdirAll(directory, os.ModePerm); err != nil {
-			http.Error(w, "Gagal membuat folder", http.StatusInternalServerError)
-			return
-		}
+	if err := os.MkdirAll(directory, os.ModePerm); err != nil {
+		http.Error(w, "Gagal membuat folder", http.StatusInternalServerError)
+		return
+	}
 
-		if err := os.WriteFile(filePath, output, 0644); err != nil {
-			http.Error(w, "Gagal menulis file hasil", http.StatusInternalServerError)
-			return
-		}
+	if err := os.WriteFile(filePath, output, 0644); err != nil {
+		http.Error(w, "Gagal menulis file hasil", http.StatusInternalServerError)
+		return
 	}
 
 	jsonFile, err := os.Open(filePath)
@@ -146,12 +165,39 @@ func processSearchRequest(w http.ResponseWriter, r *http.Request) {
 	}
 	defer jsonFile.Close()
 
-	var response SearchResponse
-	if err := json.NewDecoder(jsonFile).Decode(&response); err != nil {
-		http.Error(w, "Gagal decode hasil pencarian", http.StatusInternalServerError)
-		return
+	if req.Mode == "single" {
+		var response SearchResponse
+		if err := json.NewDecoder(jsonFile).Decode(&response); err != nil {
+			http.Error(w, "Gagal decode hasil pencarian", http.StatusInternalServerError)
+			return
+		}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(response)
+	} else {
+		var response MultipleSearchResponse
+		if err := json.NewDecoder(jsonFile).Decode(&response); err != nil {
+			http.Error(w, "Gagal decode hasil pencarian", http.StatusInternalServerError)
+			return
+		}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(response)
+	}
+}
+
+// Converter for multiple recipe
+func convertTreeNodeToNode(t *bfsGraph.TreeNode) Node {
+	if t == nil {
+		return Node{}
 	}
 
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(response)
+	children := make([]Node, len(t.Children))
+	for i, child := range t.Children {
+		children[i] = convertTreeNodeToNode(child)
+	}
+
+	return Node{
+		Name:           t.Name,
+		NodeDiscovered: t.NodeDiscovered,
+		Children:       children,
+	}
 }
