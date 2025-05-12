@@ -2,7 +2,7 @@
   "trees": [
     {
       "name": "Water",
-      "node discovered": 0,
+      "node_discovered": 0,
       "children": []
     }
   ],

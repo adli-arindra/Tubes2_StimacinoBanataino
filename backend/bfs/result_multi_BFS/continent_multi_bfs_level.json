@@ -1,0 +1,72 @@
+{
+  "trees": [
+    {
+      "name": "Continent",
+      "node_discovered": 0,
+      "children": [
+        {
+          "name": "Land",
+          "node_discovered": 1,
+          "children": [
+            {
+              "name": "Earth",
+              "node_discovered": 3,
+              "children": []
+            },
+            {
+              "name": "Earth",
+              "node_discovered": 4,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Land",
+          "node_discovered": 2,
+          "children": [
+            {
+              "name": "Earth",
+              "node_discovered": 5,
+              "children": []
+            },
+            {
+              "name": "Earth",
+              "node_discovered": 6,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Continent",
+      "node_discovered": -1,
+      "children": [
+        {
+          "name": "Land",
+          "node_discovered": -1,
+          "children": [
+            {
+              "name": "Earth",
+              "node_discovered": -1,
+              "children": []
+            },
+            {
+              "name": "Earth",
+              "node_discovered": -1,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Earth",
+          "node_discovered": -1,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "algorithm": "Multi_BFS_All_Paths",
+  "duration_ms": 1.086,
+  "visited_nodes": 15
+}
