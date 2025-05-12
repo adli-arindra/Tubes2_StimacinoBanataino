@@ -34,3 +34,11 @@ type TreeResult struct {
 	DurationMS  	float64   	`json:"duration_ms"` 
 	VisitedNodes	int      	`json:"visited_nodes"` 
 }
+
+// Menyimpan struktur output untuk DFS Multiple
+type MultiTreeResult struct {
+	Trees			[]*TreeNode	`json:"trees"`
+	Algorithm		string 		`json:"algorithm"`
+	DurationMS		float64 	`json:"duration_ms"`
+	VisitedNodes	int			`json:"visited_nodes"`
+}
