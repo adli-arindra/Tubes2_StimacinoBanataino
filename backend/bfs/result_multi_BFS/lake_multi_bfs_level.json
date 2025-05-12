@@ -14,12 +14,12 @@
               "children": [
                 {
                   "name": "Water",
-                  "node_discovered": 5,
+                  "node_discovered": 7,
                   "children": []
                 },
                 {
                   "name": "Water",
-                  "node_discovered": 6,
+                  "node_discovered": 8,
                   "children": []
                 }
               ]
@@ -30,12 +30,12 @@
               "children": [
                 {
                   "name": "Water",
-                  "node_discovered": 7,
+                  "node_discovered": 9,
                   "children": []
                 },
                 {
                   "name": "Water",
-                  "node_discovered": 8,
+                  "node_discovered": 10,
                   "children": []
                 }
               ]
@@ -43,8 +43,161 @@
           ]
         },
         {
-          "name": "Water",
+          "name": "Pond",
           "node_discovered": 2,
+          "children": [
+            {
+              "name": "Puddle",
+              "node_discovered": 5,
+              "children": [
+                {
+                  "name": "Water",
+                  "node_discovered": 11,
+                  "children": []
+                },
+                {
+                  "name": "Water",
+                  "node_discovered": 12,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Puddle",
+              "node_discovered": 6,
+              "children": [
+                {
+                  "name": "Water",
+                  "node_discovered": 13,
+                  "children": []
+                },
+                {
+                  "name": "Water",
+                  "node_discovered": 14,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lake",
+      "node_discovered": -1,
+      "children": [
+        {
+          "name": "Pond",
+          "node_discovered": -1,
+          "children": [
+            {
+              "name": "Puddle",
+              "node_discovered": -1,
+              "children": [
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                },
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Puddle",
+              "node_discovered": -1,
+              "children": [
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                },
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Pond",
+          "node_discovered": -1,
+          "children": [
+            {
+              "name": "Puddle",
+              "node_discovered": -1,
+              "children": [
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                },
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Water",
+              "node_discovered": -1,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lake",
+      "node_discovered": -1,
+      "children": [
+        {
+          "name": "Pond",
+          "node_discovered": -1,
+          "children": [
+            {
+              "name": "Puddle",
+              "node_discovered": -1,
+              "children": [
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                },
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Puddle",
+              "node_discovered": -1,
+              "children": [
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                },
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Water",
+          "node_discovered": -1,
           "children": []
         }
       ]
@@ -84,164 +237,11 @@
           "name": "Water",
           "node_discovered": -1,
           "children": []
-        }
-      ]
-    },
-    {
-      "name": "Lake",
-      "node_discovered": -1,
-      "children": [
-        {
-          "name": "Pond",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Puddle",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                },
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Puddle",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                },
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Pond",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Puddle",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                },
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Puddle",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                },
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Lake",
-      "node_discovered": -1,
-      "children": [
-        {
-          "name": "Pond",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Puddle",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                },
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Puddle",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                },
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Pond",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Puddle",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                },
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Water",
-              "node_discovered": -1,
-              "children": []
-            }
-          ]
         }
       ]
     }
   ],
-  "algorithm": "Multi_BFS_All_Paths",
-  "duration_ms": 0.609,
+  "algorithm": "Multi_BFS",
+  "duration_ms": 0.518,
   "visited_nodes": 28
 }

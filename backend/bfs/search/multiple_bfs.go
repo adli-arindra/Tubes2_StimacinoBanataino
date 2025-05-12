@@ -49,6 +49,8 @@ func MultiBFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]i
 	numWorkers := runtime.NumCPU() * 2
 	targetTier := tierMap[target]
 	done := false
+	maxCombinationPerPair := 100 // Batasi kombinasi untuk tiap percobaan
+	var recipeMutex sync.Mutex
 
 	// Proses utama Multiple BFS
 	for !done {
@@ -63,10 +65,6 @@ func MultiBFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]i
 			go func() {
 				defer wg.Done()
 				for task := range tasks {
-					if maxRecipes > 0 && len(foundRecipes) >= maxRecipes {
-						return
-					}
-
 					product := task.Product
 					recipe := task.Recipe
 					productTier := tierMap[product]
@@ -83,6 +81,7 @@ func MultiBFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]i
 					}
 
 					// Build semua kombinasi dari elemen yang sudah ada
+					count := 0
 					for _, l := range lefts {
 						for _, r := range rights {
 							key := fmt.Sprintf("%s+%s>%s#%p|%p", recipe[0], recipe[1], product, l, r)
@@ -100,13 +99,19 @@ func MultiBFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]i
 							mutex.Lock()
 							newNodesThisTier[product] = append(newNodesThisTier[product], newNode)
 							if product == target {
+								recipeMutex.Lock()
 								foundRecipes = append(foundRecipes, deepCopyTree(newNode))
 								if maxRecipes > 0 && len(foundRecipes) >= maxRecipes {
 									done = true
         						}
+								recipeMutex.Unlock()
       						}
        						mutex.Unlock()
+							count++
       					}
+						if count >= maxCombinationPerPair {
+							break
+						}
      				}
     			}
    			}()
@@ -125,6 +130,12 @@ func MultiBFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]i
 				if len(r) != 2 {
 					continue
 				}
+				recipeMutex.Lock()
+				if maxRecipes > 0 && len(foundRecipes) >= maxRecipes {
+					recipeMutex.Unlock()
+					break
+				}
+				recipeMutex.Unlock()
 				tasks <- levelTask{Product: product, Recipe: r}
 			}
   		}
@@ -160,7 +171,7 @@ func MultiBFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]i
 
 	return graph.MultiTreeResult{
 		Trees:        foundRecipes,
-		Algorithm:    "Multi_BFS_All_Paths",
+		Algorithm:    "Multi_BFS",
 		DurationMS:   float64(time.Since(start).Microseconds()) / 1000.0,
 		VisitedNodes: len(visitedElem),
 	}, nil

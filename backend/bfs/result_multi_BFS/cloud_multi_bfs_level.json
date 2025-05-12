@@ -19,27 +19,11 @@
               "children": [
                 {
                   "name": "Continent",
-                  "node_discovered": 5,
+                  "node_discovered": 7,
                   "children": [
                     {
                       "name": "Land",
-                      "node_discovered": 7,
-                      "children": [
-                        {
-                          "name": "Earth",
-                          "node_discovered": 11,
-                          "children": []
-                        },
-                        {
-                          "name": "Earth",
-                          "node_discovered": 12,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Land",
-                      "node_discovered": 8,
+                      "node_discovered": 9,
                       "children": [
                         {
                           "name": "Earth",
@@ -52,16 +36,10 @@
                           "children": []
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Continent",
-                  "node_discovered": 6,
-                  "children": [
+                    },
                     {
                       "name": "Land",
-                      "node_discovered": 9,
+                      "node_discovered": 10,
                       "children": [
                         {
                           "name": "Earth",
@@ -74,10 +52,16 @@
                           "children": []
                         }
                       ]
-                    },
+                    }
+                  ]
+                },
+                {
+                  "name": "Continent",
+                  "node_discovered": 8,
+                  "children": [
                     {
                       "name": "Land",
-                      "node_discovered": 10,
+                      "node_discovered": 11,
                       "children": [
                         {
                           "name": "Earth",
@@ -90,6 +74,22 @@
                           "children": []
                         }
                       ]
+                    },
+                    {
+                      "name": "Land",
+                      "node_discovered": 12,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node_discovered": 19,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": 20,
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -98,8 +98,424 @@
           ]
         },
         {
-          "name": "Water",
+          "name": "Mist",
           "node_discovered": 2,
+          "children": [
+            {
+              "name": "Air",
+              "node_discovered": 5,
+              "children": []
+            },
+            {
+              "name": "Water",
+              "node_discovered": 6,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cloud",
+      "node_discovered": -1,
+      "children": [
+        {
+          "name": "Atmosphere",
+          "node_discovered": -1,
+          "children": [
+            {
+              "name": "Air",
+              "node_discovered": -1,
+              "children": []
+            },
+            {
+              "name": "Planet",
+              "node_discovered": -1,
+              "children": [
+                {
+                  "name": "Continent",
+                  "node_discovered": -1,
+                  "children": [
+                    {
+                      "name": "Land",
+                      "node_discovered": -1,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Land",
+                      "node_discovered": -1,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Continent",
+                  "node_discovered": -1,
+                  "children": [
+                    {
+                      "name": "Land",
+                      "node_discovered": -1,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Earth",
+                      "node_discovered": -1,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Mist",
+          "node_discovered": -1,
+          "children": [
+            {
+              "name": "Air",
+              "node_discovered": -1,
+              "children": []
+            },
+            {
+              "name": "Water",
+              "node_discovered": -1,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cloud",
+      "node_discovered": -1,
+      "children": [
+        {
+          "name": "Atmosphere",
+          "node_discovered": -1,
+          "children": [
+            {
+              "name": "Air",
+              "node_discovered": -1,
+              "children": []
+            },
+            {
+              "name": "Planet",
+              "node_discovered": -1,
+              "children": [
+                {
+                  "name": "Continent",
+                  "node_discovered": -1,
+                  "children": [
+                    {
+                      "name": "Land",
+                      "node_discovered": -1,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Earth",
+                      "node_discovered": -1,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Continent",
+                  "node_discovered": -1,
+                  "children": [
+                    {
+                      "name": "Land",
+                      "node_discovered": -1,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Land",
+                      "node_discovered": -1,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Mist",
+          "node_discovered": -1,
+          "children": [
+            {
+              "name": "Air",
+              "node_discovered": -1,
+              "children": []
+            },
+            {
+              "name": "Water",
+              "node_discovered": -1,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cloud",
+      "node_discovered": -1,
+      "children": [
+        {
+          "name": "Atmosphere",
+          "node_discovered": -1,
+          "children": [
+            {
+              "name": "Air",
+              "node_discovered": -1,
+              "children": []
+            },
+            {
+              "name": "Planet",
+              "node_discovered": -1,
+              "children": [
+                {
+                  "name": "Continent",
+                  "node_discovered": -1,
+                  "children": [
+                    {
+                      "name": "Land",
+                      "node_discovered": -1,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Earth",
+                      "node_discovered": -1,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Continent",
+                  "node_discovered": -1,
+                  "children": [
+                    {
+                      "name": "Land",
+                      "node_discovered": -1,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Earth",
+                      "node_discovered": -1,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Mist",
+          "node_discovered": -1,
+          "children": [
+            {
+              "name": "Air",
+              "node_discovered": -1,
+              "children": []
+            },
+            {
+              "name": "Water",
+              "node_discovered": -1,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cloud",
+      "node_discovered": -1,
+      "children": [
+        {
+          "name": "Atmosphere",
+          "node_discovered": -1,
+          "children": [
+            {
+              "name": "Air",
+              "node_discovered": -1,
+              "children": []
+            },
+            {
+              "name": "Planet",
+              "node_discovered": -1,
+              "children": [
+                {
+                  "name": "Continent",
+                  "node_discovered": -1,
+                  "children": [
+                    {
+                      "name": "Land",
+                      "node_discovered": -1,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Land",
+                      "node_discovered": -1,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Continent",
+                  "node_discovered": -1,
+                  "children": [
+                    {
+                      "name": "Land",
+                      "node_discovered": -1,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Land",
+                      "node_discovered": -1,
+                      "children": [
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Water",
+          "node_discovered": -1,
           "children": []
         }
       ]
@@ -369,427 +785,11 @@
           "name": "Water",
           "node_discovered": -1,
           "children": []
-        }
-      ]
-    },
-    {
-      "name": "Cloud",
-      "node_discovered": -1,
-      "children": [
-        {
-          "name": "Atmosphere",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Air",
-              "node_discovered": -1,
-              "children": []
-            },
-            {
-              "name": "Planet",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Continent",
-                  "node_discovered": -1,
-                  "children": [
-                    {
-                      "name": "Land",
-                      "node_discovered": -1,
-                      "children": [
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        },
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Land",
-                      "node_discovered": -1,
-                      "children": [
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        },
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Continent",
-                  "node_discovered": -1,
-                  "children": [
-                    {
-                      "name": "Land",
-                      "node_discovered": -1,
-                      "children": [
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        },
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Land",
-                      "node_discovered": -1,
-                      "children": [
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        },
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Mist",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Air",
-              "node_discovered": -1,
-              "children": []
-            },
-            {
-              "name": "Water",
-              "node_discovered": -1,
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Cloud",
-      "node_discovered": -1,
-      "children": [
-        {
-          "name": "Atmosphere",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Air",
-              "node_discovered": -1,
-              "children": []
-            },
-            {
-              "name": "Planet",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Continent",
-                  "node_discovered": -1,
-                  "children": [
-                    {
-                      "name": "Land",
-                      "node_discovered": -1,
-                      "children": [
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        },
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Land",
-                      "node_discovered": -1,
-                      "children": [
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        },
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Continent",
-                  "node_discovered": -1,
-                  "children": [
-                    {
-                      "name": "Land",
-                      "node_discovered": -1,
-                      "children": [
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        },
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Earth",
-                      "node_discovered": -1,
-                      "children": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Mist",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Air",
-              "node_discovered": -1,
-              "children": []
-            },
-            {
-              "name": "Water",
-              "node_discovered": -1,
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Cloud",
-      "node_discovered": -1,
-      "children": [
-        {
-          "name": "Atmosphere",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Air",
-              "node_discovered": -1,
-              "children": []
-            },
-            {
-              "name": "Planet",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Continent",
-                  "node_discovered": -1,
-                  "children": [
-                    {
-                      "name": "Land",
-                      "node_discovered": -1,
-                      "children": [
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        },
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Earth",
-                      "node_discovered": -1,
-                      "children": []
-                    }
-                  ]
-                },
-                {
-                  "name": "Continent",
-                  "node_discovered": -1,
-                  "children": [
-                    {
-                      "name": "Land",
-                      "node_discovered": -1,
-                      "children": [
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        },
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Land",
-                      "node_discovered": -1,
-                      "children": [
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        },
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Mist",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Air",
-              "node_discovered": -1,
-              "children": []
-            },
-            {
-              "name": "Water",
-              "node_discovered": -1,
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Cloud",
-      "node_discovered": -1,
-      "children": [
-        {
-          "name": "Atmosphere",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Air",
-              "node_discovered": -1,
-              "children": []
-            },
-            {
-              "name": "Planet",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Continent",
-                  "node_discovered": -1,
-                  "children": [
-                    {
-                      "name": "Land",
-                      "node_discovered": -1,
-                      "children": [
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        },
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Earth",
-                      "node_discovered": -1,
-                      "children": []
-                    }
-                  ]
-                },
-                {
-                  "name": "Continent",
-                  "node_discovered": -1,
-                  "children": [
-                    {
-                      "name": "Land",
-                      "node_discovered": -1,
-                      "children": [
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        },
-                        {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Earth",
-                      "node_discovered": -1,
-                      "children": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Mist",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Air",
-              "node_discovered": -1,
-              "children": []
-            },
-            {
-              "name": "Water",
-              "node_discovered": -1,
-              "children": []
-            }
-          ]
         }
       ]
     }
   ],
-  "algorithm": "Multi_BFS_All_Paths",
-  "duration_ms": 2.738,
+  "algorithm": "Multi_BFS",
+  "duration_ms": 2.807,
   "visited_nodes": 69
 }
