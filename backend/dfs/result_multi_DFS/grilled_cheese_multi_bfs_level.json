@@ -2337,84 +2337,18 @@
                                   "node_discovered": -1,
                                   "children": [
                                     {
-                                      "name": "Planet",
+                                      "name": "Lava",
                                       "node_discovered": -1,
                                       "children": [
                                         {
-                                          "name": "Continent",
+                                          "name": "Earth",
                                           "node_discovered": -1,
-                                          "children": [
-                                            {
-                                              "name": "Land",
-                                              "node_discovered": -1,
-                                              "children": [
-                                                {
-                                                  "name": "Earth",
-                                                  "node_discovered": -1,
-                                                  "children": []
-                                                },
-                                                {
-                                                  "name": "Earth",
-                                                  "node_discovered": -1,
-                                                  "children": []
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "name": "Land",
-                                              "node_discovered": -1,
-                                              "children": [
-                                                {
-                                                  "name": "Earth",
-                                                  "node_discovered": -1,
-                                                  "children": []
-                                                },
-                                                {
-                                                  "name": "Earth",
-                                                  "node_discovered": -1,
-                                                  "children": []
-                                                }
-                                              ]
-                                            }
-                                          ]
+                                          "children": []
                                         },
                                         {
-                                          "name": "Continent",
+                                          "name": "Fire",
                                           "node_discovered": -1,
-                                          "children": [
-                                            {
-                                              "name": "Land",
-                                              "node_discovered": -1,
-                                              "children": [
-                                                {
-                                                  "name": "Earth",
-                                                  "node_discovered": -1,
-                                                  "children": []
-                                                },
-                                                {
-                                                  "name": "Earth",
-                                                  "node_discovered": -1,
-                                                  "children": []
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "name": "Land",
-                                              "node_discovered": -1,
-                                              "children": [
-                                                {
-                                                  "name": "Earth",
-                                                  "node_discovered": -1,
-                                                  "children": []
-                                                },
-                                                {
-                                                  "name": "Earth",
-                                                  "node_discovered": -1,
-                                                  "children": []
-                                                }
-                                              ]
-                                            }
-                                          ]
+                                          "children": []
                                         }
                                       ]
                                     },
@@ -2893,84 +2827,18 @@
                               "node_discovered": -1,
                               "children": [
                                 {
-                                  "name": "Planet",
+                                  "name": "Lava",
                                   "node_discovered": -1,
                                   "children": [
                                     {
-                                      "name": "Continent",
+                                      "name": "Earth",
                                       "node_discovered": -1,
-                                      "children": [
-                                        {
-                                          "name": "Land",
-                                          "node_discovered": -1,
-                                          "children": [
-                                            {
-                                              "name": "Earth",
-                                              "node_discovered": -1,
-                                              "children": []
-                                            },
-                                            {
-                                              "name": "Earth",
-                                              "node_discovered": -1,
-                                              "children": []
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "name": "Land",
-                                          "node_discovered": -1,
-                                          "children": [
-                                            {
-                                              "name": "Earth",
-                                              "node_discovered": -1,
-                                              "children": []
-                                            },
-                                            {
-                                              "name": "Earth",
-                                              "node_discovered": -1,
-                                              "children": []
-                                            }
-                                          ]
-                                        }
-                                      ]
+                                      "children": []
                                     },
                                     {
-                                      "name": "Continent",
+                                      "name": "Fire",
                                       "node_discovered": -1,
-                                      "children": [
-                                        {
-                                          "name": "Land",
-                                          "node_discovered": -1,
-                                          "children": [
-                                            {
-                                              "name": "Earth",
-                                              "node_discovered": -1,
-                                              "children": []
-                                            },
-                                            {
-                                              "name": "Earth",
-                                              "node_discovered": -1,
-                                              "children": []
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "name": "Land",
-                                          "node_discovered": -1,
-                                          "children": [
-                                            {
-                                              "name": "Earth",
-                                              "node_discovered": -1,
-                                              "children": []
-                                            },
-                                            {
-                                              "name": "Earth",
-                                              "node_discovered": -1,
-                                              "children": []
-                                            }
-                                          ]
-                                        }
-                                      ]
+                                      "children": []
                                     }
                                   ]
                                 },
@@ -3176,7 +3044,7 @@
               ]
             },
             {
-              "name": "Tool",
+              "name": "Cook",
               "node_discovered": -1,
               "children": [
                 {
@@ -3241,84 +3109,18 @@
                           "node_discovered": -1,
                           "children": [
                             {
-                              "name": "Planet",
+                              "name": "Lava",
                               "node_discovered": -1,
                               "children": [
                                 {
-                                  "name": "Continent",
+                                  "name": "Earth",
                                   "node_discovered": -1,
-                                  "children": [
-                                    {
-                                      "name": "Land",
-                                      "node_discovered": -1,
-                                      "children": [
-                                        {
-                                          "name": "Earth",
-                                          "node_discovered": -1,
-                                          "children": []
-                                        },
-                                        {
-                                          "name": "Earth",
-                                          "node_discovered": -1,
-                                          "children": []
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "name": "Land",
-                                      "node_discovered": -1,
-                                      "children": [
-                                        {
-                                          "name": "Earth",
-                                          "node_discovered": -1,
-                                          "children": []
-                                        },
-                                        {
-                                          "name": "Earth",
-                                          "node_discovered": -1,
-                                          "children": []
-                                        }
-                                      ]
-                                    }
-                                  ]
+                                  "children": []
                                 },
                                 {
-                                  "name": "Continent",
+                                  "name": "Fire",
                                   "node_discovered": -1,
-                                  "children": [
-                                    {
-                                      "name": "Land",
-                                      "node_discovered": -1,
-                                      "children": [
-                                        {
-                                          "name": "Earth",
-                                          "node_discovered": -1,
-                                          "children": []
-                                        },
-                                        {
-                                          "name": "Earth",
-                                          "node_discovered": -1,
-                                          "children": []
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "name": "Land",
-                                      "node_discovered": -1,
-                                      "children": [
-                                        {
-                                          "name": "Earth",
-                                          "node_discovered": -1,
-                                          "children": []
-                                        },
-                                        {
-                                          "name": "Earth",
-                                          "node_discovered": -1,
-                                          "children": []
-                                        }
-                                      ]
-                                    }
-                                  ]
+                                  "children": []
                                 }
                               ]
                             },
@@ -3460,29 +3262,282 @@
                   ]
                 },
                 {
-                  "name": "Metal",
+                  "name": "Vegetable",
                   "node_discovered": -1,
                   "children": [
                     {
-                      "name": "Stone",
+                      "name": "Farmer",
                       "node_discovered": -1,
                       "children": [
                         {
-                          "name": "Earth",
-                          "node_discovered": -1,
-                          "children": []
-                        },
-                        {
-                          "name": "Pressure",
+                          "name": "Human",
                           "node_discovered": -1,
                           "children": [
                             {
-                              "name": "Air",
+                              "name": "Clay",
                               "node_discovered": -1,
-                              "children": []
+                              "children": [
+                                {
+                                  "name": "Mud",
+                                  "node_discovered": -1,
+                                  "children": [
+                                    {
+                                      "name": "Water",
+                                      "node_discovered": -1,
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "Earth",
+                                      "node_discovered": -1,
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Stone",
+                                  "node_discovered": -1,
+                                  "children": [
+                                    {
+                                      "name": "Earth",
+                                      "node_discovered": -1,
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "Pressure",
+                                      "node_discovered": -1,
+                                      "children": [
+                                        {
+                                          "name": "Air",
+                                          "node_discovered": -1,
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "Air",
+                                          "node_discovered": -1,
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
                             },
                             {
-                              "name": "Air",
+                              "name": "Life",
+                              "node_discovered": -1,
+                              "children": [
+                                {
+                                  "name": "Primordial soup",
+                                  "node_discovered": -1,
+                                  "children": [
+                                    {
+                                      "name": "Lava",
+                                      "node_discovered": -1,
+                                      "children": [
+                                        {
+                                          "name": "Earth",
+                                          "node_discovered": -1,
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "Fire",
+                                          "node_discovered": -1,
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Sea",
+                                      "node_discovered": -1,
+                                      "children": [
+                                        {
+                                          "name": "Lake",
+                                          "node_discovered": -1,
+                                          "children": [
+                                            {
+                                              "name": "Pond",
+                                              "node_discovered": -1,
+                                              "children": [
+                                                {
+                                                  "name": "Puddle",
+                                                  "node_discovered": -1,
+                                                  "children": [
+                                                    {
+                                                      "name": "Water",
+                                                      "node_discovered": -1,
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "name": "Water",
+                                                      "node_discovered": -1,
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Puddle",
+                                                  "node_discovered": -1,
+                                                  "children": [
+                                                    {
+                                                      "name": "Water",
+                                                      "node_discovered": -1,
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "name": "Water",
+                                                      "node_discovered": -1,
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Water",
+                                              "node_discovered": -1,
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Lake",
+                                          "node_discovered": -1,
+                                          "children": [
+                                            {
+                                              "name": "Pond",
+                                              "node_discovered": -1,
+                                              "children": [
+                                                {
+                                                  "name": "Puddle",
+                                                  "node_discovered": -1,
+                                                  "children": [
+                                                    {
+                                                      "name": "Water",
+                                                      "node_discovered": -1,
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "name": "Water",
+                                                      "node_discovered": -1,
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Puddle",
+                                                  "node_discovered": -1,
+                                                  "children": [
+                                                    {
+                                                      "name": "Water",
+                                                      "node_discovered": -1,
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "name": "Water",
+                                                      "node_discovered": -1,
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "name": "Water",
+                                              "node_discovered": -1,
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Volcano",
+                                  "node_discovered": -1,
+                                  "children": [
+                                    {
+                                      "name": "Lava",
+                                      "node_discovered": -1,
+                                      "children": [
+                                        {
+                                          "name": "Earth",
+                                          "node_discovered": -1,
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "Fire",
+                                          "node_discovered": -1,
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Earth",
+                                      "node_discovered": -1,
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Field",
+                          "node_discovered": -1,
+                          "children": [
+                            {
+                              "name": "Plow",
+                              "node_discovered": -1,
+                              "children": [
+                                {
+                                  "name": "Earth",
+                                  "node_discovered": -1,
+                                  "children": []
+                                },
+                                {
+                                  "name": "Metal",
+                                  "node_discovered": -1,
+                                  "children": [
+                                    {
+                                      "name": "Stone",
+                                      "node_discovered": -1,
+                                      "children": [
+                                        {
+                                          "name": "Earth",
+                                          "node_discovered": -1,
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "Pressure",
+                                          "node_discovered": -1,
+                                          "children": [
+                                            {
+                                              "name": "Air",
+                                              "node_discovered": -1,
+                                              "children": []
+                                            },
+                                            {
+                                              "name": "Air",
+                                              "node_discovered": -1,
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Fire",
+                                      "node_discovered": -1,
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Earth",
                               "node_discovered": -1,
                               "children": []
                             }
@@ -3491,9 +3546,64 @@
                       ]
                     },
                     {
-                      "name": "Fire",
+                      "name": "Field",
                       "node_discovered": -1,
-                      "children": []
+                      "children": [
+                        {
+                          "name": "Plow",
+                          "node_discovered": -1,
+                          "children": [
+                            {
+                              "name": "Earth",
+                              "node_discovered": -1,
+                              "children": []
+                            },
+                            {
+                              "name": "Metal",
+                              "node_discovered": -1,
+                              "children": [
+                                {
+                                  "name": "Stone",
+                                  "node_discovered": -1,
+                                  "children": [
+                                    {
+                                      "name": "Earth",
+                                      "node_discovered": -1,
+                                      "children": []
+                                    },
+                                    {
+                                      "name": "Pressure",
+                                      "node_discovered": -1,
+                                      "children": [
+                                        {
+                                          "name": "Air",
+                                          "node_discovered": -1,
+                                          "children": []
+                                        },
+                                        {
+                                          "name": "Air",
+                                          "node_discovered": -1,
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "Fire",
+                                  "node_discovered": -1,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Earth",
+                          "node_discovered": -1,
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -3538,84 +3648,18 @@
                                           "node_discovered": -1,
                                           "children": [
                                             {
-                                              "name": "Planet",
+                                              "name": "Lava",
                                               "node_discovered": -1,
                                               "children": [
                                                 {
-                                                  "name": "Continent",
+                                                  "name": "Earth",
                                                   "node_discovered": -1,
-                                                  "children": [
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
+                                                  "children": []
                                                 },
                                                 {
-                                                  "name": "Continent",
+                                                  "name": "Fire",
                                                   "node_discovered": -1,
-                                                  "children": [
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
+                                                  "children": []
                                                 }
                                               ]
                                             },
@@ -3772,84 +3816,18 @@
                                               "node_discovered": -1,
                                               "children": [
                                                 {
-                                                  "name": "Planet",
+                                                  "name": "Lava",
                                                   "node_discovered": -1,
                                                   "children": [
                                                     {
-                                                      "name": "Continent",
+                                                      "name": "Earth",
                                                       "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Land",
-                                                          "node_discovered": -1,
-                                                          "children": [
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            },
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            }
-                                                          ]
-                                                        },
-                                                        {
-                                                          "name": "Land",
-                                                          "node_discovered": -1,
-                                                          "children": [
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            },
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            }
-                                                          ]
-                                                        }
-                                                      ]
+                                                      "children": []
                                                     },
                                                     {
-                                                      "name": "Continent",
+                                                      "name": "Fire",
                                                       "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Land",
-                                                          "node_discovered": -1,
-                                                          "children": [
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            },
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            }
-                                                          ]
-                                                        },
-                                                        {
-                                                          "name": "Land",
-                                                          "node_discovered": -1,
-                                                          "children": [
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            },
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            }
-                                                          ]
-                                                        }
-                                                      ]
+                                                      "children": []
                                                     }
                                                   ]
                                                 },
@@ -4065,84 +4043,18 @@
                                           "node_discovered": -1,
                                           "children": [
                                             {
-                                              "name": "Planet",
+                                              "name": "Lava",
                                               "node_discovered": -1,
                                               "children": [
                                                 {
-                                                  "name": "Continent",
+                                                  "name": "Earth",
                                                   "node_discovered": -1,
-                                                  "children": [
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
+                                                  "children": []
                                                 },
                                                 {
-                                                  "name": "Continent",
+                                                  "name": "Fire",
                                                   "node_discovered": -1,
-                                                  "children": [
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
+                                                  "children": []
                                                 }
                                               ]
                                             },
@@ -4368,84 +4280,18 @@
                                           "node_discovered": -1,
                                           "children": [
                                             {
-                                              "name": "Planet",
+                                              "name": "Lava",
                                               "node_discovered": -1,
                                               "children": [
                                                 {
-                                                  "name": "Continent",
+                                                  "name": "Earth",
                                                   "node_discovered": -1,
-                                                  "children": [
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
+                                                  "children": []
                                                 },
                                                 {
-                                                  "name": "Continent",
+                                                  "name": "Fire",
                                                   "node_discovered": -1,
-                                                  "children": [
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
+                                                  "children": []
                                                 }
                                               ]
                                             },
@@ -4602,84 +4448,18 @@
                                               "node_discovered": -1,
                                               "children": [
                                                 {
-                                                  "name": "Planet",
+                                                  "name": "Lava",
                                                   "node_discovered": -1,
                                                   "children": [
                                                     {
-                                                      "name": "Continent",
+                                                      "name": "Earth",
                                                       "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Land",
-                                                          "node_discovered": -1,
-                                                          "children": [
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            },
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            }
-                                                          ]
-                                                        },
-                                                        {
-                                                          "name": "Land",
-                                                          "node_discovered": -1,
-                                                          "children": [
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            },
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            }
-                                                          ]
-                                                        }
-                                                      ]
+                                                      "children": []
                                                     },
                                                     {
-                                                      "name": "Continent",
+                                                      "name": "Fire",
                                                       "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Land",
-                                                          "node_discovered": -1,
-                                                          "children": [
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            },
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            }
-                                                          ]
-                                                        },
-                                                        {
-                                                          "name": "Land",
-                                                          "node_discovered": -1,
-                                                          "children": [
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            },
-                                                            {
-                                                              "name": "Earth",
-                                                              "node_discovered": -1,
-                                                              "children": []
-                                                            }
-                                                          ]
-                                                        }
-                                                      ]
+                                                      "children": []
                                                     }
                                                   ]
                                                 },
@@ -4895,84 +4675,18 @@
                                           "node_discovered": -1,
                                           "children": [
                                             {
-                                              "name": "Planet",
+                                              "name": "Lava",
                                               "node_discovered": -1,
                                               "children": [
                                                 {
-                                                  "name": "Continent",
+                                                  "name": "Earth",
                                                   "node_discovered": -1,
-                                                  "children": [
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
+                                                  "children": []
                                                 },
                                                 {
-                                                  "name": "Continent",
+                                                  "name": "Fire",
                                                   "node_discovered": -1,
-                                                  "children": [
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "name": "Land",
-                                                      "node_discovered": -1,
-                                                      "children": [
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        },
-                                                        {
-                                                          "name": "Earth",
-                                                          "node_discovered": -1,
-                                                          "children": []
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
+                                                  "children": []
                                                 }
                                               ]
                                             },
@@ -5204,6 +4918,6 @@
     }
   ],
   "algorithm": "Multi_DFS",
-  "duration_ms": 1.094,
+  "duration_ms": 1.519,
   "visited_nodes": 37
 }
