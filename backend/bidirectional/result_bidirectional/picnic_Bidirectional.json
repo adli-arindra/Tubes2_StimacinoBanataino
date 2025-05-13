@@ -1,0 +1,54 @@
+{
+  "tree": {
+    "name": "Beach",
+    "node discovered": 0,
+    "children": [
+      {
+        "name": "Sand",
+        "node discovered": 0,
+        "children": [
+          {
+            "name": "Stone",
+            "node discovered": 0,
+            "children": [
+              {
+                "name": "Air",
+                "node discovered": 0,
+                "children": []
+              },
+              {
+                "name": "Lava",
+                "node discovered": 0,
+                "children": [
+                  {
+                    "name": "Earth",
+                    "node discovered": 0,
+                    "children": []
+                  },
+                  {
+                    "name": "Fire",
+                    "node discovered": 0,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Air",
+            "node discovered": 0,
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Water",
+        "node discovered": 0,
+        "children": []
+      }
+    ]
+  },
+  "algorithm": "Bidirectional",
+  "duration_ms": 1.143,
+  "visited_nodes": 179
+}

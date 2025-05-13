@@ -2,33 +2,33 @@
   "trees": [
     {
       "name": "Brick",
-      "node_discovered": 4,
+      "node_discovered": 0,
       "children": [
         {
           "name": "Mud",
-          "node_discovered": 2,
+          "node_discovered": 1,
           "children": [
             {
               "name": "Water",
-              "node_discovered": 0,
-              "children": null
+              "node_discovered": 2,
+              "children": []
             },
             {
               "name": "Earth",
-              "node_discovered": 1,
-              "children": null
+              "node_discovered": 3,
+              "children": []
             }
           ]
         },
         {
           "name": "Fire",
-          "node_discovered": 3,
-          "children": null
+          "node_discovered": 4,
+          "children": []
         }
       ]
     }
   ],
   "algorithm": "Multi_DFS",
-  "duration_ms": 0.547,
-  "visited_nodes": 5
+  "duration_ms": 0,
+  "visited_nodes": 6
 }
