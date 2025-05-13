@@ -272,10 +272,11 @@ func setDiscoveredIndexMultiple(node *graph.TreeNode, counter *int) {
 	node.NodeDiscovered = *counter
 	*counter++
 	for _, child := range node.Children {
-		setDiscoveredIndexMultiple(child, counter)
+		setDiscoveredIndex(child, counter)
 	}
 }
 
+// Sama kayak BFS Multiple
 func markTreeAsAlternative(node *graph.TreeNode) {
 	if node == nil {
 		return

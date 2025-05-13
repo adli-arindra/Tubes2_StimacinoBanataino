@@ -632,6 +632,6 @@
     }
   ],
   "algorithm": "Multi_DFS",
-  "duration_ms": 0,
+  "duration_ms": 0.051,
   "visited_nodes": 4
 }
