@@ -66,7 +66,7 @@
       ]
     }
   ],
-  "algorithm": "Multi_BFS_All_Paths",
-  "duration_ms": 1.086,
-  "visited_nodes": 15
+  "algorithm": "Multi_BFS",
+  "duration_ms": 4.844,
+  "visited_nodes": 27
 }
