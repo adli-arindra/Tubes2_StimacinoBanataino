@@ -23,11 +23,11 @@ func DFS(target string, g graph.Graph, elementTier map[string]int) (graph.TreeRe
 			duration := float64(time.Since(start).Microseconds()) / 1000.0
 			return graph.TreeResult{
 				Tree: &graph.TreeNode{
-					Name: base,
+					Name:     base,
 					Children: []*graph.TreeNode{},
 				},
-				Algorithm: "DFS",
-				DurationMS: duration,
+				Algorithm:    "DFS",
+				DurationMS:   duration,
 				VisitedNodes: 1,
 			}, nil
 		}
@@ -37,9 +37,9 @@ func DFS(target string, g graph.Graph, elementTier map[string]int) (graph.TreeRe
 	maxTier, ok := elementTier[target]
 	if !ok {
 		return graph.TreeResult{
-			Tree: nil, 
-			Algorithm: "DFS",
-			DurationMS: 0,
+			Tree:         nil,
+			Algorithm:    "DFS",
+			DurationMS:   0,
 			VisitedNodes: 0,
 		}, nil
 	}
@@ -63,7 +63,7 @@ func DFS(target string, g graph.Graph, elementTier map[string]int) (graph.TreeRe
 				continue
 			}
 
-			// Kalau elemen sudah pernah didapatkan, skip ae 
+			// Kalau elemen sudah pernah didapatkan, skip ae
 			if _, alreadyFound := discovered[product]; alreadyFound {
 				continue
 			}
@@ -77,7 +77,7 @@ func DFS(target string, g graph.Graph, elementTier map[string]int) (graph.TreeRe
 					// Cek dulu elemen di recipe jangan sampe lebih tinggi dari elemen yang akan dihasilkan
 					aTier, aOk := elementTier[a]
 					bTier, bOk := elementTier[b]
-					if !aOk || !bOk || aTier > productTier || bTier > productTier {
+					if !aOk || !bOk || aTier >= productTier || bTier >= productTier {
 						continue
 					}
 
@@ -133,11 +133,11 @@ func DFS(target string, g graph.Graph, elementTier map[string]int) (graph.TreeRe
 
 func buildTree(current string, nodes map[string]*graph.TreeNode, parentMap map[string][]string) *graph.TreeNode {
 	node := &graph.TreeNode{
-		Name: current,
+		Name:     current,
 		Children: []*graph.TreeNode{},
 	}
 	parents, ok := parentMap[current]
-	
+
 	if !ok {
 		return node
 	}
