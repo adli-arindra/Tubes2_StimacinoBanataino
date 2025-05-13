@@ -30,5 +30,5 @@
   ],
   "algorithm": "Multi_DFS",
   "duration_ms": 0,
-  "visited_nodes": 2
+  "visited_nodes": 6
 }

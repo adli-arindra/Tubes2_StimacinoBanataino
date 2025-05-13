@@ -54,12 +54,25 @@ func MultiDFS(target string, g graph.Graph, maxRecipes int, tierMap map[string]i
 		}
 	}
 
+	visited := map[string]bool{}
+
+	for _, recipe := range append([]map[string]Recipe{primaryPath}, altRecipes...) {
+		for product, r := range recipe {
+			visited[product] = true
+			visited[r.Recipe1] = true
+			visited[r.Recipe2] = true
+		}
+	}
+	for _, base := range []string{"Air", "Fire", "Water", "Earth"} {
+		visited[base] = true
+	}
+
 	duration := float64(time.Since(start).Microseconds()) / 1000.0
 	return graph.MultiTreeResult{
 		Trees:        trees,
 		Algorithm:    "Multi_DFS",
 		DurationMS:   duration,
-		VisitedNodes: len(primaryPath), // Bentar ini harusnya semua node
+		VisitedNodes: len(visited), // Bentar ini harusnya semua node
 	}, nil
 }
 
