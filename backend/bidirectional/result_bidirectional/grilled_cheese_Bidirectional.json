@@ -1,0 +1,10 @@
+{
+  "tree": {
+    "name": "Fire",
+    "node discovered": 0,
+    "children": []
+  },
+  "algorithm": "Bidirectional",
+  "duration_ms": 1.126,
+  "visited_nodes": 708
+}

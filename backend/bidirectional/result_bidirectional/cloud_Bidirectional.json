@@ -1,0 +1,98 @@
+{
+  "tree": {
+    "name": "Cloud",
+    "node discovered": 0,
+    "children": [
+      {
+        "name": "Atmosphere",
+        "node discovered": 0,
+        "children": [
+          {
+            "name": "Air",
+            "node discovered": 0,
+            "children": []
+          },
+          {
+            "name": "Planet",
+            "node discovered": 0,
+            "children": [
+              {
+                "name": "Continent",
+                "node discovered": 0,
+                "children": [
+                  {
+                    "name": "Land",
+                    "node discovered": 0,
+                    "children": [
+                      {
+                        "name": "Earth",
+                        "node discovered": 0,
+                        "children": []
+                      },
+                      {
+                        "name": "Earth",
+                        "node discovered": 0,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Earth",
+                    "node discovered": 0,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Continent",
+                "node discovered": 0,
+                "children": [
+                  {
+                    "name": "Land",
+                    "node discovered": 0,
+                    "children": [
+                      {
+                        "name": "Earth",
+                        "node discovered": 0,
+                        "children": []
+                      },
+                      {
+                        "name": "Earth",
+                        "node discovered": 0,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Earth",
+                    "node discovered": 0,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mist",
+        "node discovered": 0,
+        "children": [
+          {
+            "name": "Air",
+            "node discovered": 0,
+            "children": []
+          },
+          {
+            "name": "Water",
+            "node discovered": 0,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "algorithm": "Bidirectional",
+  "duration_ms": 0,
+  "visited_nodes": 102
+}
