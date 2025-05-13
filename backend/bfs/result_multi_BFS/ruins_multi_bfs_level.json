@@ -1,6 +1,6 @@
 {
   "trees": [],
-  "algorithm": "Multi_BFS_All_Paths",
-  "duration_ms": 10.731,
-  "visited_nodes": 112
+  "algorithm": "Multi_BFS",
+  "duration_ms": 25.115,
+  "visited_nodes": 147
 }

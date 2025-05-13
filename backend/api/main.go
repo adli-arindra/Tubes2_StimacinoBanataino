@@ -14,6 +14,9 @@ import (
 	dfsGraph "dfs/graph"
 	dfsSearch "dfs/search"
 
+	bidirectionalGraph "bidirectional/graph"
+	bidirectionalSearch "bidirectional/search"
+
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 )
@@ -50,10 +53,10 @@ func main() {
 	r.HandleFunc("/search", processSearchRequest).Methods("POST")
 
 	c := cors.New(cors.Options{
-		AllowedOrigins:   []string{"http://localhost:3000"},
+		AllowedOrigins:   []string{"*"},
 		AllowedMethods:   []string{"GET", "POST", "OPTIONS"},
 		AllowedHeaders:   []string{"Content-Type"},
-		AllowCredentials: true,
+		AllowCredentials: false,
 	})
 
 	handler := c.Handler(r)
@@ -77,28 +80,34 @@ func processSearchRequest(w http.ResponseWriter, r *http.Request) {
 	switch req.Algorithm {
 	case "BFS":
 		if req.Mode == "single" {
-			directory = "../bfs/result_BFS"
+			directory = "bfs/result_BFS"
 			filePath = fmt.Sprintf("%s/%s_bfs.json", directory, target)
 		} else {
-			directory = "../bfs/result_multi_BFS"
+			directory = "bfs/result_multi_BFS"
 			filePath = fmt.Sprintf("%s/%s_multi_bfs_level.json", directory, target)
 		}
 	case "DFS":
 		if req.Mode == "single" {
-			directory = "../dfs/result_DFS"
+			directory = "dfs/result_DFS"
 			filePath = fmt.Sprintf("%s/%s_dfs.json", directory, target)
 		} else {
-			directory = "../dfs/result_multi_DFS"
+			directory = "dfs/result_multi_DFS"
 			filePath = fmt.Sprintf("%s/%s_multi_dfs_level.json", directory, target)
+		}
+	case "Bidirectional":
+		{
+			directory = "bidirectional/result_bidirectional"
+			filePath = fmt.Sprintf("%s/%s_bidirectional.json", directory, target)
 		}
 	default:
 		http.Error(w, "Algoritma tidak ada", http.StatusBadRequest)
 		return
 	}
 
-	graphBFS, err := bfsGraph.LoadRecipes("../scraping/data_scraping/scraped_data.json")
-	graphDFS, err := dfsGraph.LoadRecipes("../scraping/data_scraping/scraped_data.json")
-	catalog, err := dfsGraph.LoadCatalog("../scraping/data_scraping/scraped_data.json")
+	graphBFS, err := bfsGraph.LoadRecipes("scraping/data_scraping/scraped_data.json")
+	graphDFS, err := dfsGraph.LoadRecipes("scraping/data_scraping/scraped_data.json")
+	graphBidirectional, err := bidirectionalGraph.LoadRecipes("scraping/data_scraping/scraped_data.json")
+	catalog, err := dfsGraph.LoadCatalog("scraping/data_scraping/scraped_data.json")
 	elementTiers := dfsGraph.MapElementToTier(catalog)
 
 	if err != nil {
@@ -120,7 +129,7 @@ func processSearchRequest(w http.ResponseWriter, r *http.Request) {
 
 			var nodes []Node
 			for _, t := range multiResult.Trees {
-				nodes = append(nodes, convertTreeNodeToNode(t))
+				nodes = append(nodes, convertTreeNodeToNodeBFS(t))
 			}
 
 			result = MultipleSearchResponse{
@@ -134,24 +143,26 @@ func processSearchRequest(w http.ResponseWriter, r *http.Request) {
 		if req.Mode == "single" {
 			result, err = dfsSearch.DFS(req.Target, graphDFS, elementTiers)
 		} else {
-			// multiResult, err := dfsSearch.MultiDFS(req.Target, graphDFS, *req.MaxRecipes, elementTiers)
-			// if err != nil {
-			// 	http.Error(w, "Pencarian gagal: "+err.Error(), http.StatusInternalServerError)
-			// 	return
-			// }
+			multiResult, err := dfsSearch.MultiDFS(req.Target, graphDFS, *req.MaxRecipes, elementTiers)
+			if err != nil {
+				http.Error(w, "Pencarian gagal: "+err.Error(), http.StatusInternalServerError)
+				return
+			}
 
-			// var nodes []Node
-			// for _, t := range multiResult.Trees {
-			// 	nodes = append(nodes, convertTreeNodeToNode(t))
-			// }
+			var nodes []Node
+			for _, t := range multiResult.Trees {
+				nodes = append(nodes, convertTreeNodeToNodeDFS(t))
+			}
 
-			// result = MultipleSearchResponse{
-			// 	Tree:         nodes,
-			// 	Algorithm:    multiResult.Algorithm,
-			// 	Duration:     multiResult.DurationMS,
-			// 	VisitedNodes: multiResult.VisitedNodes,
-			// }
+			result = MultipleSearchResponse{
+				Tree:         nodes,
+				Algorithm:    multiResult.Algorithm,
+				Duration:     multiResult.DurationMS,
+				VisitedNodes: multiResult.VisitedNodes,
+			}
 		}
+	case "Bidirectional":
+		result, err = bidirectionalSearch.Bidirectional(req.Target, graphBidirectional, elementTiers)
 	}
 	if err != nil {
 		http.Error(w, "Pencarian gagal: "+err.Error(), http.StatusInternalServerError)
@@ -201,14 +212,31 @@ func processSearchRequest(w http.ResponseWriter, r *http.Request) {
 }
 
 // Converter for multiple recipe
-func convertTreeNodeToNode(t *bfsGraph.TreeNode) Node {
+func convertTreeNodeToNodeBFS(t *bfsGraph.TreeNode) Node {
 	if t == nil {
 		return Node{}
 	}
 
 	children := make([]Node, len(t.Children))
 	for i, child := range t.Children {
-		children[i] = convertTreeNodeToNode(child)
+		children[i] = convertTreeNodeToNodeBFS(child)
+	}
+
+	return Node{
+		Name:           t.Name,
+		NodeDiscovered: t.NodeDiscovered,
+		Children:       children,
+	}
+}
+
+func convertTreeNodeToNodeDFS(t *dfsGraph.TreeNode) Node {
+	if t == nil {
+		return Node{}
+	}
+
+	children := make([]Node, len(t.Children))
+	for i, child := range t.Children {
+		children[i] = convertTreeNodeToNodeDFS(child)
 	}
 
 	return Node{

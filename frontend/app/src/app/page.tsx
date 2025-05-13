@@ -37,7 +37,7 @@ export default function Home() {
   const [showLive, setShowLive] = useState(false);
 
   const [target, setTarget] = useState('');
-  const [algorithm, setAlgorithm] = useState<'BFS' | 'DFS'>('BFS');
+  const [algorithm, setAlgorithm] = useState<'BFS' | 'DFS' | 'Bidirectional'>('BFS');
   const [mode, setMode] = useState<'single' | 'multiple'>('single');
   const [maxRecipes, setMaxRecipes] = useState<number>(30);
 
@@ -175,6 +175,7 @@ export default function Home() {
               >
                 <option value="BFS">BFS</option>
                 <option value="DFS">DFS</option>
+                <option value="Bidirectional">Bidirectional</option>
               </select>
             </label>
 
@@ -184,9 +185,12 @@ export default function Home() {
                 value={mode}
                 onChange={(e) => setMode(e.target.value as 'single' | 'multiple')}
                 className="ml-2 p-1 border rounded"
+                disabled={algorithm === 'Bidirectional'}
               >
                 <option value="single">Single</option>
-                <option value="multiple">Multiple</option>
+                <option value="multiple" disabled={algorithm === 'Bidirectional'}>
+                  Multiple
+                </option>
               </select>
             </label>
           </div>
@@ -214,12 +218,14 @@ export default function Home() {
               <NumberStepper value={index} setValue={setIndex} min={0} max={treeArray.length - 1}/>
             </div>
           }
-          <button 
-              onClick={onStartLive}
-              className={`p-2 rounded  mt-4 ${startAnimation ? 'bg-gray-500' : 'bg-blue-500'}`}
-              disabled={startAnimation}
-              >
-              Start Animation
+          <button
+            onClick={onStartLive}
+            className={`p-2 rounded mt-4 ${
+              startAnimation || algorithm === 'Bidirectional' ? 'bg-gray-500' : 'bg-blue-500'
+            }`}
+            disabled={startAnimation || algorithm === 'Bidirectional'}
+          >
+            Start Animation
           </button>
         </div>
     </div>

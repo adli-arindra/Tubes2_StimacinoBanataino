@@ -8,9 +8,11 @@ require (
 
 	bfs v0.0.0
 	dfs v0.0.0
+	bidirectional v0.0.0
 )
 
 replace (
 	bfs => ../bfs
 	dfs => ../dfs
+	bidirectional => ../bidirectional
 )

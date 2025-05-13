@@ -1,0 +1,120 @@
+{
+  "tree": {
+    "name": "Soil",
+    "node discovered": 0,
+    "children": [
+      {
+        "name": "Earth",
+        "node discovered": 0,
+        "children": []
+      },
+      {
+        "name": "Life",
+        "node discovered": 0,
+        "children": [
+          {
+            "name": "Primordial soup",
+            "node discovered": 0,
+            "children": [
+              {
+                "name": "Earth",
+                "node discovered": 0,
+                "children": []
+              },
+              {
+                "name": "Sea",
+                "node discovered": 0,
+                "children": [
+                  {
+                    "name": "Lake",
+                    "node discovered": 0,
+                    "children": [
+                      {
+                        "name": "Pond",
+                        "node discovered": 0,
+                        "children": [
+                          {
+                            "name": "Puddle",
+                            "node discovered": 0,
+                            "children": [
+                              {
+                                "name": "Water",
+                                "node discovered": 0,
+                                "children": []
+                              },
+                              {
+                                "name": "Water",
+                                "node discovered": 0,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Water",
+                            "node discovered": 0,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Pond",
+                        "node discovered": 0,
+                        "children": [
+                          {
+                            "name": "Puddle",
+                            "node discovered": 0,
+                            "children": [
+                              {
+                                "name": "Water",
+                                "node discovered": 0,
+                                "children": []
+                              },
+                              {
+                                "name": "Water",
+                                "node discovered": 0,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Water",
+                            "node discovered": 0,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Water",
+                    "node discovered": 0,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Energy",
+            "node discovered": 0,
+            "children": [
+              {
+                "name": "Fire",
+                "node discovered": 0,
+                "children": []
+              },
+              {
+                "name": "Fire",
+                "node discovered": 0,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "algorithm": "Bidirectional",
+  "duration_ms": 0.513,
+  "visited_nodes": 156
+}

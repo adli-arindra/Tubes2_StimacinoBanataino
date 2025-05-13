@@ -23,22 +23,14 @@ type Graph map[string][][]string
 // Menyimpan satu node dalam pohon
 type TreeNode struct {
 	Name			string			`json:"name"`
-	NodeDiscovered 	int           	`json:"node_discovered"`
+	NodeDiscovered 	int           	`json:"node discovered"`
 	Children		[]*TreeNode		`json:"children"`
 }
 
-// Menyimpan struktur output untuk DFS One Recipe
+// Menyimpan struktur output untuk Bidirectional One Recipe
 type TreeResult struct {
 	Tree        	*TreeNode 	`json:"tree"`       
 	Algorithm   	string    	`json:"algorithm"`  
 	DurationMS  	float64   	`json:"duration_ms"` 
 	VisitedNodes	int      	`json:"visited_nodes"` 
-}
-
-// Menyimpan struktur output untuk DFS Multiple
-type MultiTreeResult struct {
-	Trees			[]*TreeNode	`json:"trees"`
-	Algorithm		string 		`json:"algorithm"`
-	DurationMS		float64 	`json:"duration_ms"`
-	VisitedNodes	int			`json:"visited_nodes"`
 }

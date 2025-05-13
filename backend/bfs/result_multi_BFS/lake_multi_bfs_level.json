@@ -25,20 +25,9 @@
               ]
             },
             {
-              "name": "Puddle",
+              "name": "Water",
               "node_discovered": 4,
-              "children": [
-                {
-                  "name": "Water",
-                  "node_discovered": 7,
-                  "children": []
-                },
-                {
-                  "name": "Water",
-                  "node_discovered": 8,
-                  "children": []
-                }
-              ]
+              "children": []
             }
           ]
         },
@@ -74,9 +63,20 @@
               ]
             },
             {
-              "name": "Water",
+              "name": "Puddle",
               "node_discovered": -1,
-              "children": []
+              "children": [
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                },
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -112,102 +112,9 @@
               ]
             },
             {
-              "name": "Puddle",
+              "name": "Water",
               "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                },
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Pond",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Puddle",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                },
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Puddle",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                },
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Lake",
-      "node_discovered": -1,
-      "children": [
-        {
-          "name": "Pond",
-          "node_discovered": -1,
-          "children": [
-            {
-              "name": "Puddle",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                },
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Puddle",
-              "node_discovered": -1,
-              "children": [
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                },
-                {
-                  "name": "Water",
-                  "node_discovered": -1,
-                  "children": []
-                }
-              ]
+              "children": []
             }
           ]
         },
@@ -239,9 +146,80 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Lake",
+      "node_discovered": -1,
+      "children": [
+        {
+          "name": "Pond",
+          "node_discovered": -1,
+          "children": [
+            {
+              "name": "Puddle",
+              "node_discovered": -1,
+              "children": [
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                },
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Water",
+              "node_discovered": -1,
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Pond",
+          "node_discovered": -1,
+          "children": [
+            {
+              "name": "Puddle",
+              "node_discovered": -1,
+              "children": [
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                },
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Puddle",
+              "node_discovered": -1,
+              "children": [
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                },
+                {
+                  "name": "Water",
+                  "node_discovered": -1,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
-  "algorithm": "Multi_BFS_All_Paths",
-  "duration_ms": 0.609,
-  "visited_nodes": 28
+  "algorithm": "Multi_BFS",
+  "duration_ms": 6.057,
+  "visited_nodes": 39
 }

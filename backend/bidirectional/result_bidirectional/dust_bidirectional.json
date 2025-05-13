@@ -1,0 +1,21 @@
+{
+  "tree": {
+    "name": "Dust",
+    "node discovered": 0,
+    "children": [
+      {
+        "name": "Earth",
+        "node discovered": 0,
+        "children": []
+      },
+      {
+        "name": "Air",
+        "node discovered": 0,
+        "children": []
+      }
+    ]
+  },
+  "algorithm": "Bidirectional",
+  "duration_ms": 0,
+  "visited_nodes": 5
+}
