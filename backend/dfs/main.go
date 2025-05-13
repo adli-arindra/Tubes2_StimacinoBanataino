@@ -12,7 +12,7 @@ import (
 	"dfs/search"
 )
 
-func main1() {
+func main() {
 	const recipeFile = "../scraping/data_scraping/scraped_data.json"
 
 	reader := bufio.NewReader(os.Stdin)

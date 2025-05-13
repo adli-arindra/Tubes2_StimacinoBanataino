@@ -77,7 +77,7 @@ func DFS(target string, g graph.Graph, elementTier map[string]int) (graph.TreeRe
 					// Cek dulu elemen di recipe jangan sampe lebih tinggi dari elemen yang akan dihasilkan
 					aTier, aOk := elementTier[a]
 					bTier, bOk := elementTier[b]
-					if !aOk || !bOk || aTier > productTier || bTier > productTier {
+					if !aOk || !bOk || aTier >= productTier || bTier >= productTier {
 						continue
 					}
 
