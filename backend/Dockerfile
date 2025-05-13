@@ -9,6 +9,7 @@ COPY api/go.mod api/go.sum ./
 COPY bfs/ ../bfs/
 COPY dfs/ ../dfs/
 COPY scraping/ ../scraping/
+COPY bidirectional/ ../bidirectional/
 
 RUN go mod download
 
@@ -25,6 +26,7 @@ COPY --from=builder /app/main .
 COPY bfs/ ./bfs/
 COPY dfs/ ./dfs/
 COPY scraping/ ./scraping/
+COPY bidirectional/ ./bidirectional/
 
 EXPOSE 8080
 
