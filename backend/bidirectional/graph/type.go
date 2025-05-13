@@ -23,7 +23,7 @@ type Graph map[string][][]string
 // Menyimpan satu node dalam pohon
 type TreeNode struct {
 	Name			string			`json:"name"`
-	NodeDiscovered 	int           	`json:"node discovered"`
+	NodeDiscovered 	int           	`json:"node_discovered"`
 	Children		[]*TreeNode		`json:"children"`
 }
 
