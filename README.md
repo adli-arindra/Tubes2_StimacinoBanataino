@@ -22,6 +22,11 @@ Untuk menjalankan proyek ini, Anda memerlukan beberapa alat dan dependensi:
 
 ## iii. Command atau Langkah-Langkah dalam Meng-compile atau Build Program
 
+### **Clone Repository**
+```bash
+git clone https://github.com/adli-arindra/Tubes2_StimacinoBanataino.git
+```
+
 ### **Cara Menjalankan Backend**
 ```bash
 cd backend
